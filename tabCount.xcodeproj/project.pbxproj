@@ -19,6 +19,8 @@
 		2D84758E236D523A00C9BE4F /* SafariExtensionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D84758C236D523A00C9BE4F /* SafariExtensionViewController.xib */; };
 		2D847591236D523A00C9BE4F /* script.js in Resources */ = {isa = PBXBuildFile; fileRef = 2D847590236D523A00C9BE4F /* script.js */; };
 		2D847593236D523A00C9BE4F /* ToolbarItemIcon.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 2D847592236D523A00C9BE4F /* ToolbarItemIcon.pdf */; };
+		2D84759F236D52EA00C9BE4F /* SettingsHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D84759E236D52EA00C9BE4F /* SettingsHelper.swift */; };
+		2D8475A0236D52EA00C9BE4F /* SettingsHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D84759E236D52EA00C9BE4F /* SettingsHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +64,7 @@
 		2D847590236D523A00C9BE4F /* script.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = script.js; sourceTree = "<group>"; };
 		2D847592236D523A00C9BE4F /* ToolbarItemIcon.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = ToolbarItemIcon.pdf; sourceTree = "<group>"; };
 		2D847594236D523A00C9BE4F /* tabCount_Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = tabCount_Extension.entitlements; sourceTree = "<group>"; };
+		2D84759E236D52EA00C9BE4F /* SettingsHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,6 +136,7 @@
 				2D847590236D523A00C9BE4F /* script.js */,
 				2D847592236D523A00C9BE4F /* ToolbarItemIcon.pdf */,
 				2D847594236D523A00C9BE4F /* tabCount_Extension.entitlements */,
+				2D84759E236D52EA00C9BE4F /* SettingsHelper.swift */,
 			);
 			path = "tabCount Extension";
 			sourceTree = "<group>";
@@ -242,6 +246,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2D847578236D523800C9BE4F /* ViewController.swift in Sources */,
+				2D84759F236D52EA00C9BE4F /* SettingsHelper.swift in Sources */,
 				2D847573236D523800C9BE4F /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -251,6 +256,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2D84758B236D523A00C9BE4F /* SafariExtensionViewController.swift in Sources */,
+				2D8475A0236D52EA00C9BE4F /* SettingsHelper.swift in Sources */,
 				2D847589236D523A00C9BE4F /* SafariExtensionHandler.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

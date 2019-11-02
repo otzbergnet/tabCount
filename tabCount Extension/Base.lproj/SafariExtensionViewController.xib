@@ -1,30 +1,104 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="11134" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="15505" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11134"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="15505"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <customObject id="-2" userLabel="File's Owner" customClass="SafariExtensionViewController" customModuleProvider="target">
+        <customObject id="-2" userLabel="File's Owner" customClass="SafariExtensionViewController" customModule="tab_count_Extension" customModuleProvider="target">
             <connections>
+                <outlet property="badgeFromBox" destination="RzG-Uc-Prf" id="TcB-Uv-BNu"/>
+                <outlet property="badgeFromSlider" destination="RTD-RK-r1n" id="ErU-J8-aTu"/>
+                <outlet property="tabCountLabel" destination="sC5-o9-pg4" id="dhM-Fa-40e"/>
                 <outlet property="view" destination="c22-O7-iKe" id="vwT-Xx-Aiz"/>
+                <outlet property="windowCountLabel" destination="rJu-Yl-b8d" id="SK2-mF-Ybc"/>
             </connections>
         </customObject>
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
         <customObject id="-3" userLabel="Application" customClass="NSObject"/>
         <customView id="c22-O7-iKe">
-            <rect key="frame" x="0.0" y="0.0" width="330" height="119"/>
+            <rect key="frame" x="0.0" y="0.0" width="330" height="186"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
             <subviews>
-                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4Iy-aV-wGF">
-                    <rect key="frame" x="103" y="82" width="124" height="17"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="tabCount Extension" id="2Ec-kd-q2K">
-                        <font key="font" metaFont="system"/>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="4Iy-aV-wGF">
+                    <rect key="frame" x="18" y="142" width="294" height="24"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Safari Tab Count" id="2Ec-kd-q2K">
+                        <font key="font" metaFont="systemBold" size="21"/>
                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
                 </textField>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="leS-uS-yfl">
+                    <rect key="frame" x="18" y="118" width="97" height="16"/>
+                    <textFieldCell key="cell" lineBreakMode="clipping" title="Window Count:" id="ha4-Ck-XDO">
+                        <font key="font" metaFont="system"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="rJu-Yl-b8d">
+                    <rect key="frame" x="121" y="118" width="37" height="16"/>
+                    <textFieldCell key="cell" lineBreakMode="clipping" title="Label" id="iJW-4U-11p">
+                        <font key="font" metaFont="system"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="GUx-Bz-OcW">
+                    <rect key="frame" x="18" y="94" width="70" height="16"/>
+                    <textFieldCell key="cell" lineBreakMode="clipping" title="Tab Count:" id="Fda-wa-Gn1">
+                        <font key="font" metaFont="system"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="sC5-o9-pg4">
+                    <rect key="frame" x="121" y="94" width="37" height="16"/>
+                    <textFieldCell key="cell" lineBreakMode="clipping" title="Label" id="IQM-E3-U44">
+                        <font key="font" metaFont="system"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <slider verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="RTD-RK-r1n">
+                    <rect key="frame" x="43" y="18" width="244" height="19"/>
+                    <sliderCell key="cell" continuous="YES" state="on" alignment="left" minValue="1" maxValue="50" doubleValue="10" tickMarkPosition="above" sliderType="linear" id="tjh-NR-oSL"/>
+                    <connections>
+                        <action selector="badgeFromSlider:" target="-2" id="6Xo-yf-SNx"/>
+                    </connections>
+                </slider>
+                <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="RzG-Uc-Prf">
+                    <rect key="frame" x="123" y="45" width="84" height="21"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" id="8Ob-dE-Twd">
+                        <font key="font" metaFont="system"/>
+                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                    <connections>
+                        <action selector="badgeFromBoxAction:" target="-2" id="tbt-bt-OVm"/>
+                    </connections>
+                </textField>
             </subviews>
+            <constraints>
+                <constraint firstItem="sC5-o9-pg4" firstAttribute="top" secondItem="rJu-Yl-b8d" secondAttribute="bottom" constant="8" id="9Om-hx-Yyv"/>
+                <constraint firstItem="leS-uS-yfl" firstAttribute="top" secondItem="4Iy-aV-wGF" secondAttribute="bottom" constant="8" id="AWR-I7-kP6"/>
+                <constraint firstItem="RzG-Uc-Prf" firstAttribute="leading" secondItem="c22-O7-iKe" secondAttribute="leading" constant="123" id="CX8-3i-lyk"/>
+                <constraint firstItem="rJu-Yl-b8d" firstAttribute="leading" secondItem="leS-uS-yfl" secondAttribute="trailing" constant="10" id="Hva-0H-GxZ"/>
+                <constraint firstAttribute="trailing" secondItem="4Iy-aV-wGF" secondAttribute="trailing" constant="20" id="LeH-3j-oAc"/>
+                <constraint firstItem="GUx-Bz-OcW" firstAttribute="top" secondItem="leS-uS-yfl" secondAttribute="bottom" constant="8" id="QsV-FW-an3"/>
+                <constraint firstItem="RTD-RK-r1n" firstAttribute="leading" secondItem="c22-O7-iKe" secondAttribute="leading" constant="45" id="ZLR-LM-JlM"/>
+                <constraint firstItem="GUx-Bz-OcW" firstAttribute="leading" secondItem="c22-O7-iKe" secondAttribute="leading" constant="20" id="ZRf-5i-ZeU"/>
+                <constraint firstAttribute="bottom" secondItem="RTD-RK-r1n" secondAttribute="bottom" constant="20" id="a5m-oO-ILE"/>
+                <constraint firstItem="RTD-RK-r1n" firstAttribute="centerX" secondItem="c22-O7-iKe" secondAttribute="centerX" id="bKu-Dd-fYf"/>
+                <constraint firstItem="leS-uS-yfl" firstAttribute="leading" secondItem="c22-O7-iKe" secondAttribute="leading" constant="20" id="cl4-H4-5Uq"/>
+                <constraint firstItem="sC5-o9-pg4" firstAttribute="leading" secondItem="leS-uS-yfl" secondAttribute="trailing" constant="10" id="gjV-Cb-JFe"/>
+                <constraint firstItem="RzG-Uc-Prf" firstAttribute="centerX" secondItem="c22-O7-iKe" secondAttribute="centerX" id="kFG-Sm-hjL"/>
+                <constraint firstItem="4Iy-aV-wGF" firstAttribute="top" secondItem="c22-O7-iKe" secondAttribute="top" constant="20" id="qk9-2S-3Ds"/>
+                <constraint firstItem="rJu-Yl-b8d" firstAttribute="top" secondItem="4Iy-aV-wGF" secondAttribute="bottom" constant="8" id="qud-8d-wwo"/>
+                <constraint firstItem="RTD-RK-r1n" firstAttribute="top" secondItem="RzG-Uc-Prf" secondAttribute="bottom" constant="10" id="tu7-FD-5vp"/>
+                <constraint firstItem="4Iy-aV-wGF" firstAttribute="leading" secondItem="c22-O7-iKe" secondAttribute="leading" constant="20" id="yrG-h8-fCB"/>
+            </constraints>
+            <point key="canvasLocation" x="141" y="188"/>
         </customView>
     </objects>
 </document>
