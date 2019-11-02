@@ -24,7 +24,7 @@ class SafariExtensionViewController: SFSafariExtensionViewController, NSTextFiel
     
     static let shared: SafariExtensionViewController = {
         let shared = SafariExtensionViewController()
-        shared.preferredContentSize = NSSize(width:320, height:240)
+        shared.preferredContentSize = NSSize(width:320, height:280)
         return shared
     }()
     
@@ -50,9 +50,64 @@ class SafariExtensionViewController: SFSafariExtensionViewController, NSTextFiel
         else{
             settings.setIntData(key: "maxTabs", data: maxTabsFromSlider)
         }
-        
     }
     
+    func closeTabsToLeft(){
+        var foundTab = false
+        NSLog("TabCount: foundTab is false")
+        SFSafariApplication.getActiveWindow { (window) in
+            guard let window = window else{
+                //NSLog("TabCount: Window failed will return")
+                return
+            }
+            
+            window.getActiveTab { (nowActive) in
+                window.getAllTabs(completionHandler: { (tabs) in
+                    for tab in tabs{
+                        if(foundTab){
+                            //NSLog("TabCount: Found Tab will return")
+                            return
+                        }
+                        if(tab != nowActive){
+                            //NSLog("TabCount: Not the same tab");
+                            tab.close()
+                        }
+                        else{
+                            //NSLog("TabCount: Same tab, setting it that way")
+                            foundTab = true
+                            return
+                        }
+                    }
+                })
+            }
+        }
+    }
+    
+    func closeTabsToRight(){
+         var foundTab = false
+         NSLog("TabCount: foundTab is false")
+         SFSafariApplication.getActiveWindow { (window) in
+             guard let window = window else{
+                 //NSLog("TabCount: Window failed will return")
+                 return
+             }
+             
+             window.getActiveTab { (nowActive) in
+                 window.getAllTabs(completionHandler: { (tabs) in
+                     for tab in tabs{
+                         if(tab != nowActive && foundTab){
+                             //NSLog("TabCount: Not the same tab");
+                             tab.close()
+                         }
+                         else{
+                             //NSLog("TabCount: Same tab, setting it that way")
+                             foundTab = true
+                         }
+                     }
+                 })
+             }
+         }
+     }
 
     
     func getPreviousMaxTabs(){
@@ -106,5 +161,16 @@ class SafariExtensionViewController: SFSafariExtensionViewController, NSTextFiel
             settings.setIntData(key: "maxTabs", data: maxTabsFromBox)
         }
     }
-        
+      
+    
+    @IBAction func closeToLeftAction(_ sender: Any) {
+        closeTabsToLeft()
+    }
+  
+    @IBAction func closeToRightAction(_ sender: Any) {
+        closeTabsToRight()
+    }
+    
+    
+    
 }

@@ -30,10 +30,7 @@
 		<string>$(PRODUCT_MODULE_NAME).SafariExtensionHandler</string>
 		<key>SFSafariContentScript</key>
 		<array>
-			<dict>
-				<key>Script</key>
-				<string>script.js</string>
-			</dict>
+			<dict/>
 		</array>
 		<key>SFSafariToolbarItem</key>
 		<dict>
@@ -44,21 +41,21 @@
 			<key>Image</key>
 			<string>ToolbarItemIcon.pdf</string>
 			<key>Label</key>
-			<string>Your Button</string>
+			<string>Tab Count Extension</string>
 		</dict>
 		<key>SFSafariWebsiteAccess</key>
 		<dict>
 			<key>Allowed Domains</key>
 			<array>
-				<string>*</string>
+				<string>*.otzberg.net</string>
 			</array>
 			<key>Level</key>
-			<string>All</string>
+			<string>None</string>
 		</dict>
 	</dict>
 	<key>NSHumanReadableCopyright</key>
 	<string>Copyright © 2019 Claus Wolf. All rights reserved.</string>
 	<key>NSHumanReadableDescription</key>
-	<string>This Extension helps to manage tabs</string>
+	<string>This Extension helps you see, when there are too many tabs open</string>
 </dict>
 </plist>
