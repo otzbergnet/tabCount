@@ -5,7 +5,7 @@
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleDisplayName</key>
-	<string>Tab Count Extension</string>
+	<string>Tab Count</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
@@ -56,6 +56,6 @@
 	<key>NSHumanReadableCopyright</key>
 	<string>Copyright © 2019 Claus Wolf. All rights reserved.</string>
 	<key>NSHumanReadableDescription</key>
-	<string>This Extension helps you see, when there are too many tabs open</string>
+	<string>This Extension helps you see when there are too many tabs open</string>
 </dict>
 </plist>
