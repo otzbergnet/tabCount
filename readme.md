@@ -2,15 +2,15 @@
 
 ## About
 
-With Safari 13 Apple depreated old style Safari Extensions (.safariextensions), which let to a number of extensions to become unavailable.
+With Safari 13 Apple deprecated old style Safari Extensions (.safariextensions), which meant a large number of extensions became unavailable.
 
-[@gingerbeardman](https://github.com/gingerbeardman) contacted me about [Safari Count Tabs Extension](https://github.com/adrianh/safari-count-tabs-extension), which was no longer able to run inthe latest Safari builds.
+[@gingerbeardman](https://github.com/gingerbeardman) contacted me about [Safari Count Tabs Extension](https://github.com/adrianh/safari-count-tabs-extension), which was no longer able to run in the latest Safari builds.
 
-The inspiration stems from someone else's work and I am grateful to both for mentioning it
+The inspiration stems from someone else's work and I am grateful to both for mentioning it.
 
 ## Translations
 
-At this time the app is localized in English & German - I would love to add your language. Please contact me to make this happen
+At this time the app is localized in English & German - I would love to add your language. Please contact me to make this happen.
 
 ## Design
 
@@ -22,4 +22,4 @@ You can reach me by [eMail](mailto:tabcount@otzberg.net)
 
 ## License
 
-While I will publish the app at one point in the App Store, I plan to apply an Open Source license
+While I will publish the app at one point in the App Store, I plan to apply an Open Source license.
