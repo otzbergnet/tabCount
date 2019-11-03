@@ -26,5 +26,13 @@ class SettingsHelper {
         self.defaults.synchronize()
     }
 
+    func setBoolData(key: String, data: Bool){
+        self.defaults.set(data, forKey: key)
+        self.defaults.synchronize()
+    }
+    
+    func getBoolData(key: String) -> Bool {
+        return self.defaults.bool(forKey: key)
+    }
     
 }

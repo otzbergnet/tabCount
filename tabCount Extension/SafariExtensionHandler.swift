@@ -53,19 +53,29 @@ class SafariExtensionHandler: SFSafariExtensionHandler {
     }
     
     func updateCountBadge(){
+        let showWindow = settings.getBoolData(key: "window")
         let maxTabs = settings.getIntData(key: "maxTabs")
+        var badgeText = ""
         if(self.tabCount >= maxTabs){
+            
+            if(showWindow){
+                badgeText = "\(self.tabCount) (\(self.windowCount))"
+            }
+            else{
+                badgeText = "\(self.tabCount)"
+            }
+            
             SFSafariApplication.getActiveWindow { (window) in
-                window?.getToolbarItem { $0?.setBadgeText("\(self.tabCount)")}
+                window?.getToolbarItem { $0?.setBadgeText(badgeText)}
             }
         }
     }
+    
     
     func updateBadge(text: String){
         SFSafariApplication.getActiveWindow { (window) in
             window?.getToolbarItem { $0?.setBadgeText(text)}
         }
-        
     }
     
 }

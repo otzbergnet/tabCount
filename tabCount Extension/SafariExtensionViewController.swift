@@ -20,11 +20,12 @@ class SafariExtensionViewController: SFSafariExtensionViewController, NSTextFiel
     @IBOutlet weak var badgeFromBox: NSTextField!
     @IBOutlet weak var badgeFromSlider: NSSlider!
     
+    @IBOutlet weak var windowCountCheckBox: NSButton!
     
     
     static let shared: SafariExtensionViewController = {
         let shared = SafariExtensionViewController()
-        shared.preferredContentSize = NSSize(width:320, height:320)
+        shared.preferredContentSize = NSSize(width:320, height:345)
         return shared
     }()
     
@@ -34,11 +35,13 @@ class SafariExtensionViewController: SFSafariExtensionViewController, NSTextFiel
     
     override func viewDidLoad() {
         getPreviousMaxTabs()
+        getShowWindowState()
         updateDataLabels()
     }
     
     override func viewWillAppear() {
         getPreviousMaxTabs()
+        getShowWindowState()
         updateDataLabels()
     }
     
@@ -124,6 +127,16 @@ class SafariExtensionViewController: SFSafariExtensionViewController, NSTextFiel
         
     }
     
+    func getShowWindowState(){
+        let windowState = settings.getBoolData(key: "window")
+        if(windowState){
+            windowCountCheckBox.state = .on
+        }
+        else{
+            windowCountCheckBox.state = .off
+        }
+    }
+    
     func updateDataLabels(){
         tabCount = 0
         windowCount = 0
@@ -179,6 +192,14 @@ class SafariExtensionViewController: SFSafariExtensionViewController, NSTextFiel
         closeTabsToRight()
     }
     
+    @IBAction func windowCountCheckBoxChanged(_ sender: NSButton) {
+        if(sender.state == .on){
+            settings.setBoolData(key: "window", data: true)
+        }
+        else{
+            settings.setBoolData(key: "window", data: false)
+        }
+    }
     
     
 }
