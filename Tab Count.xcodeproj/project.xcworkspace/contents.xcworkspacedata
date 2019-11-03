@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:tabCount.xcodeproj">
+      location = "self:/Users/cwolf/Documents/GitHub/tabCount/Tab Count.xcodeproj">
    </FileRef>
 </Workspace>

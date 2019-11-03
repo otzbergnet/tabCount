@@ -12,7 +12,7 @@
 		2D847576236D523800C9BE4F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D847574236D523800C9BE4F /* Main.storyboard */; };
 		2D847578236D523800C9BE4F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D847577236D523800C9BE4F /* ViewController.swift */; };
 		2D84757A236D523900C9BE4F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2D847579236D523900C9BE4F /* Assets.xcassets */; };
-		2D847581236D523A00C9BE4F /* tabCount Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 2D847580236D523A00C9BE4F /* tabCount Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		2D847581236D523A00C9BE4F /* Tab Count Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 2D847580236D523A00C9BE4F /* Tab Count Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		2D847586236D523A00C9BE4F /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D847585236D523A00C9BE4F /* Cocoa.framework */; };
 		2D847589236D523A00C9BE4F /* SafariExtensionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D847588236D523A00C9BE4F /* SafariExtensionHandler.swift */; };
 		2D84758B236D523A00C9BE4F /* SafariExtensionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D84758A236D523A00C9BE4F /* SafariExtensionViewController.swift */; };
@@ -40,7 +40,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				2D847581236D523A00C9BE4F /* tabCount Extension.appex in Embed App Extensions */,
+				2D847581236D523A00C9BE4F /* Tab Count Extension.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -48,14 +48,14 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		2D84756D236D523800C9BE4F /* tabCount.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tabCount.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2D84756D236D523800C9BE4F /* Tab Count.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tab Count.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D847570236D523800C9BE4F /* tabCount.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = tabCount.entitlements; sourceTree = "<group>"; };
 		2D847572236D523800C9BE4F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2D847575236D523800C9BE4F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2D847577236D523800C9BE4F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		2D847579236D523900C9BE4F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2D84757B236D523900C9BE4F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2D847580236D523A00C9BE4F /* tabCount Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "tabCount Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2D847580236D523A00C9BE4F /* Tab Count Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Tab Count Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D847585236D523A00C9BE4F /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		2D847588236D523A00C9BE4F /* SafariExtensionHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariExtensionHandler.swift; sourceTree = "<group>"; };
 		2D84758A236D523A00C9BE4F /* SafariExtensionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariExtensionViewController.swift; sourceTree = "<group>"; };
@@ -101,8 +101,8 @@
 		2D84756E236D523800C9BE4F /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				2D84756D236D523800C9BE4F /* tabCount.app */,
-				2D847580236D523A00C9BE4F /* tabCount Extension.appex */,
+				2D84756D236D523800C9BE4F /* Tab Count.app */,
+				2D847580236D523A00C9BE4F /* Tab Count Extension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -146,9 +146,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		2D84756C236D523800C9BE4F /* tabCount */ = {
+		2D84756C236D523800C9BE4F /* Tab Count */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2D84759B236D523A00C9BE4F /* Build configuration list for PBXNativeTarget "tabCount" */;
+			buildConfigurationList = 2D84759B236D523A00C9BE4F /* Build configuration list for PBXNativeTarget "Tab Count" */;
 			buildPhases = (
 				2D847569236D523800C9BE4F /* Sources */,
 				2D84756A236D523800C9BE4F /* Frameworks */,
@@ -160,14 +160,14 @@
 			dependencies = (
 				2D847583236D523A00C9BE4F /* PBXTargetDependency */,
 			);
-			name = tabCount;
+			name = "Tab Count";
 			productName = tabCount;
-			productReference = 2D84756D236D523800C9BE4F /* tabCount.app */;
+			productReference = 2D84756D236D523800C9BE4F /* Tab Count.app */;
 			productType = "com.apple.product-type.application";
 		};
-		2D84757F236D523A00C9BE4F /* tabCount Extension */ = {
+		2D84757F236D523A00C9BE4F /* Tab Count Extension */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2D847597236D523A00C9BE4F /* Build configuration list for PBXNativeTarget "tabCount Extension" */;
+			buildConfigurationList = 2D847597236D523A00C9BE4F /* Build configuration list for PBXNativeTarget "Tab Count Extension" */;
 			buildPhases = (
 				2D84757C236D523A00C9BE4F /* Sources */,
 				2D84757D236D523A00C9BE4F /* Frameworks */,
@@ -177,9 +177,9 @@
 			);
 			dependencies = (
 			);
-			name = "tabCount Extension";
+			name = "Tab Count Extension";
 			productName = "tabCount Extension";
-			productReference = 2D847580236D523A00C9BE4F /* tabCount Extension.appex */;
+			productReference = 2D847580236D523A00C9BE4F /* Tab Count Extension.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
@@ -200,7 +200,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 2D847568236D523800C9BE4F /* Build configuration list for PBXProject "tabCount" */;
+			buildConfigurationList = 2D847568236D523800C9BE4F /* Build configuration list for PBXProject "Tab Count" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -214,8 +214,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				2D84756C236D523800C9BE4F /* tabCount */,
-				2D84757F236D523A00C9BE4F /* tabCount Extension */,
+				2D84756C236D523800C9BE4F /* Tab Count */,
+				2D84757F236D523A00C9BE4F /* Tab Count Extension */,
 			);
 		};
 /* End PBXProject section */
@@ -269,7 +269,7 @@
 /* Begin PBXTargetDependency section */
 		2D847583236D523A00C9BE4F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 2D84757F236D523A00C9BE4F /* tabCount Extension */;
+			target = 2D84757F236D523A00C9BE4F /* Tab Count Extension */;
 			targetProxy = 2D847582236D523A00C9BE4F /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -496,7 +496,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		2D847568236D523800C9BE4F /* Build configuration list for PBXProject "tabCount" */ = {
+		2D847568236D523800C9BE4F /* Build configuration list for PBXProject "Tab Count" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2D847595236D523A00C9BE4F /* Debug */,
@@ -505,7 +505,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2D847597236D523A00C9BE4F /* Build configuration list for PBXNativeTarget "tabCount Extension" */ = {
+		2D847597236D523A00C9BE4F /* Build configuration list for PBXNativeTarget "Tab Count Extension" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2D847598236D523A00C9BE4F /* Debug */,
@@ -514,7 +514,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2D84759B236D523A00C9BE4F /* Build configuration list for PBXNativeTarget "tabCount" */ = {
+		2D84759B236D523A00C9BE4F /* Build configuration list for PBXNativeTarget "Tab Count" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2D84759C236D523A00C9BE4F /* Debug */,
