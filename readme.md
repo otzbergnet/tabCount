@@ -4,7 +4,7 @@
 
 With Safari 13 Apple depreated old style Safari Extensions (.safariextensions), which let to a number of extensions to become unavailable.
 
-@gingerbeardman contacted me about [Safari Count Tabs Extension](https://github.com/adrianh/safari-count-tabs-extension), which was no longer able to run inthe latest Safari builds.
+[@gingerbeardman](https://github.com/gingerbeardman) contacted me about [Safari Count Tabs Extension](https://github.com/adrianh/safari-count-tabs-extension), which was no longer able to run inthe latest Safari builds.
 
 The inspiration stems from someone else's work and I am grateful to both for mentioning it
 
