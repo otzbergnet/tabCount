@@ -1,6 +1,6 @@
 
 /* Class = "NSTextFieldCell"; title = "Safari Tab Count"; ObjectID = "2Ec-kd-q2K"; */
-"2Ec-kd-q2K.title" = "Safari Tab Count";
+"2Ec-kd-q2K.title" = "Tab Count";
 
 /* Class = "NSTextFieldCell"; title = "Tab Count:"; ObjectID = "Fda-wa-Gn1"; */
 "Fda-wa-Gn1.title" = "Anzahl Tabs:";
@@ -15,7 +15,7 @@
 "iJW-4U-11p.title" = "Label";
 
 /* Close tabs to:*/
-"MHr-ta-yhp.title" = "Alle Tabs schliessen:";
+"MHr-ta-yhp.title" = "Alle Tabs schließen:";
 
 /* Class = "NSButtonCell"; title = "Close tabs to left"; ObjectID = "NdP-Wm-1dE"; */
 "NdP-Wm-1dE.title" = "links";
