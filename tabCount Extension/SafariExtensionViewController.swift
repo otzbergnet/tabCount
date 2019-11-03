@@ -24,7 +24,7 @@ class SafariExtensionViewController: SFSafariExtensionViewController, NSTextFiel
     
     static let shared: SafariExtensionViewController = {
         let shared = SafariExtensionViewController()
-        shared.preferredContentSize = NSSize(width:320, height:280)
+        shared.preferredContentSize = NSSize(width:320, height:320)
         return shared
     }()
     

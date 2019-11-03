@@ -1,0 +1,31 @@
+
+/* Class = "NSTextFieldCell"; title = "Safari Tab Count"; ObjectID = "2Ec-kd-q2K"; */
+"2Ec-kd-q2K.title" = "Safari Tab Count";
+
+/* Class = "NSTextFieldCell"; title = "Tab Count:"; ObjectID = "Fda-wa-Gn1"; */
+"Fda-wa-Gn1.title" = "Anzahl Tabs:";
+
+/* Class = "NSTextFieldCell"; title = "Label"; ObjectID = "IQM-E3-U44"; Simply Used to place a Number*/
+"IQM-E3-U44.title" = "Label";
+
+/* Class = "NSTextFieldCell"; title = "Window Count:"; ObjectID = "ha4-Ck-XDO"; */
+"ha4-Ck-XDO.title" = "Anzahl Fenster:";
+
+/* Class = "NSTextFieldCell"; title = "Label"; ObjectID = "iJW-4U-11p"; Simply Used to place a Number*/
+"iJW-4U-11p.title" = "Label";
+
+/* Close tabs to:*/
+"MHr-ta-yhp.title" = "Alle Tabs schliessen:";
+
+/* Class = "NSButtonCell"; title = "Close tabs to left"; ObjectID = "NdP-Wm-1dE"; */
+"NdP-Wm-1dE.title" = "links";
+
+/* Class = "NSButtonCell"; title = "Close tabs to right"; ObjectID = "1X0-Ho-SuO"; */
+"1X0-Ho-SuO.title" = "rechts";
+
+/* Class = "NSTextFieldCell"; title = "Show Tab Count as badge on toolbar icon:"; ObjectID = "bTE-06-HCL"; */
+"bTE-06-HCL.title" = "Anzahl offener Tabs im Toolbar zeigen, ab:";
+
+
+
+
