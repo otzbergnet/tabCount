@@ -45,8 +45,13 @@ class ViewController: NSViewController {
 
     @IBAction func tabCountSave(_ sender: Any) {
         if let maxTabsFromBox = Int(tabCountBox.stringValue){
-            print(maxTabsFromBox)
-            settings.setIntData(key: "maxTabs", data: maxTabsFromBox)
+            if(maxTabsFromBox > 0 && maxTabsFromBox < 100){
+               settings.setIntData(key: "maxTabs", data: maxTabsFromBox)
+            }
+            else{
+                tabCountBox.stringValue = "10"
+            }
+            
         }
         else{
             tabCountBox.stringValue = "10"

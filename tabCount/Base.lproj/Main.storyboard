@@ -98,12 +98,12 @@
         <scene sceneID="hIz-AP-VOD">
             <objects>
                 <viewController id="XfG-lQ-9wD" customClass="ViewController" customModule="tabCount" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" id="m2S-Jp-Qdl">
-                        <rect key="frame" x="0.0" y="0.0" width="640" height="383"/>
+                    <view key="view" misplaced="YES" id="m2S-Jp-Qdl">
+                        <rect key="frame" x="0.0" y="0.0" width="640" height="348"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Fqk-YA-Amn">
-                                <rect key="frame" x="45" y="294" width="64" height="64"/>
+                                <rect key="frame" x="45" y="259" width="64" height="64"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="64" id="AEM-sF-2tS"/>
                                     <constraint firstAttribute="height" constant="64" id="gea-nf-f4W"/>
@@ -111,29 +111,27 @@
                                 <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="AppIcon" id="j4W-AA-DW9"/>
                             </imageView>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="KnH-nz-9mQ">
-                                <rect key="frame" x="152" y="315" width="215" height="23"/>
+                                <rect key="frame" x="152" y="280" width="215" height="23"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" title="Welcome to Tab Count" id="Ndz-z7-kVw">
                                     <font key="font" metaFont="systemBold" size="20"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="fsd-K5-xK9">
-                                <rect key="frame" x="152" y="65" width="445" height="230"/>
+                            <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" textCompletion="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fsd-K5-xK9">
+                                <rect key="frame" x="152" y="65" width="445" height="195"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="230" id="mjq-ul-2kj"/>
+                                    <constraint firstAttribute="height" constant="195" id="mjq-ul-2kj"/>
                                 </constraints>
-                                <textFieldCell key="cell" sendsActionOnEndEditing="YES" state="on" id="Ybs-tm-0T5">
+                                <textFieldCell key="cell" allowsUndo="NO" sendsActionOnEndEditing="YES" state="on" alignment="justified" id="Ybs-tm-0T5">
                                     <font key="font" metaFont="system"/>
-                                    <string key="title">Thank you for downloading Tab Count. You'll need this containing app just once, to:
+                                    <mutableString key="title">Thank you for downloading Tab Count! You'll need this containing app just once to enable Tab Count in Safari. To do so, click the button to Open Safari Extension Preferences below
 
-1) Enable Tab Count extension in Safari. To do so, click the button to Open Safari Extension Preferences below
+The app will show a toolbar icon and a badge with the number of open tabs. To avoid it being too intrusive you can set a threashold for when the badge is to show. The default is 10, which you can change by typing a different value in the box on the left.
 
-2) Set the number of tabs at which the app will show the tab count as a badge to the toolbar icon. 
+Let me know, if you have ideas on how to improve this app! 
 
-The default is 10, but you can change that by setting your personal preference in the box at the left.
-
-Let me know, if you have ideas on how to improve this app - you can reach me at tabcount@otzberg.net</string>
+Claus - tabcount@otzberg.net</mutableString>
                                     <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="quaternaryLabelColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>

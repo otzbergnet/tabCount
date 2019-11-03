@@ -157,8 +157,16 @@ class SafariExtensionViewController: SFSafariExtensionViewController, NSTextFiel
 
     @IBAction func badgeFromBoxAction(_ sender: NSTextField) {
         if let maxTabsFromBox = Int(badgeFromBox.stringValue){
-            badgeFromSlider.integerValue = maxTabsFromBox
-            settings.setIntData(key: "maxTabs", data: maxTabsFromBox)
+            if(maxTabsFromBox > 0 && maxTabsFromBox < 100){
+                badgeFromSlider.integerValue = maxTabsFromBox
+                settings.setIntData(key: "maxTabs", data: maxTabsFromBox)
+            }
+            else{
+                badgeFromSlider.integerValue = 10
+                badgeFromBox.stringValue = "10"
+                settings.setIntData(key: "maxTabs", data: 10)
+            }
+            
         }
     }
       
