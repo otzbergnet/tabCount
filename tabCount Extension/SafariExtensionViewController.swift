@@ -56,60 +56,40 @@ class SafariExtensionViewController: SFSafariExtensionViewController, NSTextFiel
     }
     
     func closeTabsToLeft(){
-        var foundTab = false
-        NSLog("TabCount: foundTab is false")
+
         SFSafariApplication.getActiveWindow { (window) in
-            guard let window = window else{
-                //NSLog("TabCount: Window failed will return")
+            guard let window = window else {
                 return
             }
-            
-            window.getActiveTab { (nowActive) in
-                window.getAllTabs(completionHandler: { (tabs) in
-                    for tab in tabs{
-                        if(foundTab){
-                            //NSLog("TabCount: Found Tab will return")
-                            return
-                        }
-                        if(tab != nowActive){
-                            //NSLog("TabCount: Not the same tab");
-                            tab.close()
-                        }
-                        else{
-                            //NSLog("TabCount: Same tab, setting it that way")
-                            foundTab = true
-                            return
-                        }
+            window.getActiveTab { (activeTab) in
+                window.getAllTabs { (tabs) in
+                    
+                    let tabIndex: Int = tabs.firstIndex(where: { activeTab!.isEqual($0) })!
+                    for n in 0...(tabIndex-1){
+                        tabs[n].close()
                     }
-                })
+
+                }
             }
         }
     }
     
     func closeTabsToRight(){
-         var foundTab = false
-         NSLog("TabCount: foundTab is false")
-         SFSafariApplication.getActiveWindow { (window) in
-             guard let window = window else{
-                 //NSLog("TabCount: Window failed will return")
-                 return
-             }
-             
-             window.getActiveTab { (nowActive) in
-                 window.getAllTabs(completionHandler: { (tabs) in
-                     for tab in tabs{
-                         if(tab != nowActive && foundTab){
-                             //NSLog("TabCount: Not the same tab");
-                             tab.close()
-                         }
-                         else{
-                             //NSLog("TabCount: Same tab, setting it that way")
-                             foundTab = true
-                         }
-                     }
-                 })
-             }
-         }
+        SFSafariApplication.getActiveWindow { (window) in
+            guard let window = window else {
+                return
+            }
+            window.getActiveTab { (activeTab) in
+                window.getAllTabs { (tabs) in
+                    
+                    let tabIndex: Int = tabs.firstIndex(where: { activeTab!.isEqual($0) })!
+                    for n in (tabIndex+1)...tabs.count{
+                        tabs[n].close()
+                    }
+
+                }
+            }
+        }
      }
 
     
