@@ -22,4 +22,4 @@ You can reach me by [eMail](mailto:tabcount@otzberg.net)
 
 ## License
 
-While I will publish the app at one point in the App Store, I plan to apply an Open Source license.
+This app will be published to the AppStore, but the code itself is licensed under MIT license. See repository for license information.
