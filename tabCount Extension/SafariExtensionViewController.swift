@@ -56,7 +56,7 @@ class SafariExtensionViewController: SFSafariExtensionViewController, NSTextFiel
     }
     
     func closeTabsToLeft(){
-
+        SafariExtensionViewController.shared.dismissPopover()
         SFSafariApplication.getActiveWindow { (window) in
             guard let window = window else {
                 return
@@ -75,6 +75,7 @@ class SafariExtensionViewController: SFSafariExtensionViewController, NSTextFiel
     }
     
     func closeTabsToRight(){
+        SafariExtensionViewController.shared.dismissPopover()
         SFSafariApplication.getActiveWindow { (window) in
             guard let window = window else {
                 return
