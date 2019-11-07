@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="15505" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
     <dependencies>
+        <deployment identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="15505"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <customObject id="-2" userLabel="File's Owner" customClass="SafariExtensionViewController" customModule="tabCount_Extension" customModuleProvider="target">
+        <customObject id="-2" userLabel="File's Owner" customClass="SafariExtensionViewController" customModule="Tab_Count_Extension" customModuleProvider="target">
             <connections>
                 <outlet property="badgeFromBox" destination="RzG-Uc-Prf" id="TcB-Uv-BNu"/>
                 <outlet property="badgeFromSlider" destination="RTD-RK-r1n" id="ErU-J8-aTu"/>
@@ -122,8 +123,8 @@
                     </textFieldCell>
                 </textField>
                 <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Bci-jG-5L6">
-                    <rect key="frame" x="18" y="18" width="276" height="18"/>
-                    <buttonCell key="cell" type="check" title="Show window count in badge, e.g. 124 (4)" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="B4O-6U-CAU">
+                    <rect key="frame" x="18" y="18" width="263" height="18"/>
+                    <buttonCell key="cell" type="check" title="Show window count in badge, e.g. 124 ⁴" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="B4O-6U-CAU">
                         <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                         <font key="font" metaFont="system"/>
                     </buttonCell>
