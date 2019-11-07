@@ -22,6 +22,7 @@
 		2D84759F236D52EA00C9BE4F /* SettingsHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D84759E236D52EA00C9BE4F /* SettingsHelper.swift */; };
 		2D8475A0236D52EA00C9BE4F /* SettingsHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D84759E236D52EA00C9BE4F /* SettingsHelper.swift */; };
 		2D921419237353400058613B /* info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2D921418237353400058613B /* info.plist */; };
+		2D92141C237484D20058613B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2D92141E237484D20058613B /* InfoPlist.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +67,7 @@
 		2D847594236D523A00C9BE4F /* tabCount_Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = tabCount_Extension.entitlements; sourceTree = "<group>"; };
 		2D84759E236D52EA00C9BE4F /* SettingsHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsHelper.swift; sourceTree = "<group>"; };
 		2D921418237353400058613B /* info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = info.plist; sourceTree = "<group>"; };
+		2D92141D237484D20058613B /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		2DF22BC7236EA0DC00D0AA12 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Main.strings; sourceTree = "<group>"; };
 		2DF22BC8236EA0DC00D0AA12 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/SafariExtensionViewController.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -140,6 +142,7 @@
 				2D847592236D523A00C9BE4F /* ToolbarItemIcon.pdf */,
 				2D847594236D523A00C9BE4F /* tabCount_Extension.entitlements */,
 				2D84759E236D52EA00C9BE4F /* SettingsHelper.swift */,
+				2D92141E237484D20058613B /* InfoPlist.strings */,
 			);
 			path = "tabCount Extension";
 			sourceTree = "<group>";
@@ -240,6 +243,7 @@
 				2D847593236D523A00C9BE4F /* ToolbarItemIcon.pdf in Resources */,
 				2D84758E236D523A00C9BE4F /* SafariExtensionViewController.xib in Resources */,
 				2D847591236D523A00C9BE4F /* script.js in Resources */,
+				2D92141C237484D20058613B /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -293,6 +297,14 @@
 				2DF22BC8236EA0DC00D0AA12 /* de */,
 			);
 			name = SafariExtensionViewController.xib;
+			sourceTree = "<group>";
+		};
+		2D92141E237484D20058613B /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2D92141D237484D20058613B /* de */,
+			);
+			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

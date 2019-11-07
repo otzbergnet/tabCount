@@ -1,0 +1,10 @@
+/* 
+  InfoPlist.strings
+  Tab Count
+
+  Created by Claus Wolf on 07.11.19.
+  Copyright © 2019 Claus Wolf. All rights reserved.
+*/
+
+NSHumanReadableDescription = "Diese Erweiterung hilft zu sehen, wie viele Tabs geöffnet sind.";
+NSHumanReadableCopyright = "© 2019 Claus Wolf. Alle Recht vorbehalten.";
