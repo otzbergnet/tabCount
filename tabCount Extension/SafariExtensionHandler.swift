@@ -58,8 +58,9 @@ class SafariExtensionHandler: SFSafariExtensionHandler {
         var badgeText = ""
         if(self.tabCount >= maxTabs){
             
-            if(showWindow){
-                badgeText = "\(self.tabCount) (\(self.windowCount))"
+            if(showWindow && self.windowCount > 1){
+                badgeText = "\(self.tabCount) "
+                badgeText += exponent(i: self.windowCount)
             }
             else{
                 badgeText = "\(self.tabCount)"
@@ -76,6 +77,29 @@ class SafariExtensionHandler: SFSafariExtensionHandler {
         SFSafariApplication.getActiveWindow { (window) in
             window?.getToolbarItem { $0?.setBadgeText(text)}
         }
+    }
+    
+    func exponent(i: Int) -> String {
+        let powers : [String] = [
+          "\u{2070}",
+          "\u{00B9}",
+          "\u{00B2}",
+          "\u{00B3}",
+          "\u{2074}",
+          "\u{2075}",
+          "\u{2076}",
+          "\u{2077}",
+          "\u{2078}",
+          "\u{2079}"
+        ]
+
+        let digits = Array(String(i))
+        var string = ""
+
+        for d in digits {
+          string.append("\(powers[Int(String(d))!])")
+        }
+        return string
     }
     
 }
