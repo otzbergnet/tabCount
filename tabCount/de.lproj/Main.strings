@@ -33,7 +33,8 @@
 "Olw-nP-bQN.title" = "Tab Count ausblenden";
 
 /* Class = "NSTextFieldCell"; placeholderString = "Tab Count"; ObjectID = "SXS-p8-lgb"; */
-"SXS-p8-lgb.placeholderString" = "Tab Count";
+"SXS-p8-lgb.placeholderString" = "Tabs #";
+"7bX-Ue-B1h.placeholderString" = "Fenster #";
 
 /* Class = "NSMenuItem"; title = "Hide Others"; ObjectID = "Vdr-fp-XzO"; */
 "Vdr-fp-XzO.title" = "Andere ausblenden";
@@ -53,4 +54,4 @@
 /* Class = "NSButtonCell"; title = "Save"; ObjectID = "xlz-ha-1c8"; */
 "xlz-ha-1c8.title" = "Sichern";
 
-"pHL-L6-PCr.title" = "Fenster zählen";
+"pHL-L6-PCr.title" = "Fenster";

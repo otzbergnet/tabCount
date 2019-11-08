@@ -3,13 +3,13 @@
 "2Ec-kd-q2K.title" = "Tab Count";
 
 /* Class = "NSTextFieldCell"; title = "Tab Count:"; ObjectID = "Fda-wa-Gn1"; */
-"Fda-wa-Gn1.title" = "Anzahl Tabs:";
+"Fda-wa-Gn1.title" = "Tabs:";
 
 /* Class = "NSTextFieldCell"; title = "Label"; ObjectID = "IQM-E3-U44"; Simply Used to place a Number*/
 "IQM-E3-U44.title" = "Label";
 
 /* Class = "NSTextFieldCell"; title = "Window Count:"; ObjectID = "ha4-Ck-XDO"; */
-"ha4-Ck-XDO.title" = "Anzahl Fenster:";
+"ha4-Ck-XDO.title" = "Fenster:";
 
 /* Class = "NSTextFieldCell"; title = "Label"; ObjectID = "iJW-4U-11p"; Simply Used to place a Number*/
 "iJW-4U-11p.title" = "Label";
@@ -24,8 +24,11 @@
 "1X0-Ho-SuO.title" = "rechts";
 
 /* Class = "NSTextFieldCell"; title = "Show Tab Count as badge on toolbar icon:"; ObjectID = "bTE-06-HCL"; */
-"bTE-06-HCL.title" = "Anzahl offener Tabs im Toolbar zeigen, ab:";
+"bTE-06-HCL.title" = "Tabs";
 
-"B4O-6U-CAU.title" = "Anzahl offener Fenster zeigen, z.B. 124 ⁴";
+"B4O-6U-CAU.title" = "Fenster";
+
+"rrM-Yg-vns.title" = "Badge für";
+"bDd-Tp-RDz.title" = "Zeigen ab";
 
 

@@ -17,15 +17,16 @@ class SafariExtensionViewController: SFSafariExtensionViewController, NSTextFiel
     @IBOutlet weak var windowCountLabel: NSTextField!
     @IBOutlet weak var tabCountLabel: NSTextField!
     
-    @IBOutlet weak var badgeFromBox: NSTextField!
-    @IBOutlet weak var badgeFromSlider: NSSlider!
+    @IBOutlet weak var tabCountBox: NSComboBox!
+    @IBOutlet weak var windowCountBox: NSComboBox!
     
+    @IBOutlet weak var tabCountCheckBox: NSButton!
     @IBOutlet weak var windowCountCheckBox: NSButton!
     
     
     static let shared: SafariExtensionViewController = {
         let shared = SafariExtensionViewController()
-        shared.preferredContentSize = NSSize(width:320, height:345)
+        shared.preferredContentSize = NSSize(width:280, height:240)
         return shared
     }()
     
@@ -34,25 +35,30 @@ class SafariExtensionViewController: SFSafariExtensionViewController, NSTextFiel
     }
     
     override func viewDidLoad() {
+        populateComboBoxes()
         getPreviousMaxTabs()
+        getPreviousMaxWindows()
+        getShowTabState()
         getShowWindowState()
         updateDataLabels()
     }
     
     override func viewWillAppear() {
         getPreviousMaxTabs()
+        getPreviousMaxWindows()
+        getShowTabState()
         getShowWindowState()
         updateDataLabels()
     }
     
     override func viewWillDisappear() {
-        let maxTabsFromSlider = badgeFromSlider.integerValue
-        if let maxTabsFromBox = Int(badgeFromBox.stringValue){
-            settings.setIntData(key: "maxTabs", data: maxTabsFromBox)
-        }
-        else{
-            settings.setIntData(key: "maxTabs", data: maxTabsFromSlider)
-        }
+        //        let maxTabsFromSlider = badgeFromSlider.integerValue
+        //        if let maxTabsFromBox = Int(badgeFromBox.stringValue){
+        //            settings.setIntData(key: "maxTabs", data: maxTabsFromBox)
+        //        }
+        //        else{
+        //            settings.setIntData(key: "maxTabs", data: maxTabsFromSlider)
+        //        }
     }
     
     func closeTabsToLeft(){
@@ -68,7 +74,7 @@ class SafariExtensionViewController: SFSafariExtensionViewController, NSTextFiel
                     for n in 0...(tabIndex-1){
                         tabs[n].close()
                     }
-
+                    
                 }
             }
         }
@@ -87,25 +93,43 @@ class SafariExtensionViewController: SFSafariExtensionViewController, NSTextFiel
                     for n in (tabIndex+1)...tabs.count{
                         tabs[n].close()
                     }
-
+                    
                 }
             }
         }
-     }
-
+    }
+    
+    func populateComboBoxes(){
+        for i in 1...100{
+            tabCountBox.addItem(withObjectValue: i)
+        }
+        for n in 1...25{
+            windowCountBox.addItem(withObjectValue: n)
+        }
+    }
     
     func getPreviousMaxTabs(){
         let maxTabs = settings.getIntData(key: "maxTabs")
         
         if(maxTabs > 0){
-            badgeFromBox.stringValue = "\(maxTabs)"
-            badgeFromSlider.integerValue = maxTabs
+            tabCountBox.stringValue = "\(maxTabs)"
         }
         else{
-            badgeFromBox.stringValue = "10"
+            tabCountBox.stringValue = "10"
             settings.setIntData(key: "maxTabs", data: 10)
         }
+    }
+    
+    func getPreviousMaxWindows(){
+        let maxWindows = settings.getIntData(key: "maxWindows")
         
+        if(maxWindows > 0){
+            windowCountBox.stringValue = "\(maxWindows)"
+        }
+        else{
+            windowCountBox.stringValue = "3"
+            settings.setIntData(key: "maxWindows", data: 3)
+        }
     }
     
     func getShowWindowState(){
@@ -115,6 +139,16 @@ class SafariExtensionViewController: SFSafariExtensionViewController, NSTextFiel
         }
         else{
             windowCountCheckBox.state = .off
+        }
+    }
+    
+    func getShowTabState(){
+        let tabState = settings.getBoolData(key: "tab")
+        if(tabState){
+            tabCountCheckBox.state = .on
+        }
+        else{
+            tabCountCheckBox.state = .off
         }
     }
     
@@ -140,35 +174,34 @@ class SafariExtensionViewController: SFSafariExtensionViewController, NSTextFiel
         windowCountLabel.stringValue = ""
     }
     
-    
-    @IBAction func badgeFromSlider(_ sender: Any) {
-        
-        let maxTabs = badgeFromSlider.integerValue
-        badgeFromBox.stringValue = "\(maxTabs)"
-        settings.setIntData(key: "maxTabs", data: maxTabs)
-        
-    }
-
-    @IBAction func badgeFromBoxAction(_ sender: NSTextField) {
-        if let maxTabsFromBox = Int(badgeFromBox.stringValue){
+    @IBAction func tabThresholdBox(_ sender: NSComboBox) {
+        if let maxTabsFromBox = Int(tabCountBox.stringValue){
             if(maxTabsFromBox > 0 && maxTabsFromBox < 100){
-                badgeFromSlider.integerValue = maxTabsFromBox
                 settings.setIntData(key: "maxTabs", data: maxTabsFromBox)
             }
             else{
-                badgeFromSlider.integerValue = 10
-                badgeFromBox.stringValue = "10"
+                tabCountBox.stringValue = "10"
                 settings.setIntData(key: "maxTabs", data: 10)
             }
-            
         }
     }
-      
+    
+    @IBAction func windowThresholdBox(_ sender: Any) {
+        if let maxWindowsFromBox = Int(windowCountBox.stringValue){
+            if(maxWindowsFromBox > 0 && maxWindowsFromBox < 100){
+                settings.setIntData(key: "maxWindows", data: maxWindowsFromBox)
+            }
+            else{
+                windowCountBox.stringValue = "3"
+                settings.setIntData(key: "maxWindows", data: 3)
+            }
+        }
+    }
     
     @IBAction func closeToLeftAction(_ sender: Any) {
         closeTabsToLeft()
     }
-  
+    
     @IBAction func closeToRightAction(_ sender: Any) {
         closeTabsToRight()
     }
@@ -181,6 +214,16 @@ class SafariExtensionViewController: SFSafariExtensionViewController, NSTextFiel
             settings.setBoolData(key: "window", data: false)
         }
     }
+    
+    @IBAction func tabCountCheckBoxChanged(_ sender: NSButton) {
+        if(sender.state == .on){
+            settings.setBoolData(key: "tab", data: true)
+        }
+        else{
+            settings.setBoolData(key: "tab", data: false)
+        }
+    }
+    
     
     
 }
