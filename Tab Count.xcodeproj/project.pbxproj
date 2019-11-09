@@ -23,6 +23,7 @@
 		2D8475A0236D52EA00C9BE4F /* SettingsHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D84759E236D52EA00C9BE4F /* SettingsHelper.swift */; };
 		2D921419237353400058613B /* info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2D921418237353400058613B /* info.plist */; };
 		2D92141C237484D20058613B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2D92141E237484D20058613B /* InfoPlist.strings */; };
+		2DA5F9272376A58D002CCB29 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA5F9252376A446002CCB29 /* Helper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +69,7 @@
 		2D84759E236D52EA00C9BE4F /* SettingsHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsHelper.swift; sourceTree = "<group>"; };
 		2D921418237353400058613B /* info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = info.plist; sourceTree = "<group>"; };
 		2D92141D237484D20058613B /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		2DA5F9252376A446002CCB29 /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 		2DF22BC7236EA0DC00D0AA12 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Main.strings; sourceTree = "<group>"; };
 		2DF22BC8236EA0DC00D0AA12 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/SafariExtensionViewController.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -134,7 +136,6 @@
 		2D847587236D523A00C9BE4F /* tabCount Extension */ = {
 			isa = PBXGroup;
 			children = (
-				2D921418237353400058613B /* info.plist */,
 				2D847588236D523A00C9BE4F /* SafariExtensionHandler.swift */,
 				2D84758A236D523A00C9BE4F /* SafariExtensionViewController.swift */,
 				2D84758C236D523A00C9BE4F /* SafariExtensionViewController.xib */,
@@ -142,6 +143,8 @@
 				2D847592236D523A00C9BE4F /* ToolbarItemIcon.pdf */,
 				2D847594236D523A00C9BE4F /* tabCount_Extension.entitlements */,
 				2D84759E236D52EA00C9BE4F /* SettingsHelper.swift */,
+				2DA5F9252376A446002CCB29 /* Helper.swift */,
+				2D921418237353400058613B /* info.plist */,
 				2D92141E237484D20058613B /* InfoPlist.strings */,
 			);
 			path = "tabCount Extension";
@@ -267,6 +270,7 @@
 				2D84758B236D523A00C9BE4F /* SafariExtensionViewController.swift in Sources */,
 				2D8475A0236D52EA00C9BE4F /* SettingsHelper.swift in Sources */,
 				2D847589236D523A00C9BE4F /* SafariExtensionHandler.swift in Sources */,
+				2DA5F9272376A58D002CCB29 /* Helper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
