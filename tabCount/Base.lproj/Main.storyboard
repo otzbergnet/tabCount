@@ -71,36 +71,196 @@
                 <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
                 <customObject id="Ady-hI-5gd" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="76" y="-134"/>
+            <point key="canvasLocation" x="-283" y="-165"/>
         </scene>
         <!--Window Controller-->
         <scene sceneID="R2V-B0-nI4">
             <objects>
                 <windowController showSeguePresentationStyle="single" id="B8D-0N-5wS" sceneMemberID="viewController">
-                    <window key="window" title="Tab Count Safari App Extension" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" restorable="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" tabbingMode="disallowed" titlebarAppearsTransparent="YES" id="IQv-IB-iLA">
+                    <window key="window" title="Tab Count" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" restorable="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" tabbingMode="disallowed" titleVisibility="hidden" id="IQv-IB-iLA">
                         <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES"/>
                         <windowCollectionBehavior key="collectionBehavior" fullScreenNone="YES"/>
                         <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
-                        <rect key="contentRect" x="196" y="240" width="480" height="270"/>
+                        <rect key="contentRect" x="196" y="240" width="640" height="350"/>
                         <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1057"/>
+                        <value key="minSize" type="size" width="640" height="350"/>
                         <connections>
                             <outlet property="delegate" destination="B8D-0N-5wS" id="98r-iN-zZc"/>
                         </connections>
                     </window>
                     <connections>
-                        <segue destination="XfG-lQ-9wD" kind="relationship" relationship="window.shadowedContentViewController" id="cq2-FE-JQM"/>
+                        <segue destination="N5p-4D-KWj" kind="relationship" relationship="window.shadowedContentViewController" id="rJh-rr-Pdm"/>
                     </connections>
                 </windowController>
                 <customObject id="Oky-zY-oP4" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-39" y="200"/>
+            <point key="canvasLocation" x="-45" y="117"/>
         </scene>
-        <!--View Controller-->
+        <!--Tab View Controller-->
+        <scene sceneID="2UE-g0-bu7">
+            <objects>
+                <tabViewController selectedTabViewItemIndex="0" id="N5p-4D-KWj" sceneMemberID="viewController">
+                    <tabViewItems>
+                        <tabViewItem id="Cub-WV-wPx"/>
+                        <tabViewItem identifier="" id="yhE-Ej-VAe"/>
+                    </tabViewItems>
+                    <tabView key="tabView" type="noTabsNoBorder" id="wlc-ZU-VJB">
+                        <rect key="frame" x="0.0" y="0.0" width="640" height="350"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <font key="font" metaFont="system"/>
+                        <connections>
+                            <outlet property="delegate" destination="N5p-4D-KWj" id="0jv-Kl-IQD"/>
+                        </connections>
+                    </tabView>
+                    <connections>
+                        <outlet property="tabView" destination="wlc-ZU-VJB" id="Uih-xa-IwW"/>
+                        <segue destination="XfG-lQ-9wD" kind="relationship" relationship="tabItems" id="0ZV-fJ-x0K"/>
+                        <segue destination="EW4-1R-6Qh" kind="relationship" relationship="tabItems" id="nkg-hK-9nT"/>
+                    </connections>
+                </tabViewController>
+                <customObject id="QWW-nS-8Zm" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-45" y="605"/>
+        </scene>
+        <!--Settings-->
+        <scene sceneID="Bdl-Y3-fJh">
+            <objects>
+                <viewController title="Settings" id="EW4-1R-6Qh" sceneMemberID="viewController">
+                    <view key="view" id="2U5-jO-Az9" customClass="SettingsViewController" customModule="Tab_Count" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="640" height="348"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3Y0-1f-TfT">
+                                <rect key="frame" x="45" y="274" width="64" height="64"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="64" id="M2C-XU-xXi"/>
+                                    <constraint firstAttribute="height" constant="64" id="e53-MD-Gy2"/>
+                                </constraints>
+                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="AppIcon" id="OZY-uf-JNS"/>
+                            </imageView>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="h84-Fd-Nc7">
+                                <rect key="frame" x="137" y="295" width="460" height="23"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="Settings" id="Srr-w6-WFp">
+                                    <font key="font" metaFont="systemBold" size="20"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="aQm-LC-sTn">
+                                <rect key="frame" x="439" y="186" width="90" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="90" id="Fla-Xg-qHZ"/>
+                                </constraints>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" placeholderString="Tab Count" drawsBackground="YES" id="SXS-p8-lgb">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                                <connections>
+                                    <action selector="tabCountSave:" target="2U5-jO-Az9" id="IbH-2T-JZy"/>
+                                </connections>
+                            </textField>
+                            <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="1eh-ar-UPt">
+                                <rect key="frame" x="439" y="152" width="90" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="90" id="cUO-6P-n06"/>
+                                </constraints>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" placeholderString="Window Count" drawsBackground="YES" id="7bX-Ue-B1h">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                                <connections>
+                                    <action selector="windowCountSave:" target="2U5-jO-Az9" id="Jsv-IP-AVx"/>
+                                </connections>
+                            </textField>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="gNm-Mg-DtM">
+                                <rect key="frame" x="137" y="188" width="269" height="18"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="265" id="u9W-9Y-A8d"/>
+                                </constraints>
+                                <buttonCell key="cell" type="check" title="Show number of open tabs from:" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="j7q-gw-4bq">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="saveTabCount:" target="2U5-jO-Az9" id="asY-se-5Eo"/>
+                                </connections>
+                            </button>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="hXc-se-N2v">
+                                <rect key="frame" x="137" y="154" width="269" height="18"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="265" id="cpx-xJ-Blj"/>
+                                </constraints>
+                                <buttonCell key="cell" type="check" title="Show number of open windows from:" bezelStyle="regularSquare" imagePosition="left" inset="2" id="pHL-L6-PCr">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="saveWindowCount:" target="2U5-jO-Az9" id="wxG-cW-ilY"/>
+                                </connections>
+                            </button>
+                            <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" textCompletion="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hv4-xx-Gmy">
+                                <rect key="frame" x="137" y="229" width="460" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="456" id="QYG-uG-eWb"/>
+                                </constraints>
+                                <textFieldCell key="cell" allowsUndo="NO" sendsActionOnEndEditing="YES" state="on" alignment="justified" id="tvs-oo-bLL">
+                                    <font key="font" metaFont="system"/>
+                                    <string key="title">Here you can define the basic behavior of Tab Count. By default we will show you the tab count, when you have at least 10 tabs open. Additionally you can also show the count of open windows.</string>
+                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="quaternaryLabelColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="2b5-u8-e7V">
+                                <rect key="frame" x="133" y="108" width="70" height="32"/>
+                                <buttonCell key="cell" type="push" title="Save" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="xlz-ha-1c8">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="saveAll:" target="2U5-jO-Az9" id="R6d-ja-FUu"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="h84-Fd-Nc7" secondAttribute="trailing" constant="45" id="0uS-f2-59D"/>
+                            <constraint firstItem="Hv4-xx-Gmy" firstAttribute="leading" secondItem="3Y0-1f-TfT" secondAttribute="trailing" constant="30" id="1fx-5n-1K0"/>
+                            <constraint firstItem="3Y0-1f-TfT" firstAttribute="leading" secondItem="2U5-jO-Az9" secondAttribute="leading" constant="45" id="20e-cv-8Az"/>
+                            <constraint firstItem="hXc-se-N2v" firstAttribute="top" secondItem="gNm-Mg-DtM" secondAttribute="bottom" constant="20" id="5O0-ci-wRe"/>
+                            <constraint firstItem="aQm-LC-sTn" firstAttribute="top" secondItem="Hv4-xx-Gmy" secondAttribute="bottom" constant="22" id="FfT-l8-1m2"/>
+                            <constraint firstItem="2b5-u8-e7V" firstAttribute="leading" secondItem="3Y0-1f-TfT" secondAttribute="trailing" constant="30" id="Hfx-up-bB4"/>
+                            <constraint firstItem="h84-Fd-Nc7" firstAttribute="leading" secondItem="3Y0-1f-TfT" secondAttribute="trailing" constant="30" id="JeR-1m-mZE"/>
+                            <constraint firstItem="gNm-Mg-DtM" firstAttribute="leading" secondItem="3Y0-1f-TfT" secondAttribute="trailing" constant="30" id="Jxc-7n-aNo"/>
+                            <constraint firstItem="1eh-ar-UPt" firstAttribute="top" secondItem="aQm-LC-sTn" secondAttribute="bottom" constant="13" id="NQv-gj-emw"/>
+                            <constraint firstAttribute="trailing" secondItem="Hv4-xx-Gmy" secondAttribute="trailing" constant="45" id="Stx-Q8-hZE"/>
+                            <constraint firstItem="h84-Fd-Nc7" firstAttribute="top" secondItem="2U5-jO-Az9" secondAttribute="top" constant="30" id="XIR-ah-oYd"/>
+                            <constraint firstItem="2b5-u8-e7V" firstAttribute="top" secondItem="hXc-se-N2v" secondAttribute="bottom" constant="20" id="jLg-uL-ehU"/>
+                            <constraint firstItem="hXc-se-N2v" firstAttribute="leading" secondItem="3Y0-1f-TfT" secondAttribute="trailing" constant="30" id="lJI-QU-zjd"/>
+                            <constraint firstItem="aQm-LC-sTn" firstAttribute="leading" secondItem="gNm-Mg-DtM" secondAttribute="trailing" constant="35" id="pNd-lm-bja"/>
+                            <constraint firstItem="3Y0-1f-TfT" firstAttribute="top" secondItem="2U5-jO-Az9" secondAttribute="top" constant="10" id="qLu-tX-Z7y"/>
+                            <constraint firstItem="Hv4-xx-Gmy" firstAttribute="top" secondItem="h84-Fd-Nc7" secondAttribute="bottom" constant="18" id="raZ-B1-5lx"/>
+                            <constraint firstItem="1eh-ar-UPt" firstAttribute="leading" secondItem="hXc-se-N2v" secondAttribute="trailing" constant="35" id="siZ-u9-YKH"/>
+                            <constraint firstItem="gNm-Mg-DtM" firstAttribute="top" secondItem="Hv4-xx-Gmy" secondAttribute="bottom" constant="25" id="tLV-4S-xzw"/>
+                        </constraints>
+                        <connections>
+                            <outlet property="tabCountBox" destination="aQm-LC-sTn" id="mQ5-cb-TXL"/>
+                            <outlet property="tabCountCheck" destination="gNm-Mg-DtM" id="e7c-mn-J6P"/>
+                            <outlet property="windowCountBox" destination="1eh-ar-UPt" id="lBZ-0x-2nE"/>
+                            <outlet property="windowCountCheck" destination="hXc-se-N2v" id="qfB-k0-w3E"/>
+                        </connections>
+                    </view>
+                </viewController>
+                <customObject id="mvo-xI-OS1" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="668" y="1109"/>
+        </scene>
+        <!--Welcome-->
         <scene sceneID="hIz-AP-VOD">
             <objects>
-                <viewController id="XfG-lQ-9wD" customClass="ViewController" customModule="Tab_Count" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Welcome" id="XfG-lQ-9wD" customClass="ViewController" customModule="Tab_Count" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="m2S-Jp-Qdl">
-                        <rect key="frame" x="0.0" y="0.0" width="640" height="348"/>
+                        <rect key="frame" x="0.0" y="0.0" width="640" height="333"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Fqk-YA-Amn">
@@ -112,7 +272,7 @@
                                 <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="AppIcon" id="j4W-AA-DW9"/>
                             </imageView>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="KnH-nz-9mQ">
-                                <rect key="frame" x="152" y="280" width="215" height="23"/>
+                                <rect key="frame" x="137" y="280" width="215" height="23"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" title="Welcome to Tab Count" id="Ndz-z7-kVw">
                                     <font key="font" metaFont="systemBold" size="20"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -122,33 +282,24 @@
                             <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" textCompletion="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fsd-K5-xK9">
                                 <rect key="frame" x="137" y="65" width="460" height="195"/>
                                 <constraints>
+                                    <constraint firstAttribute="width" constant="456" id="CgU-re-PKl"/>
                                     <constraint firstAttribute="height" constant="195" id="mjq-ul-2kj"/>
                                 </constraints>
                                 <textFieldCell key="cell" allowsUndo="NO" sendsActionOnEndEditing="YES" state="on" alignment="justified" id="Ybs-tm-0T5">
                                     <font key="font" metaFont="system"/>
-                                    <string key="title">Thank you for downloading Tab Count! You'll need this containing app just once to enable Tab Count in Safari. To do so, click the button to Open Safari Extension Preferences below
+                                    <mutableString key="title">Thank you for downloading Tab Count! You'll need this containing app just once to enable Tab Count in Safari. To do so, click the button to Open Safari Extension Preferences below
 
-The app will show a toolbar icon and a badge with the number of open tabs. To avoid it being too intrusive you can set a threshold for when the badge is to show. The default is 10, which you can change by typing a different value in the box on the left.
+The app will show a toolbar icon and a badge with the number of open tabs. To avoid it being too intrusive you can set a threshold for when the badge is to show. The default is 10, which you can change within the popover or the settings tab.
 
 Let me know, if you have ideas on how to improve this app! 
 
-Claus - tabcount@otzberg.net</string>
+Claus - tabcount@otzberg.net</mutableString>
                                     <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="quaternaryLabelColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="2b5-u8-e7V">
-                                <rect key="frame" x="29" y="13" width="91" height="32"/>
-                                <buttonCell key="cell" type="push" title="Save" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="xlz-ha-1c8">
-                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" metaFont="system"/>
-                                </buttonCell>
-                                <connections>
-                                    <action selector="tabCountSave:" target="XfG-lQ-9wD" id="VTi-u8-CN4"/>
-                                </connections>
-                            </button>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="zDy-Cr-T1x">
-                                <rect key="frame" x="351" y="13" width="250" height="32"/>
+                                <rect key="frame" x="351" y="22" width="250" height="32"/>
                                 <buttonCell key="cell" type="push" title="Open Safari Extension Preferences" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="tUY-Dw-t8S">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
@@ -157,95 +308,24 @@ Claus - tabcount@otzberg.net</string>
                                     <action selector="openSafariExtensionPreferences:" target="XfG-lQ-9wD" id="P3q-s6-F09"/>
                                 </connections>
                             </button>
-                            <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="aQm-LC-sTn">
-                                <rect key="frame" x="35" y="106" width="79" height="21"/>
-                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" placeholderString="Tab Count" drawsBackground="YES" id="SXS-p8-lgb">
-                                    <font key="font" metaFont="system"/>
-                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                </textFieldCell>
-                            </textField>
-                            <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="1eh-ar-UPt">
-                                <rect key="frame" x="35" y="51" width="79" height="21"/>
-                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" placeholderString="Window Count" drawsBackground="YES" id="7bX-Ue-B1h">
-                                    <font key="font" metaFont="system"/>
-                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                </textFieldCell>
-                                <connections>
-                                    <action selector="windowCountSave:" target="XfG-lQ-9wD" id="gwV-59-ESN"/>
-                                </connections>
-                            </textField>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Oeq-BO-8KV">
-                                <rect key="frame" x="23" y="161" width="72" height="16"/>
-                                <textFieldCell key="cell" lineBreakMode="clipping" title="Settings:" id="D15-do-cL0">
-                                    <font key="font" metaFont="systemBold"/>
-                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                </textFieldCell>
-                            </textField>
-                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="gNm-Mg-DtM">
-                                <rect key="frame" x="33" y="135" width="83" height="18"/>
-                                <buttonCell key="cell" type="check" title="Tabs" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="j7q-gw-4bq">
-                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                                    <font key="font" metaFont="system"/>
-                                </buttonCell>
-                                <connections>
-                                    <action selector="saveTabCount:" target="XfG-lQ-9wD" id="uhe-WE-7UF"/>
-                                </connections>
-                            </button>
-                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="hXc-se-N2v">
-                                <rect key="frame" x="33" y="80" width="83" height="18"/>
-                                <buttonCell key="cell" type="check" title="Windows" bezelStyle="regularSquare" imagePosition="left" inset="2" id="pHL-L6-PCr">
-                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                                    <font key="font" metaFont="system"/>
-                                </buttonCell>
-                                <connections>
-                                    <action selector="saveWindowCount:" target="XfG-lQ-9wD" id="c75-Sc-4zt"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <constraints>
-                            <constraint firstItem="1eh-ar-UPt" firstAttribute="top" secondItem="hXc-se-N2v" secondAttribute="bottom" constant="10" id="3oc-gW-qII"/>
                             <constraint firstAttribute="trailing" secondItem="fsd-K5-xK9" secondAttribute="trailing" constant="45" id="6fD-Iq-axW"/>
-                            <constraint firstItem="fsd-K5-xK9" firstAttribute="leading" secondItem="1eh-ar-UPt" secondAttribute="trailing" constant="25" id="794-QN-M8u"/>
-                            <constraint firstItem="hXc-se-N2v" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="35" id="7LQ-ug-2KL"/>
-                            <constraint firstAttribute="bottom" secondItem="zDy-Cr-T1x" secondAttribute="bottom" constant="20" id="7bN-1p-1ik"/>
-                            <constraint firstItem="aQm-LC-sTn" firstAttribute="top" secondItem="gNm-Mg-DtM" secondAttribute="bottom" constant="10" id="9vi-AI-6q7"/>
-                            <constraint firstItem="1eh-ar-UPt" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="35" id="F19-NL-znY"/>
-                            <constraint firstAttribute="bottom" secondItem="2b5-u8-e7V" secondAttribute="bottom" constant="20" id="FLR-7U-wyk"/>
-                            <constraint firstItem="2b5-u8-e7V" firstAttribute="top" secondItem="1eh-ar-UPt" secondAttribute="bottom" constant="10" id="K6C-97-Rew"/>
-                            <constraint firstItem="gNm-Mg-DtM" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="35" id="LQc-0a-LXN"/>
-                            <constraint firstItem="fsd-K5-xK9" firstAttribute="leading" secondItem="gNm-Mg-DtM" secondAttribute="trailing" constant="25" id="Q3q-fY-3ew"/>
-                            <constraint firstAttribute="trailing" secondItem="Oeq-BO-8KV" secondAttribute="trailing" constant="547" id="R13-Vf-IyS"/>
                             <constraint firstAttribute="trailing" secondItem="zDy-Cr-T1x" secondAttribute="trailing" constant="45" id="SAv-kW-p2P"/>
-                            <constraint firstItem="Fqk-YA-Amn" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="25" id="WkB-Uk-cZI"/>
-                            <constraint firstItem="aQm-LC-sTn" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="35" id="WzC-PC-tTB"/>
-                            <constraint firstItem="fsd-K5-xK9" firstAttribute="leading" secondItem="2b5-u8-e7V" secondAttribute="trailing" constant="25" id="Xyy-qN-QEZ"/>
-                            <constraint firstItem="Oeq-BO-8KV" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="25" id="YPY-27-sLE"/>
-                            <constraint firstItem="fsd-K5-xK9" firstAttribute="leading" secondItem="aQm-LC-sTn" secondAttribute="trailing" constant="25" id="Zq3-1Z-9tm"/>
-                            <constraint firstItem="KnH-nz-9mQ" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="45" id="f1F-Kj-q1e"/>
-                            <constraint firstItem="2b5-u8-e7V" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="35" id="fWJ-6L-ay0"/>
+                            <constraint firstItem="Fqk-YA-Amn" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="10" id="WkB-Uk-cZI"/>
+                            <constraint firstItem="zDy-Cr-T1x" firstAttribute="top" secondItem="fsd-K5-xK9" secondAttribute="bottom" constant="15" id="css-OL-yXi"/>
+                            <constraint firstItem="KnH-nz-9mQ" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="30" id="f1F-Kj-q1e"/>
                             <constraint firstItem="fsd-K5-xK9" firstAttribute="top" secondItem="KnH-nz-9mQ" secondAttribute="bottom" constant="20" id="lsO-KB-h0d"/>
                             <constraint firstItem="Fqk-YA-Amn" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="45" id="poe-BA-4io"/>
-                            <constraint firstItem="KnH-nz-9mQ" firstAttribute="leading" secondItem="Fqk-YA-Amn" secondAttribute="trailing" constant="45" id="rhl-3p-qDC"/>
-                            <constraint firstItem="hXc-se-N2v" firstAttribute="top" secondItem="aQm-LC-sTn" secondAttribute="bottom" constant="10" id="tTt-YC-Vbi"/>
-                            <constraint firstItem="fsd-K5-xK9" firstAttribute="leading" secondItem="hXc-se-N2v" secondAttribute="trailing" constant="25" id="tWd-c3-hvv"/>
+                            <constraint firstItem="KnH-nz-9mQ" firstAttribute="leading" secondItem="Fqk-YA-Amn" secondAttribute="trailing" constant="30" id="rhl-3p-qDC"/>
                             <constraint firstAttribute="bottom" secondItem="fsd-K5-xK9" secondAttribute="bottom" constant="65" id="vdl-a5-oNh"/>
-                            <constraint firstItem="gNm-Mg-DtM" firstAttribute="top" secondItem="Oeq-BO-8KV" secondAttribute="bottom" constant="10" id="xtG-XK-KXf"/>
                             <constraint firstItem="fsd-K5-xK9" firstAttribute="leading" secondItem="Fqk-YA-Amn" secondAttribute="trailing" constant="30" id="zwk-4s-0gD"/>
                         </constraints>
                     </view>
-                    <connections>
-                        <outlet property="tabCountBox" destination="aQm-LC-sTn" id="yze-fI-bOT"/>
-                        <outlet property="tabCountCheck" destination="gNm-Mg-DtM" id="acn-wF-EMh"/>
-                        <outlet property="windowCountBox" destination="1eh-ar-UPt" id="ly2-iV-P9O"/>
-                        <outlet property="windowCountCheck" destination="hXc-se-N2v" id="Bi8-61-o2r"/>
-                    </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="75" y="726"/>
+            <point key="canvasLocation" x="-45" y="1109"/>
         </scene>
     </scenes>
     <resources>

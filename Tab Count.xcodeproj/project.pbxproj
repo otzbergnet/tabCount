@@ -24,6 +24,7 @@
 		2D921419237353400058613B /* info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2D921418237353400058613B /* info.plist */; };
 		2D92141C237484D20058613B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2D92141E237484D20058613B /* InfoPlist.strings */; };
 		2DA5F9272376A58D002CCB29 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA5F9252376A446002CCB29 /* Helper.swift */; };
+		2DE1D4CB2377DBF400D22F1D /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE1D4CA2377DBF400D22F1D /* SettingsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +71,7 @@
 		2D921418237353400058613B /* info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = info.plist; sourceTree = "<group>"; };
 		2D92141D237484D20058613B /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		2DA5F9252376A446002CCB29 /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
+		2DE1D4CA2377DBF400D22F1D /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		2DF22BC7236EA0DC00D0AA12 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Main.strings; sourceTree = "<group>"; };
 		2DF22BC8236EA0DC00D0AA12 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/SafariExtensionViewController.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -119,6 +121,7 @@
 				2D847572236D523800C9BE4F /* AppDelegate.swift */,
 				2D847574236D523800C9BE4F /* Main.storyboard */,
 				2D847577236D523800C9BE4F /* ViewController.swift */,
+				2DE1D4CA2377DBF400D22F1D /* SettingsViewController.swift */,
 				2D847579236D523900C9BE4F /* Assets.xcassets */,
 				2D84757B236D523900C9BE4F /* Info.plist */,
 			);
@@ -260,6 +263,7 @@
 				2D847578236D523800C9BE4F /* ViewController.swift in Sources */,
 				2D84759F236D52EA00C9BE4F /* SettingsHelper.swift in Sources */,
 				2D847573236D523800C9BE4F /* AppDelegate.swift in Sources */,
+				2DE1D4CB2377DBF400D22F1D /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
