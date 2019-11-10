@@ -15,14 +15,10 @@ class Helper {
     
     func updateCountBadge(windowCount: Int, tabCount: Int){
         let showWindow = settings.getBoolData(key: "window")
-        NSLog("TabCount: showWindow: \(showWindow)")
         let showTab = settings.getBoolData(key: "tab")
-        NSLog("TabCount: showTab: \(showTab)")
         
         let maxTabs = settings.getIntData(key: "maxTabs")
-        NSLog("TabCount: maxTabs: \(maxTabs)")
         let maxWindows = settings.getIntData(key: "maxWindows")
-        NSLog("TabCount: maxWindow: \(maxWindows)")
         
         var badgeText = ""
         
