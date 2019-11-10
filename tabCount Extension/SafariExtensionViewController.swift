@@ -36,6 +36,9 @@ class SafariExtensionViewController: SFSafariExtensionViewController, NSTextFiel
     }
     
     override func viewDidLoad() {
+		super.viewDidLoad()
+		preferredContentSize = NSSize(width: 225, height: 283)
+		
         populateComboBoxes()
         getPreviousMaxTabs()
         getPreviousMaxWindows()
