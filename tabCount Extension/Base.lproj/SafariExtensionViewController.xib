@@ -84,7 +84,7 @@
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                 </box>
                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oMR-Uq-NH7">
-                    <rect key="frame" x="18" y="156" width="80" height="16"/>
+                    <rect key="frame" x="18" y="152" width="80" height="20"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <textFieldCell key="cell" lineBreakMode="clipping" title="Show Badge" id="rrM-Yg-vns">
                         <font key="font" metaFont="system"/>
@@ -115,7 +115,7 @@
                     </connections>
                 </button>
                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rtH-8K-AFT">
-                    <rect key="frame" x="128" y="155" width="79" height="16"/>
+                    <rect key="frame" x="128" y="152" width="79" height="20"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <textFieldCell key="cell" lineBreakMode="clipping" title="Threshold" id="bDd-Tp-RDz">
                         <font key="font" metaFont="system"/>
