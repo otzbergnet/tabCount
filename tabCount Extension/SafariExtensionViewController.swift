@@ -27,7 +27,7 @@ class SafariExtensionViewController: SFSafariExtensionViewController, NSTextFiel
     
     static let shared: SafariExtensionViewController = {
         let shared = SafariExtensionViewController()
-        shared.preferredContentSize = NSSize(width:280, height:240)
+        shared.preferredContentSize = NSSize(width: 225, height:283)
         return shared
     }()
     
@@ -36,9 +36,6 @@ class SafariExtensionViewController: SFSafariExtensionViewController, NSTextFiel
     }
     
     override func viewDidLoad() {
-		super.viewDidLoad()
-		preferredContentSize = NSSize(width: 225, height: 283)
-		
         populateComboBoxes()
         getPreviousMaxTabs()
         getPreviousMaxWindows()
