@@ -23,6 +23,12 @@ class SafariExtensionViewController: SFSafariExtensionViewController, NSTextFiel
     @IBOutlet weak var tabCountCheckBox: NSButton!
     @IBOutlet weak var windowCountCheckBox: NSButton!
     
+    @IBOutlet weak var closeTabLabel: NSTextField!
+    @IBOutlet weak var closeLeftButton: NSButton!
+    @IBOutlet weak var closeRightButton: NSButton!
+    
+    
+    
     let helper = Helper()
     
     static let shared: SafariExtensionViewController = {
@@ -42,6 +48,7 @@ class SafariExtensionViewController: SFSafariExtensionViewController, NSTextFiel
         getShowTabState()
         getShowWindowState()
         updateDataLabels()
+        whichCloseButtonsToShow()
     }
     
     override func viewWillAppear() {
@@ -50,6 +57,7 @@ class SafariExtensionViewController: SFSafariExtensionViewController, NSTextFiel
         getShowTabState()
         getShowWindowState()
         updateDataLabels()
+        whichCloseButtonsToShow()
     }
     
     override func viewWillDisappear() {
@@ -171,6 +179,63 @@ class SafariExtensionViewController: SFSafariExtensionViewController, NSTextFiel
     func resetPopover(){
         tabCountLabel.stringValue = ""
         windowCountLabel.stringValue = ""
+    }
+    
+    func whichCloseButtonsToShow(){
+        
+        SFSafariApplication.getActiveWindow { (window) in
+            guard let window = window else {
+                return
+            }
+            window.getActiveTab { (activeTab) in
+                window.getAllTabs { (tabs) in
+                    
+                    let tabCount: Int = tabs.count
+                    let tabIndex: Int = tabs.firstIndex(where: { activeTab!.isEqual($0) })!
+                    
+                    
+                    if(tabIndex == 0 && tabCount == 1){
+                        //NSLog("TabCountDebug: Only one tab - show none")
+                        DispatchQueue.main.async {
+                            self.closeLeftButton.isEnabled = false
+                            self.closeRightButton.isEnabled = false
+                            self.closeLeftButton.alphaValue = 0.5
+                            self.closeRightButton.alphaValue = 0.5
+                        }
+                    }
+                    else if(tabIndex == 0){
+                        //NSLog("TabCountDebug: I am at the first tab")
+                        DispatchQueue.main.async {
+                            self.closeLeftButton.isEnabled = false
+                            self.closeRightButton.isEnabled = true
+                            self.closeLeftButton.alphaValue = 0.5
+                            self.closeRightButton.alphaValue = 1.0
+                        }
+                    }
+                    else if(tabIndex == (tabCount-1)){
+                        //NSLog("TabCountDebug: I am at the last tab")
+                        DispatchQueue.main.async {
+                            self.closeLeftButton.isEnabled = true
+                            self.closeRightButton.isEnabled = false
+                            self.closeLeftButton.alphaValue = 1.0
+                            self.closeRightButton.alphaValue = 0.5
+                        }
+                    }
+                    else{
+                        //NSLog("TabCountDebug: I am somewhere in the middle")
+                        DispatchQueue.main.async {
+                            self.closeLeftButton.isEnabled = true
+                            self.closeRightButton.isEnabled = true
+                            self.closeLeftButton.alphaValue = 1.0
+                            self.closeRightButton.alphaValue = 1.0
+                        }
+                    }
+                    
+                }
+            }
+        }
+        
+        
     }
     
     @IBAction func tabThresholdBox(_ sender: NSComboBox) {
