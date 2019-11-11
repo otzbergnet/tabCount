@@ -13,7 +13,7 @@ class SettingsHelper {
     var defaults: UserDefaults
 
     init(){
-        self.defaults = UserDefaults(suiteName: "group.net.otzberg.tabcount")!
+        self.defaults = UserDefaults(suiteName: "J3PNNM2UXC.tabcount")!
     }
     
     func getIntData(key : String) -> Int{

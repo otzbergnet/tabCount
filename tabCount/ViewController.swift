@@ -12,7 +12,7 @@ import SafariServices.SFSafariApplication
 class ViewController: NSViewController {
 
     @IBAction func openSafariExtensionPreferences(_ sender: AnyObject?) {
-        SFSafariApplication.showPreferencesForExtension(withIdentifier: "net.otzberg.tabCount-Extension") { error in
+        SFSafariApplication.showPreferencesForExtension(withIdentifier: "net.otzberg.tabCount.tabCount-Extension") { error in
             if let _ = error {
                 // Insert code to inform the user that something went wrong.
             }

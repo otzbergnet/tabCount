@@ -21,8 +21,6 @@
 		2D847593236D523A00C9BE4F /* ToolbarItemIcon.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 2D847592236D523A00C9BE4F /* ToolbarItemIcon.pdf */; };
 		2D84759F236D52EA00C9BE4F /* SettingsHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D84759E236D52EA00C9BE4F /* SettingsHelper.swift */; };
 		2D8475A0236D52EA00C9BE4F /* SettingsHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D84759E236D52EA00C9BE4F /* SettingsHelper.swift */; };
-		2D921419237353400058613B /* info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2D921418237353400058613B /* info.plist */; };
-		2D92141C237484D20058613B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2D92141E237484D20058613B /* InfoPlist.strings */; };
 		2DA5F9272376A58D002CCB29 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA5F9252376A446002CCB29 /* Helper.swift */; };
 		2DE1D4CB2377DBF400D22F1D /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE1D4CA2377DBF400D22F1D /* SettingsViewController.swift */; };
 /* End PBXBuildFile section */
@@ -245,11 +243,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2D921419237353400058613B /* info.plist in Resources */,
 				2D847593236D523A00C9BE4F /* ToolbarItemIcon.pdf in Resources */,
 				2D84758E236D523A00C9BE4F /* SafariExtensionViewController.xib in Resources */,
 				2D847591236D523A00C9BE4F /* script.js in Resources */,
-				2D92141C237484D20058613B /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -438,6 +434,7 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = "tabCount Extension/tabCount_Extension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 5;
 				DEVELOPMENT_TEAM = J3PNNM2UXC;
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = "tabCount Extension/Info.plist";
@@ -446,7 +443,7 @@
 					"@executable_path/../Frameworks",
 					"@executable_path/../../../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "net.otzberg.tabCount-Extension";
+				PRODUCT_BUNDLE_IDENTIFIER = "net.otzberg.tabCount.tabCount-Extension";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
@@ -458,6 +455,7 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = "tabCount Extension/tabCount_Extension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 5;
 				DEVELOPMENT_TEAM = J3PNNM2UXC;
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = "tabCount Extension/Info.plist";
@@ -466,7 +464,7 @@
 					"@executable_path/../Frameworks",
 					"@executable_path/../../../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "net.otzberg.tabCount-Extension";
+				PRODUCT_BUNDLE_IDENTIFIER = "net.otzberg.tabCount.tabCount-Extension";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
@@ -481,6 +479,7 @@
 				CODE_SIGN_ENTITLEMENTS = tabCount/tabCount.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 5;
 				DEVELOPMENT_TEAM = J3PNNM2UXC;
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = tabCount/Info.plist;
@@ -502,6 +501,7 @@
 				CODE_SIGN_ENTITLEMENTS = tabCount/tabCount.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 5;
 				DEVELOPMENT_TEAM = J3PNNM2UXC;
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = tabCount/Info.plist;
