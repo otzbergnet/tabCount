@@ -8,6 +8,12 @@ With Safari 13 Apple deprecated old style Safari Extensions (.safariextensions),
 
 The inspiration stems from someone else's work and I am grateful to both for mentioning it.
 
+## Download on AppStore
+
+[![Download on AppStore](appstore.svg)](https://apps.apple.com/de/app/tab-count/id1487406555?mt=12)
+
+It's free - of course!
+
 ## Translations
 
 At this time the app is localized in English & German - I would love to add your language. Please contact me to make this happen.
