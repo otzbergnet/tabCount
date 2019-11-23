@@ -27,7 +27,7 @@
 "IQv-IB-iLA.title" = "Tab Count";
 
 /* Class = "NSButtonCell"; title = "Show number of open tabs from:"; ObjectID = "j7q-gw-4bq"; */
-"j7q-gw-4bq.title" = "Die Anzahl offener Tab zeigen, ab:";
+"j7q-gw-4bq.title" = "Die Anzahl offener Tabs zeigen, ab:";
 
 /* Class = "NSMenuItem"; title = "Show All"; ObjectID = "Kd2-mp-pUS"; */
 "Kd2-mp-pUS.title" = "Alle Zeigen";
@@ -39,7 +39,7 @@
 "Olw-nP-bQN.title" = "Tab Count ausblenden";
 
 /* Class = "NSButtonCell"; title = "Show number of open windows from:"; ObjectID = "pHL-L6-PCr"; */
-"pHL-L6-PCr.title" = "Fenster";
+"pHL-L6-PCr.title" = "Die Anzahl offener Fenster zeigen, ab:";
 
 /* Class = "NSTextFieldCell"; title = "Settings"; ObjectID = "Srr-w6-WFp"; */
 "Srr-w6-WFp.title" = "Einstellungen";
