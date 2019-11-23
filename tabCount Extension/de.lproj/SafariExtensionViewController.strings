@@ -1,14 +1,11 @@
 
-/* Class = "NSTextFieldCell"; title = "Safari Tab Count"; ObjectID = "2Ec-kd-q2K"; */
-"2Ec-kd-q2K.title" = "Tab Count";
-
-/* Class = "NSTextFieldCell"; title = "Tab Count:"; ObjectID = "Fda-wa-Gn1"; */
+/* Class = "NSTextFieldCell"; title = "Tabs"; ObjectID = "Fda-wa-Gn1"; */
 "Fda-wa-Gn1.title" = "Tabs:";
 
 /* Class = "NSTextFieldCell"; title = "Label"; ObjectID = "IQM-E3-U44"; Simply Used to place a Number*/
 "IQM-E3-U44.title" = "Label";
 
-/* Class = "NSTextFieldCell"; title = "Window Count:"; ObjectID = "ha4-Ck-XDO"; */
+/* Class = "NSTextFieldCell"; title = "Windows"; ObjectID = "ha4-Ck-XDO"; */
 "ha4-Ck-XDO.title" = "Fenster:";
 
 /* Class = "NSTextFieldCell"; title = "Label"; ObjectID = "iJW-4U-11p"; Simply Used to place a Number*/
@@ -17,18 +14,32 @@
 /* Close tabs to:*/
 "MHr-ta-yhp.title" = "Alle Tabs schließen:";
 
-/* Class = "NSButtonCell"; title = "Close tabs to left"; ObjectID = "NdP-Wm-1dE"; */
+/* Class = "NSButtonCell"; title = "Left"; ObjectID = "NdP-Wm-1dE"; */
 "NdP-Wm-1dE.title" = "links";
 
-/* Class = "NSButtonCell"; title = "Close tabs to right"; ObjectID = "1X0-Ho-SuO"; */
+/* Class = "NSButtonCell"; title = "Right"; ObjectID = "1X0-Ho-SuO"; */
 "1X0-Ho-SuO.title" = "rechts";
 
-/* Class = "NSTextFieldCell"; title = "Show Tab Count as badge on toolbar icon:"; ObjectID = "bTE-06-HCL"; */
-"bTE-06-HCL.title" = "Tabs";
-
+/* Class = "NSButtonCell"; title = "Windows"; ObjectID = "B4O-6U-CAU"; */
 "B4O-6U-CAU.title" = "Fenster";
 
+/* Class = "NSTextFieldCell"; title = "Show Badge"; ObjectID = "rrM-Yg-vns"; */
 "rrM-Yg-vns.title" = "Badge für";
+
+/* Class = "NSTextFieldCell"; title = "Threshold"; ObjectID = "bDd-Tp-RDz"; */
 "bDd-Tp-RDz.title" = "Zeigen ab";
 
+/* Class = "NSBox"; title = "Box"; ObjectID = "ICq-hU-0NW"; */
+"ICq-hU-0NW.title" = "Box";
 
+/* Class = "NSComboBoxCell"; title = "2"; ObjectID = "aKL-mJ-2VA"; */
+"aKL-mJ-2VA.title" = "2";
+
+/* Class = "NSComboBoxCell"; title = "10"; ObjectID = "aa3-dQ-kYK"; */
+"aa3-dQ-kYK.title" = "10";
+
+/* Class = "NSButtonCell"; title = "Tabs"; ObjectID = "hri-mc-Sbx"; */
+"hri-mc-Sbx.title" = "Tabs";
+
+/* Class = "NSBox"; title = "Box"; ObjectID = "qoO-yK-1Xy"; */
+"qoO-yK-1Xy.title" = "Box";

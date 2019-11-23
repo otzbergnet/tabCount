@@ -22,6 +22,7 @@
 		2D84759F236D52EA00C9BE4F /* SettingsHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D84759E236D52EA00C9BE4F /* SettingsHelper.swift */; };
 		2D8475A0236D52EA00C9BE4F /* SettingsHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D84759E236D52EA00C9BE4F /* SettingsHelper.swift */; };
 		2DA5F9272376A58D002CCB29 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA5F9252376A446002CCB29 /* Helper.swift */; };
+		2DCBB8392389B2E60069BEB3 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2DCBB83B2389B2E60069BEB3 /* Localizable.strings */; };
 		2DE1D4CB2377DBF400D22F1D /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE1D4CA2377DBF400D22F1D /* SettingsViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -69,6 +70,7 @@
 		2D921418237353400058613B /* info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = info.plist; sourceTree = "<group>"; };
 		2D92141D237484D20058613B /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		2DA5F9252376A446002CCB29 /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
+		2DCBB83A2389B2E60069BEB3 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
 		2DE1D4CA2377DBF400D22F1D /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		2DF22BC7236EA0DC00D0AA12 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Main.strings; sourceTree = "<group>"; };
 		2DF22BC8236EA0DC00D0AA12 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/SafariExtensionViewController.strings; sourceTree = "<group>"; };
@@ -122,6 +124,7 @@
 				2DE1D4CA2377DBF400D22F1D /* SettingsViewController.swift */,
 				2D847579236D523900C9BE4F /* Assets.xcassets */,
 				2D84757B236D523900C9BE4F /* Info.plist */,
+				2DCBB83B2389B2E60069BEB3 /* Localizable.strings */,
 			);
 			path = tabCount;
 			sourceTree = "<group>";
@@ -158,6 +161,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2D84759B236D523A00C9BE4F /* Build configuration list for PBXNativeTarget "Tab Count" */;
 			buildPhases = (
+				2DCBB8362389B23A0069BEB3 /* bartycrouch */,
 				2D847569236D523800C9BE4F /* Sources */,
 				2D84756A236D523800C9BE4F /* Frameworks */,
 				2D84756B236D523800C9BE4F /* Resources */,
@@ -234,6 +238,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2D847571236D523800C9BE4F /* tabCount.entitlements in Resources */,
+				2DCBB8392389B2E60069BEB3 /* Localizable.strings in Resources */,
 				2D84757A236D523900C9BE4F /* Assets.xcassets in Resources */,
 				2D847576236D523800C9BE4F /* Main.storyboard in Resources */,
 			);
@@ -250,6 +255,27 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2DCBB8362389B23A0069BEB3 /* bartycrouch */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = bartycrouch;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nif which bartycrouch > /dev/null; then\n    bartycrouch update -x\n    bartycrouch lint -x\nelse\n    echo \"warning: BartyCrouch not installed, download it from https://github.com/Flinesoft/BartyCrouch\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		2D847569236D523800C9BE4F /* Sources */ = {
@@ -309,6 +335,14 @@
 				2D92141D237484D20058613B /* de */,
 			);
 			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		2DCBB83B2389B2E60069BEB3 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2DCBB83A2389B2E60069BEB3 /* de */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
