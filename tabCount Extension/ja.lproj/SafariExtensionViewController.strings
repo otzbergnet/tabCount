@@ -15,7 +15,7 @@
 "IQM-E3-U44.title" = "Label";
 
 /* Class = "NSTextFieldCell"; title = "Close all tabs on:"; ObjectID = "MHr-ta-yhp"; */
-"MHr-ta-yhp.title" = "全てのタブを閉じる (現在開いているタブより):";
+"MHr-ta-yhp.title" = "全てのタブを閉じる";
 
 /* Class = "NSButtonCell"; title = "Left"; ObjectID = "NdP-Wm-1dE"; */
 "NdP-Wm-1dE.title" = "左側";
