@@ -29,9 +29,6 @@
 /* Class = "NSTextFieldCell"; title = "Threshold"; ObjectID = "bDd-Tp-RDz"; */
 "bDd-Tp-RDz.title" = "Zeigen ab";
 
-/* Class = "NSBox"; title = "Box"; ObjectID = "ICq-hU-0NW"; */
-"ICq-hU-0NW.title" = "Box";
-
 /* Class = "NSComboBoxCell"; title = "2"; ObjectID = "aKL-mJ-2VA"; */
 "aKL-mJ-2VA.title" = "2";
 
@@ -40,6 +37,3 @@
 
 /* Class = "NSButtonCell"; title = "Tabs"; ObjectID = "hri-mc-Sbx"; */
 "hri-mc-Sbx.title" = "Tabs";
-
-/* Class = "NSBox"; title = "Box"; ObjectID = "qoO-yK-1Xy"; */
-"qoO-yK-1Xy.title" = "Box";
