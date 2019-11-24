@@ -107,7 +107,7 @@
                     </connections>
                 </button>
                 <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Bci-jG-5L6">
-                    <rect key="frame" x="18" y="96" width="91" height="18"/>
+                    <rect key="frame" x="18" y="96" width="106" height="18"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <buttonCell key="cell" type="check" title="Windows" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="B4O-6U-CAU">
                         <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
