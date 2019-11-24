@@ -1,12 +1,12 @@
 
 /* Class = "NSMenuItem"; title = "tabCount"; ObjectID = "1Xt-HY-uBw"; */
-"1Xt-HY-uBw.title" = "tabCount";
+"1Xt-HY-uBw.title" = "Tab Count";
 
 /* Class = "NSMenuItem"; title = "Quit tabCount"; ObjectID = "4sb-4s-VLi"; */
-"4sb-4s-VLi.title" = "終了する tabCount";
+"4sb-4s-VLi.title" = "Tab Countを終了";
 
 /* Class = "NSMenuItem"; title = "About tabCount"; ObjectID = "5kV-Vb-QxS"; */
-"5kV-Vb-QxS.title" = "約 tabCount";
+"5kV-Vb-QxS.title" = "Tab Countについて";
 
 /* Class = "NSTextFieldCell"; placeholderString = "Window Count"; ObjectID = "7bX-Ue-B1h"; */
 "7bX-Ue-B1h.placeholderString" = "Window Count";
@@ -21,7 +21,7 @@
 "F2S-fz-NVQ.title" = "ヘルプ";
 
 /* Class = "NSMenuItem"; title = "tabCount Help"; ObjectID = "FKE-Sm-Kum"; */
-"FKE-Sm-Kum.title" = "tabCount ヘルプ";
+"FKE-Sm-Kum.title" = "Tab Count ヘルプ";
 
 /* Class = "NSWindow"; title = "Tab Count"; ObjectID = "IQv-IB-iLA"; */
 "IQv-IB-iLA.title" = "Tab Count";
@@ -30,13 +30,13 @@
 "j7q-gw-4bq.title" = "タブ数の閾値";
 
 /* Class = "NSMenuItem"; title = "Show All"; ObjectID = "Kd2-mp-pUS"; */
-"Kd2-mp-pUS.title" = "Sすべて表示する";
+"Kd2-mp-pUS.title" = "すべてを表示";
 
 /* Class = "NSTextFieldCell"; title = "Welcome to Tab Count"; ObjectID = "Ndz-z7-kVw"; */
 "Ndz-z7-kVw.title" = "Tab Countへようこそ！";
 
 /* Class = "NSMenuItem"; title = "Hide tabCount"; ObjectID = "Olw-nP-bQN"; */
-"Olw-nP-bQN.title" = "隠す tabCount";
+"Olw-nP-bQN.title" = "Tab Countを隠す";
 
 /* Class = "NSButtonCell"; title = "Show number of open windows from:"; ObjectID = "pHL-L6-PCr"; */
 "pHL-L6-PCr.title" = "ウィンドウ数の閾値";
@@ -57,10 +57,10 @@
 "uQy-DD-JDr.title" = "tabCount";
 
 /* Class = "NSMenuItem"; title = "Hide Others"; ObjectID = "Vdr-fp-XzO"; */
-"Vdr-fp-XzO.title" = "他を隠す";
+"Vdr-fp-XzO.title" = "ほかを隠す";
 
 /* Class = "NSMenuItem"; title = "Help"; ObjectID = "wpr-3q-Mcd"; */
-"wpr-3q-Mcd.title" = "助けて";
+"wpr-3q-Mcd.title" = "ヘルプ";
 
 /* Class = "NSViewController"; title = "Welcome"; ObjectID = "XfG-lQ-9wD"; */
 "XfG-lQ-9wD.title" = "ようこそ";
