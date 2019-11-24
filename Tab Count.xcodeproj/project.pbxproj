@@ -70,6 +70,10 @@
 		2D921418237353400058613B /* info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = info.plist; sourceTree = "<group>"; };
 		2D92141D237484D20058613B /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		2DA5F9252376A446002CCB29 /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
+		2DC5978F238A620F00C68737 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Main.strings; sourceTree = "<group>"; };
+		2DC59790238A620F00C68737 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/SafariExtensionViewController.strings; sourceTree = "<group>"; };
+		2DC59791238A620F00C68737 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
+		2DC59792238A620F00C68737 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		2DCBB83A2389B2E60069BEB3 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
 		2DE1D4CA2377DBF400D22F1D /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		2DF22BC7236EA0DC00D0AA12 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Main.strings; sourceTree = "<group>"; };
@@ -220,6 +224,7 @@
 				en,
 				Base,
 				de,
+				ja,
 			);
 			mainGroup = 2D847564236D523800C9BE4F;
 			productRefGroup = 2D84756E236D523800C9BE4F /* Products */;
@@ -316,6 +321,7 @@
 			children = (
 				2D847575236D523800C9BE4F /* Base */,
 				2DF22BC7236EA0DC00D0AA12 /* de */,
+				2DC5978F238A620F00C68737 /* ja */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -325,6 +331,7 @@
 			children = (
 				2D84758D236D523A00C9BE4F /* Base */,
 				2DF22BC8236EA0DC00D0AA12 /* de */,
+				2DC59790238A620F00C68737 /* ja */,
 			);
 			name = SafariExtensionViewController.xib;
 			sourceTree = "<group>";
@@ -333,6 +340,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				2D92141D237484D20058613B /* de */,
+				2DC59792238A620F00C68737 /* ja */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -341,6 +349,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				2DCBB83A2389B2E60069BEB3 /* de */,
+				2DC59791238A620F00C68737 /* ja */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";

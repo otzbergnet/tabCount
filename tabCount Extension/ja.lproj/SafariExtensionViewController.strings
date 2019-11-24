@@ -1,0 +1,45 @@
+
+/* Class = "NSButtonCell"; title = "Right"; ObjectID = "1X0-Ho-SuO"; */
+"1X0-Ho-SuO.title" = "右側";
+
+/* Class = "NSButtonCell"; title = "Windows"; ObjectID = "B4O-6U-CAU"; */
+"B4O-6U-CAU.title" = "ウインドウ数";
+
+/* Class = "NSTextFieldCell"; title = "Tabs"; ObjectID = "Fda-wa-Gn1"; */
+"Fda-wa-Gn1.title" = "タブ数";
+
+/* Class = "NSBox"; title = "Box"; ObjectID = "ICq-hU-0NW"; */
+"ICq-hU-0NW.title" = "Box";
+
+/* Class = "NSTextFieldCell"; title = "Label"; ObjectID = "IQM-E3-U44"; */
+"IQM-E3-U44.title" = "Label";
+
+/* Class = "NSTextFieldCell"; title = "Close all tabs on:"; ObjectID = "MHr-ta-yhp"; */
+"MHr-ta-yhp.title" = "全てのタブを閉じる (現在開いているタブより):";
+
+/* Class = "NSButtonCell"; title = "Left"; ObjectID = "NdP-Wm-1dE"; */
+"NdP-Wm-1dE.title" = "左側";
+
+/* Class = "NSComboBoxCell"; title = "2"; ObjectID = "aKL-mJ-2VA"; */
+"aKL-mJ-2VA.title" = "2";
+
+/* Class = "NSComboBoxCell"; title = "10"; ObjectID = "aa3-dQ-kYK"; */
+"aa3-dQ-kYK.title" = "10";
+
+/* Class = "NSTextFieldCell"; title = "Threshold"; ObjectID = "bDd-Tp-RDz"; */
+"bDd-Tp-RDz.title" = "閾値";
+
+/* Class = "NSTextFieldCell"; title = "Windows"; ObjectID = "ha4-Ck-XDO"; */
+"ha4-Ck-XDO.title" = "ウインドウ数";
+
+/* Class = "NSButtonCell"; title = "Tabs"; ObjectID = "hri-mc-Sbx"; */
+"hri-mc-Sbx.title" = "タブ数";
+
+/* Class = "NSTextFieldCell"; title = "Label"; ObjectID = "iJW-4U-11p"; */
+"iJW-4U-11p.title" = "Label";
+
+/* Class = "NSBox"; title = "Box"; ObjectID = "qoO-yK-1Xy"; */
+"qoO-yK-1Xy.title" = "Box";
+
+/* Class = "NSTextFieldCell"; title = "Show Badge"; ObjectID = "rrM-Yg-vns"; */
+"rrM-Yg-vns.title" = "バッジで表示";

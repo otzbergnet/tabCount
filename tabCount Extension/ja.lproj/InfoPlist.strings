@@ -1,0 +1,10 @@
+/* 
+  InfoPlist.strings
+  Tab Count
+
+  Created by Claus Wolf on 07.11.19.
+  Copyright © 2019 Claus Wolf. All rights reserved.
+*/
+
+NSHumanReadableDescription = "Safariで開いているタブ数やウィンドウ数をカウントしてツールバーに表示してくれるSafari機能拡張です。";
+NSHumanReadableCopyright = "© 2019 Claus Wolf & Matt Sephton. Alle Recht vorbehalten.";
