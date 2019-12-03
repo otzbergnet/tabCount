@@ -41,7 +41,7 @@
 			<key>Image</key>
 			<string>ToolbarItemIcon.pdf</string>
 			<key>Label</key>
-			<string>Tab Count Extension</string>
+			<string>Tab Count</string>
 		</dict>
 		<key>SFSafariWebsiteAccess</key>
 		<dict>
