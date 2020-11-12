@@ -7,4 +7,4 @@
 */
 
 NSHumanReadableDescription = "Safariで開いているタブ数やウィンドウ数をカウントしてツールバーに表示してくれるSafari機能拡張です。";
-NSHumanReadableCopyright = "© 2019 Claus Wolf & Matt Sephton. Alle Recht vorbehalten.";
+NSHumanReadableCopyright = "© 2020 Claus Wolf & Matt Sephton. Alle Recht vorbehalten.";

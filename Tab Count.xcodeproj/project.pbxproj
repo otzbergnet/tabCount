@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2D847571236D523800C9BE4F /* tabCount.entitlements in Resources */ = {isa = PBXBuildFile; fileRef = 2D847570236D523800C9BE4F /* tabCount.entitlements */; };
 		2D847573236D523800C9BE4F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D847572236D523800C9BE4F /* AppDelegate.swift */; };
 		2D847576236D523800C9BE4F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D847574236D523800C9BE4F /* Main.storyboard */; };
 		2D847578236D523800C9BE4F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D847577236D523800C9BE4F /* ViewController.swift */; };
@@ -18,9 +17,13 @@
 		2D84758B236D523A00C9BE4F /* SafariExtensionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D84758A236D523A00C9BE4F /* SafariExtensionViewController.swift */; };
 		2D84758E236D523A00C9BE4F /* SafariExtensionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D84758C236D523A00C9BE4F /* SafariExtensionViewController.xib */; };
 		2D847591236D523A00C9BE4F /* script.js in Resources */ = {isa = PBXBuildFile; fileRef = 2D847590236D523A00C9BE4F /* script.js */; };
-		2D847593236D523A00C9BE4F /* ToolbarItemIcon.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 2D847592236D523A00C9BE4F /* ToolbarItemIcon.pdf */; };
 		2D84759F236D52EA00C9BE4F /* SettingsHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D84759E236D52EA00C9BE4F /* SettingsHelper.swift */; };
 		2D8475A0236D52EA00C9BE4F /* SettingsHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D84759E236D52EA00C9BE4F /* SettingsHelper.swift */; };
+		2D968AEF255B1C9400614E4E /* BartyCrouch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D968AEE255B1C9400614E4E /* BartyCrouch.swift */; };
+		2D968B17255B231200614E4E /* ToolbarIcon.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 2D968AE9255B1BC900614E4E /* ToolbarIcon.pdf */; };
+		2D968B1A255B231200614E4E /* ToolbarIcon.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 2D968AE9255B1BC900614E4E /* ToolbarIcon.pdf */; };
+		2D968B22255B297E00614E4E /* tabcount.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 2D968B21255B297D00614E4E /* tabcount.pdf */; };
+		2D968B23255B297E00614E4E /* tabcount.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 2D968B21255B297D00614E4E /* tabcount.pdf */; };
 		2DA5F9272376A58D002CCB29 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA5F9252376A446002CCB29 /* Helper.swift */; };
 		2DCBB8392389B2E60069BEB3 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2DCBB83B2389B2E60069BEB3 /* Localizable.strings */; };
 		2DE1D4CB2377DBF400D22F1D /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE1D4CA2377DBF400D22F1D /* SettingsViewController.swift */; };
@@ -64,11 +67,13 @@
 		2D84758A236D523A00C9BE4F /* SafariExtensionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariExtensionViewController.swift; sourceTree = "<group>"; };
 		2D84758D236D523A00C9BE4F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/SafariExtensionViewController.xib; sourceTree = "<group>"; };
 		2D847590236D523A00C9BE4F /* script.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = script.js; sourceTree = "<group>"; };
-		2D847592236D523A00C9BE4F /* ToolbarItemIcon.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = ToolbarItemIcon.pdf; sourceTree = "<group>"; };
 		2D847594236D523A00C9BE4F /* tabCount_Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = tabCount_Extension.entitlements; sourceTree = "<group>"; };
 		2D84759E236D52EA00C9BE4F /* SettingsHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsHelper.swift; sourceTree = "<group>"; };
 		2D921418237353400058613B /* info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = info.plist; sourceTree = "<group>"; };
 		2D92141D237484D20058613B /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		2D968AE9255B1BC900614E4E /* ToolbarIcon.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = ToolbarIcon.pdf; sourceTree = "<group>"; };
+		2D968AEE255B1C9400614E4E /* BartyCrouch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BartyCrouch.swift; sourceTree = "<group>"; };
+		2D968B21255B297D00614E4E /* tabcount.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = tabcount.pdf; sourceTree = "<group>"; };
 		2DA5F9252376A446002CCB29 /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 		2DC5978F238A620F00C68737 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Main.strings; sourceTree = "<group>"; };
 		2DC59790238A620F00C68737 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/SafariExtensionViewController.strings; sourceTree = "<group>"; };
@@ -129,6 +134,7 @@
 				2D847579236D523900C9BE4F /* Assets.xcassets */,
 				2D84757B236D523900C9BE4F /* Info.plist */,
 				2DCBB83B2389B2E60069BEB3 /* Localizable.strings */,
+				2D968AEE255B1C9400614E4E /* BartyCrouch.swift */,
 			);
 			path = tabCount;
 			sourceTree = "<group>";
@@ -148,7 +154,8 @@
 				2D84758A236D523A00C9BE4F /* SafariExtensionViewController.swift */,
 				2D84758C236D523A00C9BE4F /* SafariExtensionViewController.xib */,
 				2D847590236D523A00C9BE4F /* script.js */,
-				2D847592236D523A00C9BE4F /* ToolbarItemIcon.pdf */,
+				2D968B21255B297D00614E4E /* tabcount.pdf */,
+				2D968AE9255B1BC900614E4E /* ToolbarIcon.pdf */,
 				2D847594236D523A00C9BE4F /* tabCount_Extension.entitlements */,
 				2D84759E236D52EA00C9BE4F /* SettingsHelper.swift */,
 				2DA5F9252376A446002CCB29 /* Helper.swift */,
@@ -205,7 +212,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1120;
-				LastUpgradeCheck = 1120;
+				LastUpgradeCheck = 1210;
 				ORGANIZATIONNAME = "Claus Wolf";
 				TargetAttributes = {
 					2D84756C236D523800C9BE4F = {
@@ -242,10 +249,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2D847571236D523800C9BE4F /* tabCount.entitlements in Resources */,
 				2DCBB8392389B2E60069BEB3 /* Localizable.strings in Resources */,
+				2D968B1A255B231200614E4E /* ToolbarIcon.pdf in Resources */,
 				2D84757A236D523900C9BE4F /* Assets.xcassets in Resources */,
 				2D847576236D523800C9BE4F /* Main.storyboard in Resources */,
+				2D968B22255B297E00614E4E /* tabcount.pdf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -253,7 +261,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2D847593236D523A00C9BE4F /* ToolbarItemIcon.pdf in Resources */,
+				2D968B23255B297E00614E4E /* tabcount.pdf in Resources */,
+				2D968B17255B231200614E4E /* ToolbarIcon.pdf in Resources */,
 				2D84758E236D523A00C9BE4F /* SafariExtensionViewController.xib in Resources */,
 				2D847591236D523A00C9BE4F /* script.js in Resources */,
 			);
@@ -288,6 +297,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2D847578236D523800C9BE4F /* ViewController.swift in Sources */,
+				2D968AEF255B1C9400614E4E /* BartyCrouch.swift in Sources */,
 				2D84759F236D52EA00C9BE4F /* SettingsHelper.swift in Sources */,
 				2D847573236D523800C9BE4F /* AppDelegate.swift in Sources */,
 				2DE1D4CB2377DBF400D22F1D /* SettingsViewController.swift in Sources */,
@@ -384,6 +394,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -445,6 +456,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -476,8 +488,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = "tabCount Extension/tabCount_Extension.entitlements";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 11;
+				CURRENT_PROJECT_VERSION = 12;
 				DEVELOPMENT_TEAM = J3PNNM2UXC;
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = "tabCount Extension/Info.plist";
@@ -486,7 +499,7 @@
 					"@executable_path/../Frameworks",
 					"@executable_path/../../../../Frameworks",
 				);
-				MARKETING_VERSION = 1.1;
+				MARKETING_VERSION = 1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = "net.otzberg.tabCount.tabCount-Extension";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -498,8 +511,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = "tabCount Extension/tabCount_Extension.entitlements";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 11;
+				CURRENT_PROJECT_VERSION = 12;
 				DEVELOPMENT_TEAM = J3PNNM2UXC;
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = "tabCount Extension/Info.plist";
@@ -508,7 +522,7 @@
 					"@executable_path/../Frameworks",
 					"@executable_path/../../../../Frameworks",
 				);
-				MARKETING_VERSION = 1.1;
+				MARKETING_VERSION = 1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = "net.otzberg.tabCount.tabCount-Extension";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -522,9 +536,10 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = tabCount/tabCount.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 11;
+				CURRENT_PROJECT_VERSION = 12;
 				DEVELOPMENT_TEAM = J3PNNM2UXC;
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = tabCount/Info.plist;
@@ -532,7 +547,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MARKETING_VERSION = 1.1;
+				MARKETING_VERSION = 1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = net.otzberg.tabCount;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -545,9 +560,10 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = tabCount/tabCount.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 11;
+				CURRENT_PROJECT_VERSION = 12;
 				DEVELOPMENT_TEAM = J3PNNM2UXC;
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = tabCount/Info.plist;
@@ -555,7 +571,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MARKETING_VERSION = 1.1;
+				MARKETING_VERSION = 1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = net.otzberg.tabCount;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
