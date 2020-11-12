@@ -39,7 +39,7 @@
 			<key>Identifier</key>
 			<string>Button</string>
 			<key>Image</key>
-			<string>ToolbarItemIcon.pdf</string>
+			<string>tabcount.pdf</string>
 			<key>Label</key>
 			<string>Tab Count</string>
 		</dict>
@@ -54,7 +54,7 @@
 		</dict>
 	</dict>
 	<key>NSHumanReadableCopyright</key>
-	<string>Copyright © 2019 Claus Wolf &amp; Matt Sephton. All rights reserved.</string>
+	<string>Copyright © 2020 Claus Wolf &amp; Matt Sephton. All rights reserved.</string>
 	<key>NSHumanReadableDescription</key>
 	<string>This Extension helps you see when there are too many tabs open</string>
 </dict>
