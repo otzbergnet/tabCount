@@ -15,16 +15,25 @@ class SettingsViewController: NSView {
     
     @IBOutlet weak var tabCountBox: NSTextField!
     @IBOutlet weak var windowCountBox: NSTextField!
+    @IBOutlet weak var autoCloseCountBox: NSTextField!
+    @IBOutlet weak var preventNewCountBox: NSTextField!
     
     @IBOutlet weak var windowCountCheck: NSButton!
     @IBOutlet weak var tabCountCheck: NSButton!
+    @IBOutlet weak var autoCloseCheck: NSButtonCell!
+    @IBOutlet weak var preventNewCheck: NSButton!
     
     override func draw(_ dirtyRect: NSRect) {
         super.draw(dirtyRect)
         initialSetup()
         getPreviousMaxTabs()
         getPreviousMaxWindows()
+        getPreviousMaxAutoClose()
+        getPreviousMaxPreventNew()
         getShowWindowState()
+        getShowTabState()
+        getAutoCloseState()
+        getPreventNewState()
     }
 
     
@@ -33,6 +42,8 @@ class SettingsViewController: NSView {
         if(!previousSetup){
             settings.setBoolData(key: "tab", data: true)
             settings.setBoolData(key: "window", data: false)
+            settings.setBoolData(key: "autoclose", data: false)
+            settings.setBoolData(key: "preventNew", data: false)
             settings.setBoolData(key: "setup", data: true)
         }
     }
@@ -59,6 +70,28 @@ class SettingsViewController: NSView {
         }
     }
     
+    func getPreviousMaxAutoClose(){
+        let maxAutoClose = settings.getIntData(key: "autoCloseCount")
+        if(maxAutoClose > 0){
+            autoCloseCountBox.stringValue = "\(maxAutoClose)"
+        }
+        else{
+            autoCloseCountBox.stringValue = "30"
+            settings.setIntData(key: "autoCloseCount", data: 30)
+        }
+    }
+
+    func getPreviousMaxPreventNew(){
+        let maxPreventNew = settings.getIntData(key: "preventNewCount")
+        if(maxPreventNew > 0){
+            preventNewCountBox.stringValue = "\(maxPreventNew)"
+        }
+        else{
+            preventNewCountBox.stringValue = "30"
+            settings.setIntData(key: "preventNewCount", data: 30)
+        }
+    }
+    
     func getShowWindowState(){
         let windowState = settings.getBoolData(key: "window")
         if(windowState){
@@ -76,6 +109,26 @@ class SettingsViewController: NSView {
         }
         else{
             tabCountCheck.state = .off
+        }
+    }
+    
+    func getAutoCloseState(){
+        let autoCloseState = settings.getBoolData(key: "autoclose")
+        if(autoCloseState){
+            autoCloseCheck.state = .on
+        }
+        else{
+            autoCloseCheck.state = .off
+        }
+    }
+
+    func getPreventNewState(){
+        let preventNewState = settings.getBoolData(key: "preventNew")
+        if(preventNewState){
+            preventNewCheck.state = .on
+        }
+        else{
+            preventNewCheck.state = .off
         }
     }
     
@@ -109,11 +162,48 @@ class SettingsViewController: NSView {
         }
     }
     
+    func saveAutoCloseCountHelper(){
+        if let autoCloseFromBox = Int(autoCloseCountBox.stringValue){
+            if(autoCloseFromBox > 0){
+               settings.setIntData(key: "autoCloseCount", data: autoCloseFromBox)
+            }
+            else if(autoCloseCheck.state == .on){
+                autoCloseCountBox.stringValue = "30"
+                settings.setIntData(key: "autoCloseCount", data: 30)
+            }
+        }
+        else{
+            if(autoCloseCheck.state == .on){
+                autoCloseCountBox.stringValue = "30"
+                settings.setIntData(key: "autoCloseCount", data: 30)
+            }
+        }
+    }
+    
+    func savePreventNewHelper(){
+        if let preventNewFromBox = Int(preventNewCountBox.stringValue){
+            if(preventNewFromBox > 0){
+               settings.setIntData(key: "preventNewCount", data: preventNewFromBox)
+            }
+            else if(preventNewCheck.state == .on){
+                preventNewCountBox.stringValue = "30"
+                settings.setIntData(key: "preventNewCount", data: 30)
+            }
+        }
+        else{
+            if(preventNewCheck.state == .on){
+                preventNewCountBox.stringValue = "30"
+                settings.setIntData(key: "preventNewCount", data: 30)
+            }
+        }
+    }
+    
 
     @IBAction func saveAll(_ sender: Any) {
         saveWindowCountHelper()
         saveTabCountHelper()
-        
+        saveAutoCloseCountHelper()
+        savePreventNewHelper()
     }
     
     @IBAction func windowCountSave(_ sender: Any) {
@@ -124,7 +214,13 @@ class SettingsViewController: NSView {
         saveTabCountHelper()
     }
        
+    @IBAction func autoCloseSave(_ sender: Any) {
+        saveAutoCloseCountHelper()
+    }
     
+    @IBAction func prveventNewSave(_ sender: Any) {
+        savePreventNewHelper()
+    }
     
     @IBAction func saveWindowCount(_ sender: NSButton) {
         if(sender.state == .on){
@@ -142,6 +238,30 @@ class SettingsViewController: NSView {
         }
         else{
             settings.setBoolData(key: "tab", data: false)
+        }
+    }
+    
+    @IBAction func saveAutoClose(_ sender: NSButton) {
+        if(sender.state == .on){
+            settings.setBoolData(key: "autoclose", data: true)
+            settings.setBoolData(key: "preventNew", data: false)
+            self.preventNewCheck.state = .off
+            saveAutoCloseCountHelper()
+        }
+        else{
+            settings.setBoolData(key: "autoclose", data: false)
+        }
+    }
+    
+    @IBAction func savePreventNew(_ sender: NSButton) {
+        if(sender.state == .on){
+            settings.setBoolData(key: "preventNew", data: true)
+            settings.setBoolData(key: "autoclose", data: false)
+            self.autoCloseCheck.state = .off
+            savePreventNewHelper()
+        }
+        else{
+            settings.setBoolData(key: "preventNew", data: false)
         }
     }
     
