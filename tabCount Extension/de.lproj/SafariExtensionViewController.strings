@@ -37,3 +37,12 @@
 
 /* Class = "NSButtonCell"; title = "Tabs"; ObjectID = "hri-mc-Sbx"; */
 "hri-mc-Sbx.title" = "Tabs";
+
+/* Class = "NSTextFieldCell"; title = "Focus Mode:"; ObjectID = "XNT-bL-Xl0"; */
+"XNT-bL-Xl0.title" = "Fokus-Modus:";
+
+/* Class = "NSButton"; ibShadowedToolTip = "Settings"; ObjectID = "RzU-7R-Y0I"; */
+"RzU-7R-Y0I.ibShadowedToolTip" = "Einstellungen";
+
+/* Class = "NSButtonCell"; title = "OFF"; ObjectID = "uBr-qy-3mw"; */
+"uBr-qy-3mw.title" = "";

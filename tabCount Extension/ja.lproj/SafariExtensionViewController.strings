@@ -37,3 +37,12 @@
 
 /* Class = "NSTextFieldCell"; title = "Show Badge"; ObjectID = "rrM-Yg-vns"; */
 "rrM-Yg-vns.title" = "バッジで表示";
+
+/* Class = "NSTextFieldCell"; title = "Focus Mode:"; ObjectID = "XNT-bL-Xl0"; */
+"XNT-bL-Xl0.title" = "フォーカスモード";
+
+/* Class = "NSButton"; ibShadowedToolTip = "Settings"; ObjectID = "RzU-7R-Y0I"; */
+"RzU-7R-Y0I.ibShadowedToolTip" = "設定";
+
+/* Class = "NSButtonCell"; title = "OFF"; ObjectID = "uBr-qy-3mw"; */
+"uBr-qy-3mw.title" = "";

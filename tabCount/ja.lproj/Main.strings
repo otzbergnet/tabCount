@@ -5,11 +5,17 @@
 /* Class = "NSMenuItem"; title = "Quit tabCount"; ObjectID = "4sb-4s-VLi"; */
 "4sb-4s-VLi.title" = "Tab Countを終了";
 
+/* Class = "NSTextFieldCell"; placeholderString = "Open Tabs"; ObjectID = "50T-G1-9h0"; */
+"50T-G1-9h0.placeholderString" = "タブを開く";
+
 /* Class = "NSMenuItem"; title = "About tabCount"; ObjectID = "5kV-Vb-QxS"; */
 "5kV-Vb-QxS.title" = "Tab Countについて";
 
 /* Class = "NSTextFieldCell"; placeholderString = "Window Count"; ObjectID = "7bX-Ue-B1h"; */
 "7bX-Ue-B1h.placeholderString" = "Window Count";
+
+/* Class = "NSTextFieldCell"; title = "Help me focus!"; ObjectID = "7LP-Vb-acH"; */
+"7LP-Vb-acH.title" = "フォーカス-設定";
 
 /* Class = "NSMenu"; title = "Main Menu"; ObjectID = "AYu-sK-qS6"; */
 "AYu-sK-qS6.title" = "メインメニュー";
@@ -40,6 +46,9 @@
 
 /* Class = "NSButtonCell"; title = "Show number of open windows from:"; ObjectID = "pHL-L6-PCr"; */
 "pHL-L6-PCr.title" = "ウィンドウ数の閾値";
+
+/* Class = "NSTextFieldCell"; placeholderString = "Open Tabs"; ObjectID = "qAP-ch-I6k"; */
+"qAP-ch-I6k.placeholderString" = "タブを開く";
 
 /* Class = "NSTextFieldCell"; title = "Settings"; ObjectID = "Srr-w6-WFp"; */
 "Srr-w6-WFp.title" = "設定";
@@ -77,14 +86,5 @@
 /* Class = "NSButtonCell"; title = "Show number of open windows from:"; ObjectID = "zfs-jB-2nZ"; */
 "zfs-jB-2nZ.title" = "から開いているウィンドウの数を表示";
 
-/* Class = "NSTextFieldCell"; placeholderString = "Open Tabs"; ObjectID = "50T-G1-9h0"; */
-"50T-G1-9h0.placeholderString" = "";
-
-/* Class = "NSTextFieldCell"; title = "Help me focus!"; ObjectID = "7LP-Vb-acH"; */
-"7LP-Vb-acH.title" = "";
-
-/* Class = "NSTextFieldCell"; placeholderString = "Open Tabs"; ObjectID = "qAP-ch-I6k"; */
-"qAP-ch-I6k.placeholderString" = "";
-
 /* Class = "NSButtonCell"; title = "Do not allow new tabs, after:"; ObjectID = "Zi0-bD-H6a"; */
-"Zi0-bD-H6a.title" = "";
+"Zi0-bD-H6a.title" = "次の場合は、新しいタブを許可しないでください。";

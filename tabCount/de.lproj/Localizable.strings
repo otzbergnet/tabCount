@@ -1,1 +1,5 @@
+/* the mode is on */
+"OFF" = "AUS";
 
+/* the mode is on */
+"ON" = "AN";

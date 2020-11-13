@@ -27,6 +27,7 @@ class SafariExtensionViewController: SFSafariExtensionViewController, NSTextFiel
     @IBOutlet weak var closeLeftButton: NSButton!
     @IBOutlet weak var closeRightButton: NSButton!
     
+    @IBOutlet weak var focusModeOnOffButton: NSButton!
     
     
     let helper = Helper()
@@ -49,6 +50,7 @@ class SafariExtensionViewController: SFSafariExtensionViewController, NSTextFiel
         getShowWindowState()
         updateDataLabels()
         whichCloseButtonsToShow()
+        determineFocusMode()
     }
     
     override func viewWillAppear() {
@@ -58,6 +60,7 @@ class SafariExtensionViewController: SFSafariExtensionViewController, NSTextFiel
         getShowWindowState()
         updateDataLabels()
         whichCloseButtonsToShow()
+        determineFocusMode()
     }
     
     override func viewWillDisappear() {
@@ -234,8 +237,29 @@ class SafariExtensionViewController: SFSafariExtensionViewController, NSTextFiel
                 }
             }
         }
+    }
+    
+    func determineFocusMode(){
+        let preventNewState = settings.getBoolData(key: "preventNew")
+        let autoCloseState = settings.getBoolData(key: "autoclose")
         
-        
+        if(preventNewState || autoCloseState){
+            if #available(OSXApplicationExtension 10.14, *) {
+                focusModeOnOffButton.contentTintColor = .systemGreen
+            } else {
+                //focusModeOnOffButton
+            }
+            focusModeOnOffButton.title = NSLocalizedString("ON", comment: "the mode is on")
+            
+        }
+        if(!preventNewState && !autoCloseState){
+            if #available(OSXApplicationExtension 10.14, *) {
+                focusModeOnOffButton.contentTintColor = .systemGray
+            } else {
+                // Fallback on earlier versions
+            }
+            focusModeOnOffButton.title = NSLocalizedString("OFF", comment: "the mode is off")
+        }
     }
     
     @IBAction func tabThresholdBox(_ sender: NSComboBox) {
@@ -292,6 +316,16 @@ class SafariExtensionViewController: SFSafariExtensionViewController, NSTextFiel
         helper.updateCountBadge(windowCount: self.windowCount, tabCount: self.tabCount)
     }
     
+    @IBAction func settingsButtonClicked(_ sender: NSButton) {
+        if let url = URL(string: "tabcountextension:settings"),
+            NSWorkspace.shared.open(url) {
+        }
+    }
     
+    @IBAction func onOffTextClicked(_ sender: NSButton) {
+        if let url = URL(string: "tabcountextension:settings"),
+            NSWorkspace.shared.open(url) {
+        }
+    }
     
 }

@@ -1,1 +1,5 @@
+/* the mode is on */
+"OFF" = "オフ";
 
+/* the mode is on */
+"ON" = "オン";

@@ -14,6 +14,9 @@
 /* Class = "NSTextFieldCell"; placeholderString = "Window Count"; ObjectID = "7bX-Ue-B1h"; */
 "7bX-Ue-B1h.placeholderString" = "offene Fenster";
 
+/* Class = "NSTextFieldCell"; title = "Help me focus!"; ObjectID = "7LP-Vb-acH"; */
+"7LP-Vb-acH.title" = "Fokus-Einstellungen";
+
 /* Class = "NSMenu"; title = "Main Menu"; ObjectID = "AYu-sK-qS6"; */
 "AYu-sK-qS6.title" = "Hauptmenü";
 
@@ -44,6 +47,9 @@
 /* Class = "NSButtonCell"; title = "Show number of open windows from:"; ObjectID = "pHL-L6-PCr"; */
 "pHL-L6-PCr.title" = "Die Anzahl offener Fenster zeigen, ab:";
 
+/* Class = "NSTextFieldCell"; placeholderString = "Open Tabs"; ObjectID = "qAP-ch-I6k"; */
+"qAP-ch-I6k.placeholderString" = "Offene Tabs";
+
 /* Class = "NSTextFieldCell"; title = "Settings"; ObjectID = "Srr-w6-WFp"; */
 "Srr-w6-WFp.title" = "Einstellungen";
 
@@ -57,7 +63,7 @@
 "tUY-Dw-t8S.title" = "Safari Einstellungen (Erweiterungen) öffnen";
 
 /* Class = "NSTextFieldCell"; title = "Here you can define the basic behavior of Tab Count. By default we will show you the tab count, when you have at least 10 tabs open. Additionally you can also show the count of open windows."; ObjectID = "tvs-oo-bLL"; */
-"tvs-oo-bLL.title" = "Hier können Sie das grundlegende Verhalten von Tab Count definieren. Sofern Sie nichts ändern, wird die Anzahl der offenen Tabs gezeigt, sobald 10 geöffnet sind. Wenn Sie möchten, können Sie zusätzlich die Anzahl offener Fenster zeigen.";
+"tvs-oo-bLL.title" = "Hier können Sie das grundlegende Verhalten von Tab Count definieren. In der Grundeinstellung, wird die Anzahl der offenen Tabs gezeigt, sobald 10 geöffnet sind. Zusätzlich können Sie die Anzahl offener Fenster zeigen.";
 
 /* Class = "NSMenu"; title = "tabCount"; ObjectID = "uQy-DD-JDr"; */
 "uQy-DD-JDr.title" = "Tab Count";
@@ -80,11 +86,5 @@
 /* Class = "NSButtonCell"; title = "Show number of open windows from:"; ObjectID = "zfs-jB-2nZ"; */
 "zfs-jB-2nZ.title" = "Zahl offener Fenster zeigen, ab:";
 
-/* Class = "NSTextFieldCell"; title = "Help me focus!"; ObjectID = "7LP-Vb-acH"; */
-"7LP-Vb-acH.title" = "";
-
-/* Class = "NSTextFieldCell"; placeholderString = "Open Tabs"; ObjectID = "qAP-ch-I6k"; */
-"qAP-ch-I6k.placeholderString" = "";
-
 /* Class = "NSButtonCell"; title = "Do not allow new tabs, after:"; ObjectID = "Zi0-bD-H6a"; */
-"Zi0-bD-H6a.title" = "";
+"Zi0-bD-H6a.title" = "Keine neuen Tabs erlauben, nach:";
