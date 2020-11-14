@@ -1,4 +1,3 @@
-
 /* Class = "NSButtonCell"; title = "Right"; ObjectID = "1X0-Ho-SuO"; */
 "1X0-Ho-SuO.title" = "右側";
 
@@ -45,4 +44,4 @@
 "RzU-7R-Y0I.ibShadowedToolTip" = "設定";
 
 /* Class = "NSButtonCell"; title = "OFF"; ObjectID = "uBr-qy-3mw"; */
-"uBr-qy-3mw.title" = "";
+"uBr-qy-3mw.title" = "オフ";
