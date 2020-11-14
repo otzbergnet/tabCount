@@ -36,7 +36,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
 
     @objc func handleURL(event: NSAppleEventDescriptor, reply: NSAppleEventDescriptor) {
-        if let path = event.paramDescriptor(forKeyword: keyDirectObject)?.stringValue?.removingPercentEncoding {
+        if ((event.paramDescriptor(forKeyword: keyDirectObject)?.stringValue?.removingPercentEncoding) != nil) {
             let myTabBar = NSApplication.shared.mainWindow?.windowController?.contentViewController as! NSTabViewController
             myTabBar.tabView.selectTabViewItem(at: 1)
         }
