@@ -54,7 +54,7 @@
 		</dict>
 	</dict>
 	<key>NSHumanReadableCopyright</key>
-	<string>Copyright © 2020 Claus Wolf &amp; Matt Sephton. All rights reserved.</string>
+	<string>Copyright © 2020 Claus Wolf. All rights reserved.</string>
 	<key>NSHumanReadableDescription</key>
 	<string>This Extension helps you see when there are too many tabs open</string>
 </dict>

@@ -60,7 +60,6 @@ class Helper {
             //all other cases lead to an empty badge
             badgeText = ""
         }
-        
         SFSafariApplication.getActiveWindow { (window) in
             window?.getToolbarItem { $0?.setBadgeText(badgeText)}
         }
