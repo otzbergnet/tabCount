@@ -1,13 +1,13 @@
-/* Class = "NSMenuItem"; title = "tabCount"; ObjectID = "1Xt-HY-uBw"; */
+/* Class = "NSMenuItem"; title = "Tab Count"; ObjectID = "1Xt-HY-uBw"; */
 "1Xt-HY-uBw.title" = "Tab Count";
 
-/* Class = "NSMenuItem"; title = "Quit tabCount"; ObjectID = "4sb-4s-VLi"; */
+/* Class = "NSMenuItem"; title = "Quit Tab Count"; ObjectID = "4sb-4s-VLi"; */
 "4sb-4s-VLi.title" = "Tab Countを終了";
 
 /* Class = "NSTextFieldCell"; placeholderString = "Open Tabs"; ObjectID = "50T-G1-9h0"; */
 "50T-G1-9h0.placeholderString" = "タブを開く";
 
-/* Class = "NSMenuItem"; title = "About tabCount"; ObjectID = "5kV-Vb-QxS"; */
+/* Class = "NSMenuItem"; title = "About Tab Count"; ObjectID = "5kV-Vb-QxS"; */
 "5kV-Vb-QxS.title" = "Tab Countについて";
 
 /* Class = "NSTextFieldCell"; placeholderString = "Window Count"; ObjectID = "7bX-Ue-B1h"; */
@@ -25,7 +25,7 @@
 /* Class = "NSMenu"; title = "Help"; ObjectID = "F2S-fz-NVQ"; */
 "F2S-fz-NVQ.title" = "ヘルプ";
 
-/* Class = "NSMenuItem"; title = "tabCount Help"; ObjectID = "FKE-Sm-Kum"; */
+/* Class = "NSMenuItem"; title = "Tab Count Help"; ObjectID = "FKE-Sm-Kum"; */
 "FKE-Sm-Kum.title" = "Tab Count ヘルプ";
 
 /* Class = "NSWindow"; title = "Tab Count"; ObjectID = "IQv-IB-iLA"; */
@@ -40,7 +40,7 @@
 /* Class = "NSTextFieldCell"; title = "Welcome to Tab Count"; ObjectID = "Ndz-z7-kVw"; */
 "Ndz-z7-kVw.title" = "Tab Countへようこそ！";
 
-/* Class = "NSMenuItem"; title = "Hide tabCount"; ObjectID = "Olw-nP-bQN"; */
+/* Class = "NSMenuItem"; title = "Hide Tab Count"; ObjectID = "Olw-nP-bQN"; */
 "Olw-nP-bQN.title" = "Tab Countを隠す";
 
 /* Class = "NSButtonCell"; title = "Show number of open windows from:"; ObjectID = "pHL-L6-PCr"; */
@@ -64,7 +64,7 @@
 /* Class = "NSTextFieldCell"; title = "Here you can define the basic behavior of Tab Count. By default we will show you the tab count, when you have at least 10 tabs open. Additionally you can also show the count of open windows."; ObjectID = "tvs-oo-bLL"; */
 "tvs-oo-bLL.title" = "ここでは閾値の設定を変更できます。閾値を超えると開いているタブ数がツールバーに表示されます。既定では、10個のタブを超えるとタブ数がツールバーのバッジに表示されます。ウィンドウ数の表示も設定可能です。";
 
-/* Class = "NSMenu"; title = "tabCount"; ObjectID = "uQy-DD-JDr"; */
+/* Class = "NSMenu"; title = "Tab Count"; ObjectID = "uQy-DD-JDr"; */
 "uQy-DD-JDr.title" = "tabCount";
 
 /* Class = "NSMenuItem"; title = "Hide Others"; ObjectID = "Vdr-fp-XzO"; */

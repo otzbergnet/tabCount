@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="17156"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="17506"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -12,18 +12,18 @@
                 <application id="hnw-xV-0zn" sceneMemberID="viewController">
                     <menu key="mainMenu" title="Main Menu" systemMenu="main" id="AYu-sK-qS6">
                         <items>
-                            <menuItem title="tabCount" id="1Xt-HY-uBw">
+                            <menuItem title="Tab Count" id="1Xt-HY-uBw">
                                 <modifierMask key="keyEquivalentModifierMask"/>
-                                <menu key="submenu" title="tabCount" systemMenu="apple" id="uQy-DD-JDr">
+                                <menu key="submenu" title="Tab Count" systemMenu="apple" id="uQy-DD-JDr">
                                     <items>
-                                        <menuItem title="About tabCount" id="5kV-Vb-QxS">
+                                        <menuItem title="About Tab Count" id="5kV-Vb-QxS">
                                             <modifierMask key="keyEquivalentModifierMask"/>
                                             <connections>
                                                 <action selector="orderFrontStandardAboutPanel:" target="Ady-hI-5gd" id="Exp-CZ-Vem"/>
                                             </connections>
                                         </menuItem>
                                         <menuItem isSeparatorItem="YES" id="VOq-y0-SEH"/>
-                                        <menuItem title="Hide tabCount" keyEquivalent="h" id="Olw-nP-bQN">
+                                        <menuItem title="Hide Tab Count" keyEquivalent="h" id="Olw-nP-bQN">
                                             <connections>
                                                 <action selector="hide:" target="Ady-hI-5gd" id="PnN-Uc-m68"/>
                                             </connections>
@@ -41,7 +41,7 @@
                                             </connections>
                                         </menuItem>
                                         <menuItem isSeparatorItem="YES" id="kCx-OE-vgT"/>
-                                        <menuItem title="Quit tabCount" keyEquivalent="q" id="4sb-4s-VLi">
+                                        <menuItem title="Quit Tab Count" keyEquivalent="q" id="4sb-4s-VLi">
                                             <connections>
                                                 <action selector="terminate:" target="Ady-hI-5gd" id="Te7-pn-YzF"/>
                                             </connections>
@@ -53,7 +53,7 @@
                                 <modifierMask key="keyEquivalentModifierMask"/>
                                 <menu key="submenu" title="Help" systemMenu="help" id="F2S-fz-NVQ">
                                     <items>
-                                        <menuItem title="tabCount Help" keyEquivalent="?" id="FKE-Sm-Kum">
+                                        <menuItem title="Tab Count Help" keyEquivalent="?" id="FKE-Sm-Kum">
                                             <connections>
                                                 <action selector="showHelp:" target="Ady-hI-5gd" id="y7X-2Q-9no"/>
                                             </connections>
@@ -139,7 +139,7 @@
                                 <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="AppIcon" id="OZY-uf-JNS"/>
                             </imageView>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="h84-Fd-Nc7">
-                                <rect key="frame" x="137" y="305" width="84" height="23"/>
+                                <rect key="frame" x="137" y="304" width="84" height="24"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" title="Settings" id="Srr-w6-WFp">
                                     <font key="font" metaFont="systemBold" size="20"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -147,7 +147,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" textCompletion="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hv4-xx-Gmy">
-                                <rect key="frame" x="137" y="237" width="459" height="48"/>
+                                <rect key="frame" x="137" y="236" width="459" height="48"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="455" id="gMZ-kZ-OXW"/>
                                 </constraints>
@@ -159,7 +159,7 @@
                                 </textFieldCell>
                             </textField>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="2b5-u8-e7V">
-                                <rect key="frame" x="133" y="42" width="70" height="32"/>
+                                <rect key="frame" x="132" y="42" width="64" height="32"/>
                                 <buttonCell key="cell" type="push" title="Save" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="xlz-ha-1c8">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
@@ -169,13 +169,13 @@
                                 </connections>
                             </button>
                             <stackView distribution="fill" orientation="vertical" alignment="leading" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tsj-yu-qYp">
-                                <rect key="frame" x="139" y="85" width="425" height="132"/>
+                                <rect key="frame" x="139" y="84" width="425" height="132"/>
                                 <subviews>
                                     <stackView distribution="fill" orientation="horizontal" alignment="top" spacing="10" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mxZ-pH-Gq4">
                                         <rect key="frame" x="0.0" y="111" width="425" height="21"/>
                                         <subviews>
                                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="hXc-se-N2v">
-                                                <rect key="frame" x="-2" y="5" width="304" height="18"/>
+                                                <rect key="frame" x="-2" y="4" width="302" height="18"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="5bf-p6-xhL"/>
                                                 </constraints>
@@ -215,7 +215,7 @@
                                         <rect key="frame" x="0.0" y="82" width="425" height="21"/>
                                         <subviews>
                                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="gNm-Mg-DtM">
-                                                <rect key="frame" x="-2" y="5" width="304" height="18"/>
+                                                <rect key="frame" x="-2" y="4" width="302" height="18"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="QCp-rP-Nfe"/>
                                                 </constraints>
@@ -274,7 +274,7 @@
                                         <rect key="frame" x="0.0" y="29" width="425" height="21"/>
                                         <subviews>
                                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="RXL-jl-bt9">
-                                                <rect key="frame" x="-2" y="5" width="304" height="18"/>
+                                                <rect key="frame" x="-2" y="4" width="302" height="18"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="eO4-aI-qqF"/>
                                                 </constraints>
@@ -314,7 +314,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="425" height="21"/>
                                         <subviews>
                                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="ATG-ev-8mD">
-                                                <rect key="frame" x="-2" y="5" width="304" height="18"/>
+                                                <rect key="frame" x="-2" y="4" width="302" height="18"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="dbO-t9-wEu"/>
                                                 </constraints>
@@ -420,7 +420,7 @@
                                 <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="AppIcon" id="j4W-AA-DW9"/>
                             </imageView>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="KnH-nz-9mQ">
-                                <rect key="frame" x="137" y="280" width="215" height="23"/>
+                                <rect key="frame" x="137" y="279" width="215" height="24"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" title="Welcome to Tab Count" id="Ndz-z7-kVw">
                                     <font key="font" metaFont="systemBold" size="20"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -428,7 +428,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" textCompletion="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fsd-K5-xK9">
-                                <rect key="frame" x="137" y="65" width="460" height="195"/>
+                                <rect key="frame" x="137" y="64" width="460" height="195"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="456" id="CgU-re-PKl"/>
                                     <constraint firstAttribute="height" constant="195" id="mjq-ul-2kj"/>
@@ -447,7 +447,7 @@ Claus - tabcount@otzberg.net</string>
                                 </textFieldCell>
                             </textField>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="zDy-Cr-T1x">
-                                <rect key="frame" x="351" y="22" width="250" height="32"/>
+                                <rect key="frame" x="358" y="22" width="244" height="32"/>
                                 <buttonCell key="cell" type="push" title="Open Safari Extension Preferences" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="tUY-Dw-t8S">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
