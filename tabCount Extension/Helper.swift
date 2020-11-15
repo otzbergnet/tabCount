@@ -20,10 +20,21 @@ class Helper {
         let maxTabs = settings.getIntData(key: "maxTabs")
         let maxWindows = settings.getIntData(key: "maxWindows")
         
+        let autoCloseCount = settings.getIntData(key: "autoCloseCount")
+        let shouldAutoClose = settings.getBoolData(key: "autoclose")
+        
+        let preventNewCount = settings.getIntData(key: "preventNewCount")
+        let preventNew = settings.getBoolData(key: "preventNew")
+        
         var badgeText = ""
         
-        
-        if(showTab && tabCount >= maxTabs && showWindow && windowCount >= maxWindows){
+        if(shouldAutoClose && tabCount == autoCloseCount){
+            badgeText = "✗"
+        }
+        else if(preventNew && tabCount == preventNewCount){
+            badgeText = "✗"
+        }
+        else if(showTab && tabCount >= maxTabs && showWindow && windowCount >= maxWindows){
             //show both tabCount & windowCount
             badgeText = "\(tabCount) "
             badgeText += exponent(i: windowCount)
@@ -49,7 +60,6 @@ class Helper {
             //all other cases lead to an empty badge
             badgeText = ""
         }
-        
         SFSafariApplication.getActiveWindow { (window) in
             window?.getToolbarItem { $0?.setBadgeText(badgeText)}
         }

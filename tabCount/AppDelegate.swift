@@ -22,4 +22,23 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     func applicationShouldTerminateAfterLastWindowClosed(_ sender: NSApplication) -> Bool{
         return true
     }
+    
+    func applicationWillFinishLaunching(_ notification: Notification) {
+        NSAppleEventManager
+            .shared()
+            .setEventHandler(
+                self,
+                andSelector: #selector(handleURL(event:reply:)),
+                forEventClass: AEEventClass(kInternetEventClass),
+                andEventID: AEEventID(kAEGetURL)
+            )
+
+    }
+
+    @objc func handleURL(event: NSAppleEventDescriptor, reply: NSAppleEventDescriptor) {
+        if ((event.paramDescriptor(forKeyword: keyDirectObject)?.stringValue?.removingPercentEncoding) != nil) {
+            let myTabBar = NSApplication.shared.mainWindow?.windowController?.contentViewController as! NSTabViewController
+            myTabBar.tabView.selectTabViewItem(at: 1)
+        }
+    }
 }

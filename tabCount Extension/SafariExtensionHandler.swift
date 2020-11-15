@@ -34,6 +34,7 @@ class SafariExtensionHandler: SFSafariExtensionHandler {
         // This is called when Safari's state changed in some way that would require the extension's toolbar item to be validated again.
         validationHandler(true, "")
         getCounts()
+        getCurrentWindowCount()
     }
     
     override func popoverViewController() -> SFSafariExtensionViewController {
@@ -55,7 +56,26 @@ class SafariExtensionHandler: SFSafariExtensionHandler {
         }
     }
     
-    
+    func getCurrentWindowCount(){
+        let autoCloseCount = settings.getIntData(key: "autoCloseCount")
+        let shouldAutoClose = settings.getBoolData(key: "autoclose")
+        let preventNewCount = settings.getIntData(key: "preventNewCount")
+        let preventNew = settings.getBoolData(key: "preventNew")
+        if(!shouldAutoClose && !preventNew){
+            return
+        }
+        SFSafariApplication.getActiveWindow { (safariWindow) in
+            safariWindow?.getAllTabs(completionHandler: { (tabs) in
+                let count = tabs.count
+                if(shouldAutoClose && count > autoCloseCount){
+                    tabs[0].close()
+                }
+                else if(preventNew && count > preventNewCount){
+                    tabs.last?.close()
+                }
+            })
+        }
+    }
     
     
     func updateBadge(text: String){

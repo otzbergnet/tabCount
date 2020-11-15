@@ -1,15 +1,20 @@
-
-/* Class = "NSMenuItem"; title = "tabCount"; ObjectID = "1Xt-HY-uBw"; */
+/* Class = "NSMenuItem"; title = "Tab Count"; ObjectID = "1Xt-HY-uBw"; */
 "1Xt-HY-uBw.title" = "Tab Count";
 
-/* Class = "NSMenuItem"; title = "Quit tabCount"; ObjectID = "4sb-4s-VLi"; */
+/* Class = "NSMenuItem"; title = "Quit Tab Count"; ObjectID = "4sb-4s-VLi"; */
 "4sb-4s-VLi.title" = "Tab Countを終了";
 
-/* Class = "NSMenuItem"; title = "About tabCount"; ObjectID = "5kV-Vb-QxS"; */
+/* Class = "NSTextFieldCell"; placeholderString = "Open Tabs"; ObjectID = "50T-G1-9h0"; */
+"50T-G1-9h0.placeholderString" = "タブを開く";
+
+/* Class = "NSMenuItem"; title = "About Tab Count"; ObjectID = "5kV-Vb-QxS"; */
 "5kV-Vb-QxS.title" = "Tab Countについて";
 
 /* Class = "NSTextFieldCell"; placeholderString = "Window Count"; ObjectID = "7bX-Ue-B1h"; */
 "7bX-Ue-B1h.placeholderString" = "Window Count";
+
+/* Class = "NSTextFieldCell"; title = "Help me focus!"; ObjectID = "7LP-Vb-acH"; */
+"7LP-Vb-acH.title" = "フォーカス-設定";
 
 /* Class = "NSMenu"; title = "Main Menu"; ObjectID = "AYu-sK-qS6"; */
 "AYu-sK-qS6.title" = "メインメニュー";
@@ -20,7 +25,7 @@
 /* Class = "NSMenu"; title = "Help"; ObjectID = "F2S-fz-NVQ"; */
 "F2S-fz-NVQ.title" = "ヘルプ";
 
-/* Class = "NSMenuItem"; title = "tabCount Help"; ObjectID = "FKE-Sm-Kum"; */
+/* Class = "NSMenuItem"; title = "Tab Count Help"; ObjectID = "FKE-Sm-Kum"; */
 "FKE-Sm-Kum.title" = "Tab Count ヘルプ";
 
 /* Class = "NSWindow"; title = "Tab Count"; ObjectID = "IQv-IB-iLA"; */
@@ -35,11 +40,14 @@
 /* Class = "NSTextFieldCell"; title = "Welcome to Tab Count"; ObjectID = "Ndz-z7-kVw"; */
 "Ndz-z7-kVw.title" = "Tab Countへようこそ！";
 
-/* Class = "NSMenuItem"; title = "Hide tabCount"; ObjectID = "Olw-nP-bQN"; */
+/* Class = "NSMenuItem"; title = "Hide Tab Count"; ObjectID = "Olw-nP-bQN"; */
 "Olw-nP-bQN.title" = "Tab Countを隠す";
 
 /* Class = "NSButtonCell"; title = "Show number of open windows from:"; ObjectID = "pHL-L6-PCr"; */
 "pHL-L6-PCr.title" = "ウィンドウ数の閾値";
+
+/* Class = "NSTextFieldCell"; placeholderString = "Open Tabs"; ObjectID = "qAP-ch-I6k"; */
+"qAP-ch-I6k.placeholderString" = "タブを開く";
 
 /* Class = "NSTextFieldCell"; title = "Settings"; ObjectID = "Srr-w6-WFp"; */
 "Srr-w6-WFp.title" = "設定";
@@ -47,13 +55,16 @@
 /* Class = "NSTextFieldCell"; placeholderString = "Tab Count"; ObjectID = "SXS-p8-lgb"; */
 "SXS-p8-lgb.placeholderString" = "Tab Count";
 
+/* Class = "NSButtonCell"; title = "Automatically close first tab, after:"; ObjectID = "t0H-Oo-Zcy"; */
+"t0H-Oo-Zcy.title" = "その後、最初のタブを自動的に閉じます";
+
 /* Class = "NSButtonCell"; title = "Open Safari Extension Preferences"; ObjectID = "tUY-Dw-t8S"; */
 "tUY-Dw-t8S.title" = "Safari機能拡張へ";
 
 /* Class = "NSTextFieldCell"; title = "Here you can define the basic behavior of Tab Count. By default we will show you the tab count, when you have at least 10 tabs open. Additionally you can also show the count of open windows."; ObjectID = "tvs-oo-bLL"; */
 "tvs-oo-bLL.title" = "ここでは閾値の設定を変更できます。閾値を超えると開いているタブ数がツールバーに表示されます。既定では、10個のタブを超えるとタブ数がツールバーのバッジに表示されます。ウィンドウ数の表示も設定可能です。";
 
-/* Class = "NSMenu"; title = "tabCount"; ObjectID = "uQy-DD-JDr"; */
+/* Class = "NSMenu"; title = "Tab Count"; ObjectID = "uQy-DD-JDr"; */
 "uQy-DD-JDr.title" = "tabCount";
 
 /* Class = "NSMenuItem"; title = "Hide Others"; ObjectID = "Vdr-fp-XzO"; */
@@ -70,3 +81,9 @@
 
 /* Class = "NSTextFieldCell"; title = "Thank you for downloading Tab Count! You'll need this containing app just once to enable Tab Count in Safari. To do so, click the button to Open Safari Extension Preferences below\n\nThe app will show a toolbar icon and a badge with the number of open tabs. To avoid it being too intrusive you can set a threshold for when the badge is to show. The default is 10, which you can change within the popover or the settings tab.\n\nLet me know, if you have ideas on how to improve this app! \n\nClaus - tabcount@otzberg.net"; ObjectID = "Ybs-tm-0T5"; */
 "Ybs-tm-0T5.title" = "Tab Count をダウンロードして頂きありがとうございました。この拡張機能を有効にするには下の「Safari機能拡張へ」ボタンをクリックして、Tab Countにチェックを付けてくだいさい。\n\nこのSafari機能拡張では開いているタブ数やウィンドウ数をカウントしてツールバーに表示されます。タブ数とウィンドウ数は閾値を設定可能で、閾値を超えると開いているタブ数がツールバーに表示されます。設定を変更するには、このアプリの設定タブより、もしくはツールバーのバッジをクリックしてください。\n\nどうぞ、よろしくお願いします。 Claus - tabcount@otzberg.net";
+
+/* Class = "NSButtonCell"; title = "Show number of open windows from:"; ObjectID = "zfs-jB-2nZ"; */
+"zfs-jB-2nZ.title" = "から開いているウィンドウの数を表示";
+
+/* Class = "NSButtonCell"; title = "Do not allow new tabs, after:"; ObjectID = "Zi0-bD-H6a"; */
+"Zi0-bD-H6a.title" = "次の場合は、新しいタブを許可しないでください。";

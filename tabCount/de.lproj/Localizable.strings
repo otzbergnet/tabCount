@@ -1,7 +1,5 @@
-/* 
-  Localizable.strings
-  Tab Count
+/* the mode is on */
+"OFF" = "AUS";
 
-  Created by Claus Wolf on 23.11.19.
-  Copyright © 2019 Claus Wolf. All rights reserved.
-*/
+/* the mode is on */
+"ON" = "AN";

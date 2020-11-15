@@ -1,15 +1,20 @@
-
-/* Class = "NSMenuItem"; title = "tabCount"; ObjectID = "1Xt-HY-uBw"; */
+/* Class = "NSMenuItem"; title = "Tab Count"; ObjectID = "1Xt-HY-uBw"; */
 "1Xt-HY-uBw.title" = "tabCount";
 
-/* Class = "NSMenuItem"; title = "Quit tabCount"; ObjectID = "4sb-4s-VLi"; */
+/* Class = "NSMenuItem"; title = "Quit Tab Count"; ObjectID = "4sb-4s-VLi"; */
 "4sb-4s-VLi.title" = "Quit tabCount";
 
-/* Class = "NSMenuItem"; title = "About tabCount"; ObjectID = "5kV-Vb-QxS"; */
+/* Class = "NSTextFieldCell"; placeholderString = "Open Tabs"; ObjectID = "50T-G1-9h0"; */
+"50T-G1-9h0.placeholderString" = "Offene Tabs";
+
+/* Class = "NSMenuItem"; title = "About Tab Count"; ObjectID = "5kV-Vb-QxS"; */
 "5kV-Vb-QxS.title" = "About tabCount";
 
 /* Class = "NSTextFieldCell"; placeholderString = "Window Count"; ObjectID = "7bX-Ue-B1h"; */
 "7bX-Ue-B1h.placeholderString" = "Anzahl Fenster";
+
+/* Class = "NSTextFieldCell"; title = "Help me focus!"; ObjectID = "7LP-Vb-acH"; */
+"7LP-Vb-acH.title" = "Fokus-Einstellungen";
 
 /* Class = "NSMenu"; title = "Main Menu"; ObjectID = "AYu-sK-qS6"; */
 "AYu-sK-qS6.title" = "Main Menu";
@@ -20,7 +25,7 @@
 /* Class = "NSMenu"; title = "Help"; ObjectID = "F2S-fz-NVQ"; */
 "F2S-fz-NVQ.title" = "Help";
 
-/* Class = "NSMenuItem"; title = "tabCount Help"; ObjectID = "FKE-Sm-Kum"; */
+/* Class = "NSMenuItem"; title = "Tab Count Help"; ObjectID = "FKE-Sm-Kum"; */
 "FKE-Sm-Kum.title" = "tabCount Help";
 
 /* Class = "NSWindow"; title = "Tab Count"; ObjectID = "IQv-IB-iLA"; */
@@ -35,11 +40,14 @@
 /* Class = "NSTextFieldCell"; title = "Welcome to Tab Count"; ObjectID = "Ndz-z7-kVw"; */
 "Ndz-z7-kVw.title" = "Welcome to Tab Count";
 
-/* Class = "NSMenuItem"; title = "Hide tabCount"; ObjectID = "Olw-nP-bQN"; */
+/* Class = "NSMenuItem"; title = "Hide Tab Count"; ObjectID = "Olw-nP-bQN"; */
 "Olw-nP-bQN.title" = "Hide tabCount";
 
 /* Class = "NSButtonCell"; title = "Show number of open windows from:"; ObjectID = "pHL-L6-PCr"; */
 "pHL-L6-PCr.title" = "Die Anzahl offener Fenster zeigen, ab:";
+
+/* Class = "NSTextFieldCell"; placeholderString = "Open Tabs"; ObjectID = "qAP-ch-I6k"; */
+"qAP-ch-I6k.placeholderString" = "Offene Tabs";
 
 /* Class = "NSTextFieldCell"; title = "Settings"; ObjectID = "Srr-w6-WFp"; */
 "Srr-w6-WFp.title" = "Einstellungen";
@@ -47,13 +55,16 @@
 /* Class = "NSTextFieldCell"; placeholderString = "Tab Count"; ObjectID = "SXS-p8-lgb"; */
 "SXS-p8-lgb.placeholderString" = "Tab Count";
 
+/* Class = "NSButtonCell"; title = "Automatically close first tab, after:"; ObjectID = "t0H-Oo-Zcy"; */
+"t0H-Oo-Zcy.title" = "Den ersten Tab automatisch schließen, nach:";
+
 /* Class = "NSButtonCell"; title = "Open Safari Extension Preferences"; ObjectID = "tUY-Dw-t8S"; */
 "tUY-Dw-t8S.title" = "Open Safari Extension Preferences";
 
 /* Class = "NSTextFieldCell"; title = "Here you can define the basic behavior of Tab Count. By default we will show you the tab count, when you have at least 10 tabs open. Additionally you can also show the count of open windows."; ObjectID = "tvs-oo-bLL"; */
 "tvs-oo-bLL.title" = "Hier können Sie das grundlegende Verhalten von Tab Count definieren. Sofern Sie nichts ändern, wird die Anzahl der offenen Tabs gezeigt, sobald 10 geöffnet sind. Wenn Sie möchten, können Sie zusätzlich die Anzahl offener Fenster zeigen.";
 
-/* Class = "NSMenu"; title = "tabCount"; ObjectID = "uQy-DD-JDr"; */
+/* Class = "NSMenu"; title = "Tab Count"; ObjectID = "uQy-DD-JDr"; */
 "uQy-DD-JDr.title" = "tabCount";
 
 /* Class = "NSMenuItem"; title = "Hide Others"; ObjectID = "Vdr-fp-XzO"; */
@@ -70,3 +81,9 @@
 
 /* Class = "NSTextFieldCell"; title = "Thank you for downloading Tab Count! You'll need this containing app just once to enable Tab Count in Safari. To do so, click the button to Open Safari Extension Preferences below\n\nThe app will show a toolbar icon and a badge with the number of open tabs. To avoid it being too intrusive you can set a threshold for when the badge is to show. The default is 10, which you can change within the popover or the settings tab.\n\nLet me know, if you have ideas on how to improve this app! \n\nClaus - tabcount@otzberg.net"; ObjectID = "Ybs-tm-0T5"; */
 "Ybs-tm-0T5.title" = "Thank you for downloading Tab Count! You'll need this containing app just once to enable Tab Count in Safari. To do so, click the button to Open Safari Extension Preferences below\n\nThe app will show a toolbar icon and a badge with the number of open tabs. To avoid it being too intrusive you can set a threshold for when the badge is to show. The default is 10, which you can change within the popover or the settings tab.\n\nLet me know, if you have ideas on how to improve this app! \n\nClaus - tabcount@otzberg.net";
+
+/* Class = "NSButtonCell"; title = "Show number of open windows from:"; ObjectID = "zfs-jB-2nZ"; */
+"zfs-jB-2nZ.title" = "Zeige die Anzahl offener Fenster ab:";
+
+/* Class = "NSButtonCell"; title = "Do not allow new tabs, after:"; ObjectID = "Zi0-bD-H6a"; */
+"Zi0-bD-H6a.title" = "Keine neuen Tabs erlauben, nach:";
