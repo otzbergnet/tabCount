@@ -20,6 +20,9 @@ class SettingsViewController: NSView {
     
     @IBOutlet weak var windowCountCheck: NSButton!
     @IBOutlet weak var tabCountCheck: NSButton!
+    @IBOutlet weak var keepPinnedTabsCheck: NSButton!
+    
+    
     @IBOutlet weak var autoCloseCheck: NSButtonCell!
     @IBOutlet weak var preventNewCheck: NSButton!
     
@@ -34,6 +37,7 @@ class SettingsViewController: NSView {
         getShowTabState()
         getAutoCloseState()
         getPreventNewState()
+        getPinnedTabState()
     }
 
     
@@ -129,6 +133,16 @@ class SettingsViewController: NSView {
         }
         else{
             preventNewCheck.state = .off
+        }
+    }
+    
+    func getPinnedTabState(){
+        let pinnedTabState = settings.getBoolData(key: "pinnedTab")
+        if(pinnedTabState){
+            keepPinnedTabsCheck.state = .on
+        }
+        else{
+            keepPinnedTabsCheck.state = .off
         }
     }
     
@@ -262,6 +276,15 @@ class SettingsViewController: NSView {
         }
         else{
             settings.setBoolData(key: "preventNew", data: false)
+        }
+    }
+
+    @IBAction func saveKeepPinnedTab(_ sender: NSButton) {
+        if(sender.state == .on){
+            settings.setBoolData(key: "pinnedTab", data: true)
+        }
+        else{
+            settings.setBoolData(key: "pinnedTab", data: false)
         }
     }
     

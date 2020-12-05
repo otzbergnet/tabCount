@@ -77,12 +77,21 @@ class SafariExtensionViewController: SFSafariExtensionViewController, NSTextFiel
             guard let window = window else {
                 return
             }
+            let keepPinnedTab = self.settings.getBoolData(key: "pinnedTab")
             window.getActiveTab { (activeTab) in
                 window.getAllTabs { (tabs) in
-                    
                     let tabIndex: Int = tabs.firstIndex(where: { activeTab!.isEqual($0) })!
                     for n in 0...(tabIndex-1){
-                        tabs[n].close()
+                        if(keepPinnedTab) {
+                            tabs[n].getContainingWindow { (window) in
+                                if(window != nil){
+                                    tabs[n].close()
+                                }
+                            }
+                        }
+                        else {
+                            tabs[n].close()
+                        }
                     }
                     
                 }

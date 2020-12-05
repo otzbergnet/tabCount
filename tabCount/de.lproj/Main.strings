@@ -37,6 +37,9 @@
 /* Class = "NSMenuItem"; title = "Show All"; ObjectID = "Kd2-mp-pUS"; */
 "Kd2-mp-pUS.title" = "Alle Zeigen";
 
+/* Class = "NSButtonCell"; title = "When closing tabs, keep pinned tabs open"; ObjectID = "Kv5-nJ-Miq"; */
+"Kv5-nJ-Miq.title" = "Beim schließen von Tabs, fixierte Tabs behalten";
+
 /* Class = "NSTextFieldCell"; title = "Welcome to Tab Count"; ObjectID = "Ndz-z7-kVw"; */
 "Ndz-z7-kVw.title" = "Willkommen bei Tab Count";
 
@@ -61,8 +64,8 @@
 /* Class = "NSButtonCell"; title = "Open Safari Extension Preferences"; ObjectID = "tUY-Dw-t8S"; */
 "tUY-Dw-t8S.title" = "Safari Einstellungen (Erweiterungen) öffnen";
 
-/* Class = "NSTextFieldCell"; title = "Here you can define the basic behavior of Tab Count. By default we will show you the tab count, when you have at least 10 tabs open. Additionally you can also show the count of open windows."; ObjectID = "tvs-oo-bLL"; */
-"tvs-oo-bLL.title" = "Hier können Sie das grundlegende Verhalten von Tab Count definieren. In der Grundeinstellung, wird die Anzahl der offenen Tabs gezeigt, sobald 10 geöffnet sind. Zusätzlich können Sie die Anzahl offener Fenster zeigen.";
+/* Class = "NSTextFieldCell"; title = "Here you can define the basic behavior of Tab Count. By default we will show you the tab count, when you have at least 10 tabs open."; ObjectID = "tvs-oo-bLL"; */
+"tvs-oo-bLL.title" = "Hier können Sie das Verhalten von Tab Count definieren. In der Grundeinstellung wird die Zahl offener Tabs gezeigt, sobald 10 geöffnet sind.";
 
 /* Class = "NSMenu"; title = "Tab Count"; ObjectID = "uQy-DD-JDr"; */
 "uQy-DD-JDr.title" = "Tab Count";

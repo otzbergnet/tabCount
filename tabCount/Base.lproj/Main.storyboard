@@ -147,19 +147,19 @@
                                 </textFieldCell>
                             </textField>
                             <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" textCompletion="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hv4-xx-Gmy">
-                                <rect key="frame" x="137" y="236" width="459" height="48"/>
+                                <rect key="frame" x="137" y="252" width="504" height="32"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="455" id="gMZ-kZ-OXW"/>
+                                    <constraint firstAttribute="width" constant="500" id="gMZ-kZ-OXW"/>
                                 </constraints>
                                 <textFieldCell key="cell" allowsUndo="NO" sendsActionOnEndEditing="YES" state="on" alignment="justified" id="tvs-oo-bLL">
                                     <font key="font" metaFont="system"/>
-                                    <string key="title">Here you can define the basic behavior of Tab Count. By default we will show you the tab count, when you have at least 10 tabs open. Additionally you can also show the count of open windows.</string>
+                                    <string key="title">Here you can define the basic behavior of Tab Count. By default we will show you the tab count, when you have at least 10 tabs open.</string>
                                     <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="quaternaryLabelColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="2b5-u8-e7V">
-                                <rect key="frame" x="132" y="42" width="64" height="32"/>
+                                <rect key="frame" x="132" y="34" width="64" height="32"/>
                                 <buttonCell key="cell" type="push" title="Save" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="xlz-ha-1c8">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
@@ -169,10 +169,10 @@
                                 </connections>
                             </button>
                             <stackView distribution="fill" orientation="vertical" alignment="leading" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tsj-yu-qYp">
-                                <rect key="frame" x="139" y="84" width="425" height="132"/>
+                                <rect key="frame" x="139" y="76" width="425" height="156"/>
                                 <subviews>
                                     <stackView distribution="fill" orientation="horizontal" alignment="top" spacing="10" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mxZ-pH-Gq4">
-                                        <rect key="frame" x="0.0" y="111" width="425" height="21"/>
+                                        <rect key="frame" x="0.0" y="135" width="425" height="21"/>
                                         <subviews>
                                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="hXc-se-N2v">
                                                 <rect key="frame" x="-2" y="4" width="302" height="18"/>
@@ -212,7 +212,7 @@
                                         </customSpacing>
                                     </stackView>
                                     <stackView distribution="fill" orientation="horizontal" alignment="top" spacing="10" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="h4E-U3-Dfy">
-                                        <rect key="frame" x="0.0" y="82" width="425" height="21"/>
+                                        <rect key="frame" x="0.0" y="106" width="425" height="21"/>
                                         <subviews>
                                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="gNm-Mg-DtM">
                                                 <rect key="frame" x="-2" y="4" width="302" height="18"/>
@@ -248,6 +248,30 @@
                                         </visibilityPriorities>
                                         <customSpacing>
                                             <real value="3.4028234663852886e+38"/>
+                                            <real value="3.4028234663852886e+38"/>
+                                        </customSpacing>
+                                    </stackView>
+                                    <stackView distribution="fill" orientation="horizontal" alignment="top" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9Lo-uY-fmb">
+                                        <rect key="frame" x="0.0" y="82" width="300" height="16"/>
+                                        <subviews>
+                                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="1XX-6q-uVC">
+                                                <rect key="frame" x="-2" y="-1" width="302" height="18"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="ASB-c5-Cj2"/>
+                                                </constraints>
+                                                <buttonCell key="cell" type="check" title="When closing tabs, keep pinned tabs open" bezelStyle="regularSquare" imagePosition="left" inset="2" id="Kv5-nJ-Miq">
+                                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                    <font key="font" metaFont="system"/>
+                                                </buttonCell>
+                                                <connections>
+                                                    <action selector="saveKeepPinnedTab:" target="2U5-jO-Az9" id="R7R-0c-0gC"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <visibilityPriorities>
+                                            <integer value="1000"/>
+                                        </visibilityPriorities>
+                                        <customSpacing>
                                             <real value="3.4028234663852886e+38"/>
                                         </customSpacing>
                                     </stackView>
@@ -357,8 +381,10 @@
                                     <integer value="1000"/>
                                     <integer value="1000"/>
                                     <integer value="1000"/>
+                                    <integer value="1000"/>
                                 </visibilityPriorities>
                                 <customSpacing>
+                                    <real value="3.4028234663852886e+38"/>
                                     <real value="3.4028234663852886e+38"/>
                                     <real value="3.4028234663852886e+38"/>
                                     <real value="3.4028234663852886e+38"/>
@@ -386,6 +412,7 @@
                         <connections>
                             <outlet property="autoCloseCheck" destination="t0H-Oo-Zcy" id="MhE-NI-CHH"/>
                             <outlet property="autoCloseCountBox" destination="xf1-sN-HB3" id="15v-7h-lra"/>
+                            <outlet property="keepPinnedTabsCheck" destination="1XX-6q-uVC" id="Wtb-f2-qvO"/>
                             <outlet property="preventNewCheck" destination="ATG-ev-8mD" id="iwq-n0-n71"/>
                             <outlet property="preventNewCountBox" destination="kGj-FV-sL1" id="cV1-z9-2eh"/>
                             <outlet property="tabCountBox" destination="aQm-LC-sTn" id="mQ5-cb-TXL"/>

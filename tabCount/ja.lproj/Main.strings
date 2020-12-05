@@ -37,6 +37,9 @@
 /* Class = "NSMenuItem"; title = "Show All"; ObjectID = "Kd2-mp-pUS"; */
 "Kd2-mp-pUS.title" = "すべてを表示";
 
+/* Class = "NSButtonCell"; title = "When closing tabs, keep pinned tabs open"; ObjectID = "Kv5-nJ-Miq"; */
+"Kv5-nJ-Miq.title" = "タブを閉じるときは、固定されたタブを開いたままにします。";
+
 /* Class = "NSTextFieldCell"; title = "Welcome to Tab Count"; ObjectID = "Ndz-z7-kVw"; */
 "Ndz-z7-kVw.title" = "Tab Countへようこそ！";
 
@@ -61,8 +64,8 @@
 /* Class = "NSButtonCell"; title = "Open Safari Extension Preferences"; ObjectID = "tUY-Dw-t8S"; */
 "tUY-Dw-t8S.title" = "Safari機能拡張へ";
 
-/* Class = "NSTextFieldCell"; title = "Here you can define the basic behavior of Tab Count. By default we will show you the tab count, when you have at least 10 tabs open. Additionally you can also show the count of open windows."; ObjectID = "tvs-oo-bLL"; */
-"tvs-oo-bLL.title" = "ここでは閾値の設定を変更できます。閾値を超えると開いているタブ数がツールバーに表示されます。既定では、10個のタブを超えるとタブ数がツールバーのバッジに表示されます。ウィンドウ数の表示も設定可能です。";
+/* Class = "NSTextFieldCell"; title = "Here you can define the basic behavior of Tab Count. By default we will show you the tab count, when you have at least 10 tabs open."; ObjectID = "tvs-oo-bLL"; */
+"tvs-oo-bLL.title" = "ここでは閾値の設定を変更できます。閾値を超えると開いているタブ数がツールバーに表示されます。既定では、10個のタブを超えるとタブ数がツールバーのバッジに表示されます。";
 
 /* Class = "NSMenu"; title = "Tab Count"; ObjectID = "uQy-DD-JDr"; */
 "uQy-DD-JDr.title" = "tabCount";

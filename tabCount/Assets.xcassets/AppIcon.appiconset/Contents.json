@@ -1,61 +1,61 @@
 {
   "images" : [
     {
-      "filename" : "tabcount16.png",
+      "filename" : "tabcount_16.png",
       "idiom" : "mac",
       "scale" : "1x",
       "size" : "16x16"
     },
     {
-      "filename" : "tabcount32-1.png",
+      "filename" : "tabcount_32-1.png",
       "idiom" : "mac",
       "scale" : "2x",
       "size" : "16x16"
     },
     {
-      "filename" : "tabcount32.png",
+      "filename" : "tabcount_32.png",
       "idiom" : "mac",
       "scale" : "1x",
       "size" : "32x32"
     },
     {
-      "filename" : "tabcount64.png",
+      "filename" : "tabcount_64.png",
       "idiom" : "mac",
       "scale" : "2x",
       "size" : "32x32"
     },
     {
-      "filename" : "tabcount128.png",
+      "filename" : "tabcount_128.png",
       "idiom" : "mac",
       "scale" : "1x",
       "size" : "128x128"
     },
     {
-      "filename" : "tabcount256-1.png",
+      "filename" : "tabcount_256-1.png",
       "idiom" : "mac",
       "scale" : "2x",
       "size" : "128x128"
     },
     {
-      "filename" : "tabcount256.png",
+      "filename" : "tabcount_256.png",
       "idiom" : "mac",
       "scale" : "1x",
       "size" : "256x256"
     },
     {
-      "filename" : "tabcount512-1.png",
+      "filename" : "tabcount_512-1.png",
       "idiom" : "mac",
       "scale" : "2x",
       "size" : "256x256"
     },
     {
-      "filename" : "tabcount512.png",
+      "filename" : "tabcount_512.png",
       "idiom" : "mac",
       "scale" : "1x",
       "size" : "512x512"
     },
     {
-      "filename" : "tabcount1024.png",
+      "filename" : "tabcount_1024.png",
       "idiom" : "mac",
       "scale" : "2x",
       "size" : "512x512"
