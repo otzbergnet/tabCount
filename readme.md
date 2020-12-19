@@ -1,18 +1,8 @@
-# Tab Count
+# Tab Count Plus
 
 ## About
 
-With Safari 13 Apple deprecated old style Safari Extensions (.safariextensions), which meant a large number of extensions became unavailable.
-
-[@gingerbeardman](https://github.com/gingerbeardman) contacted me about [Safari Count Tabs Extension](https://github.com/adrianh/safari-count-tabs-extension), which was no longer able to run in the latest Safari builds.
-
-The inspiration stems from someone else's work and I am grateful to both for mentioning it.
-
-## Download on AppStore
-
-[![Download on AppStore](appstore.svg)](https://apps.apple.com/de/app/tab-count/id1487406555?mt=12)
-
-It's free - of course!
+TabCount Plus is a sibling to TabCount...
 
 ## Translations
 
