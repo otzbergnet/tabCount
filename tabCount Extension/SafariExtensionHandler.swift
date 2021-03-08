@@ -13,9 +13,6 @@ class SafariExtensionHandler: SFSafariExtensionHandler {
     var tabCount : Int = 0
     var windowCount : Int = 0
     
-    var mayCloseTab = true
-    var mayPreventTab = true
-    
     let settings = SettingsHelper()
     let helper = Helper()
     
@@ -60,38 +57,20 @@ class SafariExtensionHandler: SFSafariExtensionHandler {
     }
     
     func getCurrentWindowCount(){
-        print("getCurrentWindowCount")
         let autoCloseCount = settings.getIntData(key: "autoCloseCount")
         let shouldAutoClose = settings.getBoolData(key: "autoclose")
         let preventNewCount = settings.getIntData(key: "preventNewCount")
         let preventNew = settings.getBoolData(key: "preventNew")
-
         if(!shouldAutoClose && !preventNew){
             return
         }
         SFSafariApplication.getActiveWindow { (safariWindow) in
             safariWindow?.getAllTabs(completionHandler: { (tabs) in
-                print(self.mayCloseTab)
-                print(self.mayPreventTab)
                 let count = tabs.count
-                if(shouldAutoClose && count > (autoCloseCount+1)){
-                    self.mayCloseTab = false
-                    return
-                }
-                else if(count == autoCloseCount){
-                    self.mayCloseTab = true
-                }
-                if(preventNew && count > (preventNewCount+1)){
-                    self.mayPreventTab = false
-                    return
-                }
-                else if(count == preventNewCount){
-                    self.mayPreventTab = true
-                }
-                if(shouldAutoClose && count > autoCloseCount && self.mayCloseTab){
+                if(shouldAutoClose && count > autoCloseCount){
                     tabs[0].close()
                 }
-                else if(preventNew && count > preventNewCount && self.mayPreventTab){
+                else if(preventNew && count > preventNewCount){
                     tabs.last?.close()
                 }
             })
