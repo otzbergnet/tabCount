@@ -26,6 +26,7 @@ class SafariExtensionViewController: SFSafariExtensionViewController, NSTextFiel
     @IBOutlet weak var closeTabLabel: NSTextField!
     @IBOutlet weak var closeLeftButton: NSButton!
     @IBOutlet weak var closeRightButton: NSButton!
+    @IBOutlet weak var closeButtonDivider: NSBox!
     
     @IBOutlet weak var focusModeOnOffButton: NSButton!
     
@@ -205,8 +206,9 @@ class SafariExtensionViewController: SFSafariExtensionViewController, NSTextFiel
                     let tabCount: Int = tabs.count
                     let tabIndex: Int = tabs.firstIndex(where: { activeTab!.isEqual($0) })!
                     
-                    
-                    if(tabIndex == 0 && tabCount == 1){
+                    if(noCloseButtons){
+                        // nothing to do here
+                    }else if(tabIndex == 0 && tabCount == 1){
                         //NSLog("TabCountDebug: Only one tab - show none")
                         DispatchQueue.main.async {
                             self.closeLeftButton.isEnabled = false
@@ -268,6 +270,26 @@ class SafariExtensionViewController: SFSafariExtensionViewController, NSTextFiel
                 // Fallback on earlier versions
             }
             focusModeOnOffButton.title = NSLocalizedString("OFF", comment: "the mode is off")
+        }
+    }
+    
+    func noCloseButtonAction() {
+        let noCloseButtonState = settings.getBoolData(key: "noCloseButtons")
+        if (noCloseButtonState){
+            DispatchQueue.main.async {
+                self.closeLeftButton.isHidden = true
+                self.closeRightButton.isHidden = true
+                self.closeTabLabel.isHidden = true
+                self.closeButtonDivider.isHidden = true
+            }
+        }
+        else{
+            DispatchQueue.main.async {
+                self.closeLeftButton.isHidden = false
+                self.closeRightButton.isHidden = false
+                self.closeTabLabel.isHidden = false
+                self.closeButtonDivider.isHidden = false
+            }
         }
     }
     
