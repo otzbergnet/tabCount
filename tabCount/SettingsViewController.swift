@@ -23,10 +23,10 @@ class SettingsViewController: NSView {
     @IBOutlet weak var keepPinnedTabsCheck: NSButton!
     @IBOutlet weak var countPerWindowCheck: NSButton!
     
-    
-    
     @IBOutlet weak var autoCloseCheck: NSButtonCell!
     @IBOutlet weak var preventNewCheck: NSButton!
+    @IBOutlet weak var enforceTotalTabCountCheck: NSButton!
+    
     
     override func draw(_ dirtyRect: NSRect) {
         super.draw(dirtyRect)
@@ -41,6 +41,7 @@ class SettingsViewController: NSView {
         getPreventNewState()
         getPinnedTabState()
         getCountPerWindowState()
+        getEnforceTotalTabCountState()
     }
 
     
@@ -53,6 +54,7 @@ class SettingsViewController: NSView {
             settings.setBoolData(key: "preventNew", data: false)
             settings.setBoolData(key: "setup", data: true)
             settings.setBoolData(key: "countPerWindow", data: false)
+            settings.setBoolData(key: "enforceTotalTabCount", data: false)
         }
     }
     
@@ -157,6 +159,16 @@ class SettingsViewController: NSView {
         }
         else{
             countPerWindowCheck.state = .off
+        }
+    }
+    
+    func getEnforceTotalTabCountState(){
+        let enforceTotalTabCountState = settings.getBoolData(key: "enforceTotalTabCount")
+        if(enforceTotalTabCountState){
+            enforceTotalTabCountCheck.state = .on
+        }
+        else{
+            enforceTotalTabCountCheck.state = .off
         }
     }
     
@@ -308,6 +320,15 @@ class SettingsViewController: NSView {
         }
         else{
             settings.setBoolData(key: "countPerWindow", data: false)
+        }
+    }
+    
+    @IBAction func enforceTotalTabCountTab(_ sender: NSButton) {
+        if(sender.state == .on){
+            settings.setBoolData(key: "enforceTotalTabCount", data: true)
+        }
+        else{
+            settings.setBoolData(key: "enforceTotalTabCount", data: false)
         }
     }
     

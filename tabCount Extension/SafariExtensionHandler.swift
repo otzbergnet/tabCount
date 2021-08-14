@@ -82,40 +82,88 @@ class SafariExtensionHandler: SFSafariExtensionHandler {
     }
     
     func getCurrentWindowCount(){
-        print("getCurrentWindowCount")
+//        print("getCurrentWindowCount")
         let autoCloseCount = settings.getIntData(key: "autoCloseCount")
         let shouldAutoClose = settings.getBoolData(key: "autoclose")
         let preventNewCount = settings.getIntData(key: "preventNewCount")
         let preventNew = settings.getBoolData(key: "preventNew")
+        let enforceTotalTabCountState = settings.getBoolData(key: "enforceTotalTabCount")
 
         if(!shouldAutoClose && !preventNew){
             return
         }
-        SFSafariApplication.getActiveWindow { (safariWindow) in
-            safariWindow?.getAllTabs(completionHandler: { (tabs) in
-
-                let count = tabs.count
-                if(shouldAutoClose && count > (autoCloseCount+1)){
+        getCounts(enforceTotalTabCountState: enforceTotalTabCountState) { (res) in
+            switch res {
+            case .success(let counts):
+                if(shouldAutoClose && counts.tabs > (autoCloseCount+1)){
                     self.mayCloseTab = false
                     return
                 }
-                else if(count == autoCloseCount){
+                else if(counts.tabs == autoCloseCount){
                     self.mayCloseTab = true
                 }
-                if(preventNew && count > (preventNewCount+1)){
+                if(preventNew && counts.tabs > (preventNewCount+1)){
                     self.mayPreventTab = false
                     return
                 }
-                else if(count == preventNewCount){
+                else if(counts.tabs == preventNewCount){
                     self.mayPreventTab = true
                 }
-                if(shouldAutoClose && count > autoCloseCount && self.mayCloseTab){
-                    tabs[0].close()
+                if(shouldAutoClose && counts.tabs > autoCloseCount && self.mayCloseTab){
+                    self.actionPreventTabs(first: true)
                 }
-                else if(preventNew && count > preventNewCount && self.mayPreventTab){
-                    tabs.last?.close()
+                else if(preventNew && counts.tabs > preventNewCount && self.mayPreventTab){
+                    self.actionPreventTabs(first: false)
+                }
+            case .failure(let error):
+                print(error)
+            }
+        }
+        
+    }
+    
+    func actionPreventTabs(first: Bool) {
+        SFSafariApplication.getActiveWindow { (safariWindow) in
+            safariWindow?.getAllTabs(completionHandler: { (tabs) in
+                switch first {
+                    case true:
+                        tabs[0].close()
+                    case false:
+                        tabs.last?.close()
                 }
             })
+        }
+    }
+    
+    
+    func getCounts(enforceTotalTabCountState : Bool, completion: @escaping (Result<CountObject, Error>) -> ()){
+        let counts = CountObject()
+        if(enforceTotalTabCountState){
+            SFSafariApplication.getAllWindows { safariWindows in
+                var count = 0;
+                let windowCount = safariWindows.count
+                var windowCountIteration = 0
+                for singleSafariWindow in safariWindows{
+                    singleSafariWindow.getAllTabs{ tabs in
+                        windowCountIteration += 1
+//                        print("windowCount: \(windowCount)")
+//                        print("windowCountIteration: \(windowCountIteration)")
+                        count = count + tabs.count
+                        counts.tabs = count
+                        if (windowCountIteration == windowCount){
+                            completion(.success(counts))
+                        }
+                    }
+                }
+            }
+        }
+        else{
+            SFSafariApplication.getActiveWindow { (safariWindow) in
+                safariWindow?.getAllTabs(completionHandler: { (tabs) in
+                    counts.tabs = tabs.count
+                    completion(.success(counts))
+                })
+            }
         }
     }
     
@@ -126,4 +174,9 @@ class SafariExtensionHandler: SFSafariExtensionHandler {
         }
     }
     
+}
+
+class CountObject{
+    var windows = 0
+    var tabs = 0
 }
