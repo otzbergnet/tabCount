@@ -45,17 +45,40 @@ class SafariExtensionHandler: SFSafariExtensionHandler {
     
     
     func getCounts(){
-        SFSafariApplication.getAllWindows { (safariWindows) in
-            self.windowCount = safariWindows.count
-            var newTabCount = 0;
-            for singleSafariWindow in safariWindows{
-                singleSafariWindow.getAllTabs{ tabs in
-                    newTabCount = newTabCount + tabs.count
-                    self.helper.updateCountBadge(windowCount: self.windowCount, tabCount: newTabCount)
+        let countPerWindow = settings.getBoolData(key: "countPerWindow")
+        
+        if (!countPerWindow){
+            SFSafariApplication.getAllWindows { (safariWindows) in
+                self.windowCount = safariWindows.count
+                var newTabCount = 0;
+                for singleSafariWindow in safariWindows{
+                    singleSafariWindow.getAllTabs{ tabs in
+                        newTabCount = newTabCount + tabs.count
+                        self.helper.updateCountBadge(windowCount: self.windowCount, tabCount: newTabCount)
+                    }
                 }
+                self.tabCount = newTabCount;
             }
-            self.tabCount = newTabCount;
         }
+        else{
+            self.windowCount = 0;
+            SFSafariApplication.getAllWindows { (safariWindows) in
+                self.windowCount = safariWindows.count
+            }
+            SFSafariApplication.getActiveWindow { (safariWindow) in
+                var newTabCount = 0;
+                if let window = safariWindow {
+                    window.getAllTabs{ tabs in
+                        newTabCount = newTabCount + tabs.count
+                        self.helper.updateCountBadge(windowCount: self.windowCount, tabCount: newTabCount)
+                    }
+                    self.tabCount = newTabCount;
+                }
+                
+            }
+        }
+        
+        
     }
     
     func getCurrentWindowCount(){

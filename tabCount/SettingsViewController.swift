@@ -21,6 +21,8 @@ class SettingsViewController: NSView {
     @IBOutlet weak var windowCountCheck: NSButton!
     @IBOutlet weak var tabCountCheck: NSButton!
     @IBOutlet weak var keepPinnedTabsCheck: NSButton!
+    @IBOutlet weak var countPerWindowCheck: NSButton!
+    
     
     
     @IBOutlet weak var autoCloseCheck: NSButtonCell!
@@ -38,6 +40,7 @@ class SettingsViewController: NSView {
         getAutoCloseState()
         getPreventNewState()
         getPinnedTabState()
+        getCountPerWindowState()
     }
 
     
@@ -49,6 +52,7 @@ class SettingsViewController: NSView {
             settings.setBoolData(key: "autoclose", data: false)
             settings.setBoolData(key: "preventNew", data: false)
             settings.setBoolData(key: "setup", data: true)
+            settings.setBoolData(key: "countPerWindow", data: false)
         }
     }
     
@@ -143,6 +147,16 @@ class SettingsViewController: NSView {
         }
         else{
             keepPinnedTabsCheck.state = .off
+        }
+    }
+    
+    func getCountPerWindowState(){
+        let countPerWindowState = settings.getBoolData(key: "countPerWindow")
+        if(countPerWindowState){
+            countPerWindowCheck.state = .on
+        }
+        else{
+            countPerWindowCheck.state = .off
         }
     }
     
@@ -287,5 +301,15 @@ class SettingsViewController: NSView {
             settings.setBoolData(key: "pinnedTab", data: false)
         }
     }
+    
+    @IBAction func saveCountPerWindowTab(_ sender: NSButton) {
+        if(sender.state == .on){
+            settings.setBoolData(key: "countPerWindow", data: true)
+        }
+        else{
+            settings.setBoolData(key: "countPerWindow", data: false)
+        }
+    }
+    
     
 }

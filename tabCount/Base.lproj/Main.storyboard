@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="17506"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="18122"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -81,9 +81,9 @@
                         <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES"/>
                         <windowCollectionBehavior key="collectionBehavior" fullScreenNone="YES"/>
                         <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
-                        <rect key="contentRect" x="196" y="240" width="640" height="350"/>
+                        <rect key="contentRect" x="196" y="240" width="640" height="400"/>
                         <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1057"/>
-                        <value key="minSize" type="size" width="640" height="350"/>
+                        <value key="minSize" type="size" width="640" height="400"/>
                         <connections>
                             <outlet property="delegate" destination="B8D-0N-5wS" id="98r-iN-zZc"/>
                         </connections>
@@ -94,7 +94,7 @@
                 </windowController>
                 <customObject id="Oky-zY-oP4" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-45" y="117"/>
+            <point key="canvasLocation" x="-45" y="139"/>
         </scene>
         <!--Tab View Controller-->
         <scene sceneID="2UE-g0-bu7">
@@ -126,12 +126,12 @@
         <scene sceneID="Bdl-Y3-fJh">
             <objects>
                 <viewController title="Settings" id="EW4-1R-6Qh" sceneMemberID="viewController">
-                    <view key="view" id="2U5-jO-Az9" customClass="SettingsViewController" customModule="Tab_Count" customModuleProvider="target">
-                        <rect key="frame" x="0.0" y="0.0" width="794" height="348"/>
+                    <view key="view" misplaced="YES" id="2U5-jO-Az9" customClass="SettingsViewController" customModule="Tab_Count" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="640" height="400"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3Y0-1f-TfT">
-                                <rect key="frame" x="45" y="274" width="64" height="64"/>
+                                <rect key="frame" x="45" y="326" width="64" height="64"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="64" id="M2C-XU-xXi"/>
                                     <constraint firstAttribute="height" constant="64" id="e53-MD-Gy2"/>
@@ -139,7 +139,7 @@
                                 <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="AppIcon" id="OZY-uf-JNS"/>
                             </imageView>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="h84-Fd-Nc7">
-                                <rect key="frame" x="137" y="304" width="84" height="24"/>
+                                <rect key="frame" x="137" y="356" width="84" height="24"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" title="Settings" id="Srr-w6-WFp">
                                     <font key="font" metaFont="systemBold" size="20"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -147,7 +147,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" textCompletion="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hv4-xx-Gmy">
-                                <rect key="frame" x="137" y="252" width="504" height="32"/>
+                                <rect key="frame" x="137" y="304" width="504" height="32"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="500" id="gMZ-kZ-OXW"/>
                                 </constraints>
@@ -159,7 +159,7 @@
                                 </textFieldCell>
                             </textField>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="2b5-u8-e7V">
-                                <rect key="frame" x="132" y="34" width="64" height="32"/>
+                                <rect key="frame" x="132" y="62" width="64" height="32"/>
                                 <buttonCell key="cell" type="push" title="Save" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="xlz-ha-1c8">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
@@ -169,10 +169,10 @@
                                 </connections>
                             </button>
                             <stackView distribution="fill" orientation="vertical" alignment="leading" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tsj-yu-qYp">
-                                <rect key="frame" x="139" y="76" width="425" height="156"/>
+                                <rect key="frame" x="139" y="104" width="425" height="180"/>
                                 <subviews>
                                     <stackView distribution="fill" orientation="horizontal" alignment="top" spacing="10" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mxZ-pH-Gq4">
-                                        <rect key="frame" x="0.0" y="135" width="425" height="21"/>
+                                        <rect key="frame" x="0.0" y="159" width="425" height="21"/>
                                         <subviews>
                                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="hXc-se-N2v">
                                                 <rect key="frame" x="-2" y="4" width="302" height="18"/>
@@ -212,7 +212,7 @@
                                         </customSpacing>
                                     </stackView>
                                     <stackView distribution="fill" orientation="horizontal" alignment="top" spacing="10" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="h4E-U3-Dfy">
-                                        <rect key="frame" x="0.0" y="106" width="425" height="21"/>
+                                        <rect key="frame" x="0.0" y="130" width="425" height="21"/>
                                         <subviews>
                                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="gNm-Mg-DtM">
                                                 <rect key="frame" x="-2" y="4" width="302" height="18"/>
@@ -252,7 +252,7 @@
                                         </customSpacing>
                                     </stackView>
                                     <stackView distribution="fill" orientation="horizontal" alignment="top" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9Lo-uY-fmb">
-                                        <rect key="frame" x="0.0" y="82" width="300" height="16"/>
+                                        <rect key="frame" x="0.0" y="106" width="300" height="16"/>
                                         <subviews>
                                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="1XX-6q-uVC">
                                                 <rect key="frame" x="-2" y="-1" width="302" height="18"/>
@@ -265,6 +265,27 @@
                                                 </buttonCell>
                                                 <connections>
                                                     <action selector="saveKeepPinnedTab:" target="2U5-jO-Az9" id="R7R-0c-0gC"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <visibilityPriorities>
+                                            <integer value="1000"/>
+                                        </visibilityPriorities>
+                                        <customSpacing>
+                                            <real value="3.4028234663852886e+38"/>
+                                        </customSpacing>
+                                    </stackView>
+                                    <stackView distribution="fill" orientation="horizontal" alignment="top" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RDQ-Hs-ubK">
+                                        <rect key="frame" x="0.0" y="82" width="192" height="16"/>
+                                        <subviews>
+                                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="xT8-pu-hMl">
+                                                <rect key="frame" x="-2" y="-1" width="194" height="18"/>
+                                                <buttonCell key="cell" type="check" title="Show tab count per window" bezelStyle="regularSquare" imagePosition="left" inset="2" id="hVu-vi-j8c">
+                                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                    <font key="font" metaFont="system"/>
+                                                </buttonCell>
+                                                <connections>
+                                                    <action selector="saveCountPerWindowTab:" target="2U5-jO-Az9" id="iNK-0H-EnS"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -382,8 +403,10 @@
                                     <integer value="1000"/>
                                     <integer value="1000"/>
                                     <integer value="1000"/>
+                                    <integer value="1000"/>
                                 </visibilityPriorities>
                                 <customSpacing>
+                                    <real value="3.4028234663852886e+38"/>
                                     <real value="3.4028234663852886e+38"/>
                                     <real value="3.4028234663852886e+38"/>
                                     <real value="3.4028234663852886e+38"/>
@@ -412,6 +435,7 @@
                         <connections>
                             <outlet property="autoCloseCheck" destination="t0H-Oo-Zcy" id="MhE-NI-CHH"/>
                             <outlet property="autoCloseCountBox" destination="xf1-sN-HB3" id="15v-7h-lra"/>
+                            <outlet property="countPerWindowCheck" destination="xT8-pu-hMl" id="f8a-FY-6In"/>
                             <outlet property="keepPinnedTabsCheck" destination="1XX-6q-uVC" id="Wtb-f2-qvO"/>
                             <outlet property="preventNewCheck" destination="ATG-ev-8mD" id="iwq-n0-n71"/>
                             <outlet property="preventNewCountBox" destination="kGj-FV-sL1" id="cV1-z9-2eh"/>
@@ -428,18 +452,18 @@
                     <font key="font" metaFont="system"/>
                 </buttonCell>
             </objects>
-            <point key="canvasLocation" x="729" y="1116"/>
+            <point key="canvasLocation" x="667" y="1147"/>
         </scene>
         <!--Welcome-->
         <scene sceneID="hIz-AP-VOD">
             <objects>
                 <viewController title="Welcome" id="XfG-lQ-9wD" customClass="ViewController" customModule="Tab_Count" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" id="m2S-Jp-Qdl">
-                        <rect key="frame" x="0.0" y="0.0" width="640" height="323"/>
+                    <view key="view" misplaced="YES" id="m2S-Jp-Qdl">
+                        <rect key="frame" x="0.0" y="0.0" width="640" height="400"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Fqk-YA-Amn">
-                                <rect key="frame" x="45" y="249" width="64" height="64"/>
+                                <rect key="frame" x="45" y="310" width="64" height="64"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="64" id="AEM-sF-2tS"/>
                                     <constraint firstAttribute="height" constant="64" id="gea-nf-f4W"/>
@@ -447,7 +471,7 @@
                                 <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="AppIcon" id="j4W-AA-DW9"/>
                             </imageView>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="KnH-nz-9mQ">
-                                <rect key="frame" x="137" y="279" width="215" height="24"/>
+                                <rect key="frame" x="137" y="340" width="215" height="24"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" title="Welcome to Tab Count" id="Ndz-z7-kVw">
                                     <font key="font" metaFont="systemBold" size="20"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -455,7 +479,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" textCompletion="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fsd-K5-xK9">
-                                <rect key="frame" x="137" y="64" width="460" height="195"/>
+                                <rect key="frame" x="137" y="125" width="460" height="195"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="456" id="CgU-re-PKl"/>
                                     <constraint firstAttribute="height" constant="195" id="mjq-ul-2kj"/>
@@ -474,7 +498,7 @@ Claus - tabcount@otzberg.net</string>
                                 </textFieldCell>
                             </textField>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="zDy-Cr-T1x">
-                                <rect key="frame" x="358" y="22" width="244" height="32"/>
+                                <rect key="frame" x="358" y="83" width="244" height="32"/>
                                 <buttonCell key="cell" type="push" title="Open Safari Extension Preferences" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="tUY-Dw-t8S">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
@@ -495,7 +519,7 @@ Claus - tabcount@otzberg.net</string>
                             <constraint firstItem="fsd-K5-xK9" firstAttribute="top" secondItem="KnH-nz-9mQ" secondAttribute="bottom" constant="20" id="lsO-KB-h0d"/>
                             <constraint firstItem="Fqk-YA-Amn" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="45" id="poe-BA-4io"/>
                             <constraint firstItem="KnH-nz-9mQ" firstAttribute="leading" secondItem="Fqk-YA-Amn" secondAttribute="trailing" constant="30" id="rhl-3p-qDC"/>
-                            <constraint firstAttribute="bottom" relation="lessThanOrEqual" secondItem="fsd-K5-xK9" secondAttribute="bottom" constant="65" id="vdl-a5-oNh"/>
+                            <constraint firstAttribute="bottom" relation="lessThanOrEqual" secondItem="fsd-K5-xK9" secondAttribute="bottom" constant="125" id="vdl-a5-oNh"/>
                             <constraint firstItem="fsd-K5-xK9" firstAttribute="leading" secondItem="Fqk-YA-Amn" secondAttribute="trailing" constant="30" id="zwk-4s-0gD"/>
                         </constraints>
                     </view>
