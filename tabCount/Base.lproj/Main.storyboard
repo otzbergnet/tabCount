@@ -159,7 +159,7 @@
                                 </textFieldCell>
                             </textField>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="2b5-u8-e7V">
-                                <rect key="frame" x="132" y="38" width="64" height="32"/>
+                                <rect key="frame" x="132" y="14" width="64" height="32"/>
                                 <buttonCell key="cell" type="push" title="Save" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="xlz-ha-1c8">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
@@ -169,10 +169,10 @@
                                 </connections>
                             </button>
                             <stackView distribution="fill" orientation="vertical" alignment="leading" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tsj-yu-qYp">
-                                <rect key="frame" x="139" y="80" width="425" height="204"/>
+                                <rect key="frame" x="139" y="56" width="425" height="228"/>
                                 <subviews>
                                     <stackView distribution="fill" orientation="horizontal" alignment="top" spacing="10" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mxZ-pH-Gq4">
-                                        <rect key="frame" x="0.0" y="183" width="425" height="21"/>
+                                        <rect key="frame" x="0.0" y="207" width="425" height="21"/>
                                         <subviews>
                                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="hXc-se-N2v">
                                                 <rect key="frame" x="-2" y="4" width="302" height="18"/>
@@ -212,7 +212,7 @@
                                         </customSpacing>
                                     </stackView>
                                     <stackView distribution="fill" orientation="horizontal" alignment="top" spacing="10" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="h4E-U3-Dfy">
-                                        <rect key="frame" x="0.0" y="154" width="425" height="21"/>
+                                        <rect key="frame" x="0.0" y="178" width="425" height="21"/>
                                         <subviews>
                                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="gNm-Mg-DtM">
                                                 <rect key="frame" x="-2" y="4" width="302" height="18"/>
@@ -252,7 +252,7 @@
                                         </customSpacing>
                                     </stackView>
                                     <stackView distribution="fill" orientation="horizontal" alignment="top" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9Lo-uY-fmb">
-                                        <rect key="frame" x="0.0" y="130" width="300" height="16"/>
+                                        <rect key="frame" x="0.0" y="154" width="300" height="16"/>
                                         <subviews>
                                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="1XX-6q-uVC">
                                                 <rect key="frame" x="-2" y="-1" width="302" height="18"/>
@@ -276,7 +276,7 @@
                                         </customSpacing>
                                     </stackView>
                                     <stackView distribution="fill" orientation="horizontal" alignment="top" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RDQ-Hs-ubK">
-                                        <rect key="frame" x="0.0" y="106" width="192" height="16"/>
+                                        <rect key="frame" x="0.0" y="130" width="192" height="16"/>
                                         <subviews>
                                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="xT8-pu-hMl">
                                                 <rect key="frame" x="-2" y="-1" width="194" height="18"/>
@@ -286,6 +286,27 @@
                                                 </buttonCell>
                                                 <connections>
                                                     <action selector="saveCountPerWindowTab:" target="2U5-jO-Az9" id="iNK-0H-EnS"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <visibilityPriorities>
+                                            <integer value="1000"/>
+                                        </visibilityPriorities>
+                                        <customSpacing>
+                                            <real value="3.4028234663852886e+38"/>
+                                        </customSpacing>
+                                    </stackView>
+                                    <stackView distribution="fill" orientation="horizontal" alignment="top" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DMR-uz-uGx">
+                                        <rect key="frame" x="0.0" y="106" width="254" height="16"/>
+                                        <subviews>
+                                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="SWq-2I-wb6">
+                                                <rect key="frame" x="-2" y="-1" width="256" height="18"/>
+                                                <buttonCell key="cell" type="check" title="Deactive &quot;close to left / right&quot; buttons" bezelStyle="regularSquare" imagePosition="left" inset="2" id="8vr-y3-SzQ">
+                                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                    <font key="font" metaFont="system"/>
+                                                </buttonCell>
+                                                <connections>
+                                                    <action selector="hideLeftRightTab:" target="2U5-jO-Az9" id="p0V-D4-2v9"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -426,8 +447,10 @@
                                     <integer value="1000"/>
                                     <integer value="1000"/>
                                     <integer value="1000"/>
+                                    <integer value="1000"/>
                                 </visibilityPriorities>
                                 <customSpacing>
+                                    <real value="3.4028234663852886e+38"/>
                                     <real value="3.4028234663852886e+38"/>
                                     <real value="3.4028234663852886e+38"/>
                                     <real value="3.4028234663852886e+38"/>
@@ -460,6 +483,7 @@
                             <outlet property="autoCloseCountBox" destination="xf1-sN-HB3" id="15v-7h-lra"/>
                             <outlet property="countPerWindowCheck" destination="xT8-pu-hMl" id="f8a-FY-6In"/>
                             <outlet property="enforceTotalTabCountCheck" destination="Oix-vX-0FD" id="lFH-tU-OhE"/>
+                            <outlet property="hideLeftRightCheck" destination="SWq-2I-wb6" id="u0O-nD-1W3"/>
                             <outlet property="keepPinnedTabsCheck" destination="1XX-6q-uVC" id="Wtb-f2-qvO"/>
                             <outlet property="preventNewCheck" destination="ATG-ev-8mD" id="iwq-n0-n71"/>
                             <outlet property="preventNewCountBox" destination="kGj-FV-sL1" id="cV1-z9-2eh"/>
