@@ -28,6 +28,12 @@
 /* Class = "NSMenuItem"; title = "Tab Count Help"; ObjectID = "FKE-Sm-Kum"; */
 "FKE-Sm-Kum.title" = "Tab Count ヘルプ";
 
+/* Class = "NSButtonCell"; title = "Enforce limit based on total tab count of all windows"; ObjectID = "hJC-sM-wLV"; */
+"hJC-sM-wLV.title" = "すべてのウィンドウの合計タブ数に基づいて制限を適用します";
+
+/* Class = "NSButtonCell"; title = "Show tab count per window"; ObjectID = "hVu-vi-j8c"; */
+"hVu-vi-j8c.title" = "ウィンドウごとのタブ数を表示";
+
 /* Class = "NSWindow"; title = "Tab Count"; ObjectID = "IQv-IB-iLA"; */
 "IQv-IB-iLA.title" = "Tab Count";
 
@@ -91,8 +97,5 @@
 /* Class = "NSButtonCell"; title = "Do not allow new tabs, after:"; ObjectID = "Zi0-bD-H6a"; */
 "Zi0-bD-H6a.title" = "次の場合は、新しいタブを許可しないでください。";
 
-/* Class = "NSButtonCell"; title = "Enforce limit based on total tab count of all windows"; ObjectID = "hJC-sM-wLV"; */
-"hJC-sM-wLV.title" = "すべてのウィンドウの合計タブ数に基づいて制限を適用します";
-
-/* Class = "NSButtonCell"; title = "Show tab count per window"; ObjectID = "hVu-vi-j8c"; */
-"hVu-vi-j8c.title" = "ウィンドウごとのタブ数を表示";
+/* Class = "NSButtonCell"; title = "Hide \"close to left / right\" buttons"; ObjectID = "8vr-y3-SzQ"; */
+"8vr-y3-SzQ.title" = "隠れる: \"全てのタブを閉じる\"";

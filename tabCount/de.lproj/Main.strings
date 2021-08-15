@@ -28,6 +28,12 @@
 /* Class = "NSMenuItem"; title = "Tab Count Help"; ObjectID = "FKE-Sm-Kum"; */
 "FKE-Sm-Kum.title" = "Tab Count-Hilfe";
 
+/* Class = "NSButtonCell"; title = "Enforce limit based on total tab count of all windows"; ObjectID = "hJC-sM-wLV"; */
+"hJC-sM-wLV.title" = "Limits anhand der Gesamtzahl der Tabs in allen Fenstern anwenden";
+
+/* Class = "NSButtonCell"; title = "Show tab count per window"; ObjectID = "hVu-vi-j8c"; */
+"hVu-vi-j8c.title" = "Anzahl der Tabs pro Fenster zeigen";
+
 /* Class = "NSWindow"; title = "Tab Count"; ObjectID = "IQv-IB-iLA"; */
 "IQv-IB-iLA.title" = "Tab Count";
 
@@ -91,8 +97,5 @@
 /* Class = "NSButtonCell"; title = "Do not allow new tabs, after:"; ObjectID = "Zi0-bD-H6a"; */
 "Zi0-bD-H6a.title" = "Keine neuen Tabs erlauben, nach:";
 
-/* Class = "NSButtonCell"; title = "Enforce limit based on total tab count of all windows"; ObjectID = "hJC-sM-wLV"; */
-"hJC-sM-wLV.title" = "Limits anhand der Gesamtzahl der Tabs in allen Fenstern anwenden";
-
-/* Class = "NSButtonCell"; title = "Show tab count per window"; ObjectID = "hVu-vi-j8c"; */
-"hVu-vi-j8c.title" = "Anzahl der Tabs pro Fenster zeigen";
+/* Class = "NSButtonCell"; title = "Hide \"close to left / right\" buttons"; ObjectID = "8vr-y3-SzQ"; */
+"8vr-y3-SzQ.title" = "\"Alle Tabs schließen\" ausblenden";
