@@ -29,6 +29,7 @@ class SafariExtensionViewController: SFSafariExtensionViewController, NSTextFiel
     @IBOutlet weak var closeTabLabel: NSTextField!
     @IBOutlet weak var closeLeftButton: NSButton!
     @IBOutlet weak var closeRightButton: NSButton!
+    @IBOutlet weak var closeTabHoriziontalLine: NSBox!
     
     @IBOutlet weak var focusModeOnOffButton: NSButton!
     
@@ -200,6 +201,21 @@ class SafariExtensionViewController: SFSafariExtensionViewController, NSTextFiel
     }
     
     func whichCloseButtonsToShow(){
+        
+        let hide = self.settings.getBoolData(key: "hideLeftRight")
+        if (hide){
+            self.closeLeftButton.isHidden = true
+            self.closeRightButton.isHidden = true
+            self.closeTabLabel.isHidden = true
+            self.closeTabHoriziontalLine.isHidden = true
+            return
+        }
+        else {
+            self.closeLeftButton.isHidden = false
+            self.closeRightButton.isHidden = false
+            self.closeTabLabel.isHidden = false
+            self.closeTabHoriziontalLine.isHidden = false
+        }
         
         SFSafariApplication.getActiveWindow { (window) in
             guard let window = window else {

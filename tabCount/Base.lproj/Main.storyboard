@@ -297,11 +297,11 @@
                                         </customSpacing>
                                     </stackView>
                                     <stackView distribution="fill" orientation="horizontal" alignment="top" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DMR-uz-uGx">
-                                        <rect key="frame" x="0.0" y="106" width="254" height="16"/>
+                                        <rect key="frame" x="0.0" y="106" width="229" height="16"/>
                                         <subviews>
                                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="SWq-2I-wb6">
-                                                <rect key="frame" x="-2" y="-1" width="256" height="18"/>
-                                                <buttonCell key="cell" type="check" title="Deactive &quot;close to left / right&quot; buttons" bezelStyle="regularSquare" imagePosition="left" inset="2" id="8vr-y3-SzQ">
+                                                <rect key="frame" x="-2" y="-1" width="231" height="18"/>
+                                                <buttonCell key="cell" type="check" title="Hide &quot;close to left / right&quot; buttons" bezelStyle="regularSquare" imagePosition="left" inset="2" id="8vr-y3-SzQ">
                                                     <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                     <font key="font" metaFont="system"/>
                                                 </buttonCell>

@@ -10,6 +10,7 @@
             <connections>
                 <outlet property="closeLeftButton" destination="3ad-Og-XCx" id="sgG-W0-e1w"/>
                 <outlet property="closeRightButton" destination="f2q-ll-wO2" id="EcU-sD-56T"/>
+                <outlet property="closeTabHoriziontalLine" destination="odo-Ii-siT" id="bl8-dK-G30"/>
                 <outlet property="closeTabLabel" destination="DG4-KK-CWI" id="FbG-S0-gUt"/>
                 <outlet property="focusModeOnOffButton" destination="hyK-Tk-vlf" id="lS9-5B-xzp"/>
                 <outlet property="tabCountBox" destination="vpp-2c-TQr" id="wkQ-dD-QeQ"/>
