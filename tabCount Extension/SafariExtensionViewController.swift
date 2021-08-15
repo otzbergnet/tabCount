@@ -13,6 +13,9 @@ class SafariExtensionViewController: SFSafariExtensionViewController, NSTextFiel
     var settings = SettingsHelper()
     var tabCount = 0
     var windowCount = 0
+    var totalTabCount = 0
+    var countPerWindow = false
+    var enforceTotalTabCount = false
     
     @IBOutlet weak var windowCountLabel: NSTextField!
     @IBOutlet weak var tabCountLabel: NSTextField!
@@ -174,16 +177,19 @@ class SafariExtensionViewController: SFSafariExtensionViewController, NSTextFiel
     func updateDataLabels(){
         tabCount = 0
         windowCount = 0
-        SFSafariApplication.getAllWindows { (safariWindows) in
-            self.windowCount = safariWindows.count
-            for singleSafariWindow in safariWindows{
-                singleSafariWindow.getAllTabs{ tabs in
-                    self.tabCount = self.tabCount + tabs.count
-                    DispatchQueue.main.async {
-                        self.tabCountLabel.stringValue = "\(self.tabCount)"
-                        self.windowCountLabel.stringValue = "\(self.windowCount)"
-                    }
+        
+        helper.getCounts { (res) in
+            switch res {
+            case .success(let counts):
+                self.windowCount = counts.windowCount
+                self.tabCount = counts.activeWindowTabs
+                self.totalTabCount = counts.totalTabs
+                DispatchQueue.main.async {
+                    self.tabCountLabel.stringValue = "\(self.tabCount)"
+                    self.windowCountLabel.stringValue = "\(self.windowCount)"
                 }
+            case .failure(let errors):
+                print(errors)
             }
         }
     }
@@ -271,6 +277,18 @@ class SafariExtensionViewController: SFSafariExtensionViewController, NSTextFiel
         }
     }
     
+    func startUpdateCountBadge() {
+        self.helper.getCounts { (res) in
+            switch res {
+            case .success(let counts):
+                print("startUpdateCountBadge got here")
+                self.helper.updateCountBadge(windowCount: counts.windowCount, tabCount: counts.activeWindowTabs, totalTabCount: counts.totalTabs)
+            case .failure(let errors):
+                print(errors)
+            }
+        }
+    }
+    
     @IBAction func tabThresholdBox(_ sender: NSComboBox) {
         if let maxTabsFromBox = Int(tabCountBox.stringValue){
             if(maxTabsFromBox > 0 && maxTabsFromBox <= 100){
@@ -280,7 +298,7 @@ class SafariExtensionViewController: SFSafariExtensionViewController, NSTextFiel
                 tabCountBox.stringValue = "10"
                 settings.setIntData(key: "maxTabs", data: 10)
             }
-            helper.updateCountBadge(windowCount: self.windowCount, tabCount: self.tabCount)
+            
         }
     }
     
@@ -293,7 +311,7 @@ class SafariExtensionViewController: SFSafariExtensionViewController, NSTextFiel
                 windowCountBox.stringValue = "3"
                 settings.setIntData(key: "maxWindows", data: 3)
             }
-            helper.updateCountBadge(windowCount: self.windowCount, tabCount: self.tabCount)
+            startUpdateCountBadge()
         }
     }
     
@@ -312,7 +330,7 @@ class SafariExtensionViewController: SFSafariExtensionViewController, NSTextFiel
         else{
             settings.setBoolData(key: "window", data: false)
         }
-        helper.updateCountBadge(windowCount: self.windowCount, tabCount: self.tabCount)
+        startUpdateCountBadge()
     }
     
     @IBAction func tabCountCheckBoxChanged(_ sender: NSButton) {
@@ -322,7 +340,7 @@ class SafariExtensionViewController: SFSafariExtensionViewController, NSTextFiel
         else{
             settings.setBoolData(key: "tab", data: false)
         }
-        helper.updateCountBadge(windowCount: self.windowCount, tabCount: self.tabCount)
+        startUpdateCountBadge()
     }
     
     @IBAction func settingsButtonClicked(_ sender: NSButton) {

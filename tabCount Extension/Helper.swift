@@ -13,7 +13,7 @@ class Helper {
 
     let settings = SettingsHelper()
     
-    func updateCountBadge(windowCount: Int, tabCount: Int){
+    func updateCountBadge(windowCount: Int, tabCount: Int, totalTabCount: Int){
         let showWindow = settings.getBoolData(key: "window")
         let showTab = settings.getBoolData(key: "tab")
         
@@ -26,31 +26,55 @@ class Helper {
         let preventNewCount = settings.getIntData(key: "preventNewCount")
         let preventNew = settings.getBoolData(key: "preventNew")
         
+        let countPerWindow = settings.getBoolData(key: "countPerWindow")
+        let enforceTotalTabCount = settings.getBoolData(key: "enforceTotalTabCount")
+        
         var badgeText = ""
         
-        if(shouldAutoClose && tabCount == autoCloseCount){
+        var evalTabCount = 0
+        var evalBlockTabCount = 0
+        if (countPerWindow) {
+            evalTabCount = tabCount
+        }
+        else {
+            evalTabCount = totalTabCount
+        }
+        if(enforceTotalTabCount) {
+            evalBlockTabCount = totalTabCount
+        }
+        else {
+            evalBlockTabCount = tabCount
+        }
+        
+        if(shouldAutoClose && evalBlockTabCount == autoCloseCount){
             badgeText = "✗"
         }
-        else if(preventNew && tabCount == preventNewCount){
+        else if(preventNew && evalBlockTabCount == preventNewCount){
             badgeText = "✗"
         }
-        else if(showTab && tabCount >= maxTabs && showWindow && windowCount >= maxWindows){
+        else if(shouldAutoClose && evalBlockTabCount > autoCloseCount){
+            badgeText = "!!"
+        }
+        else if(preventNew && evalBlockTabCount > preventNewCount){
+            badgeText = "!!"
+        }
+        else if(showTab && evalTabCount >= maxTabs && showWindow && windowCount >= maxWindows){
             //show both tabCount & windowCount
-            badgeText = "\(tabCount) "
+            badgeText = "\(evalTabCount) "
             badgeText += exponent(i: windowCount)
         }
-        else if(showTab && tabCount >= maxTabs && showWindow && windowCount <= maxWindows){
+        else if(showTab && evalTabCount >= maxTabs && showWindow && windowCount <= maxWindows){
             //show only TabCount, windowCount condition is not met
-            badgeText = "\(tabCount)"
+            badgeText = "\(evalTabCount)"
         }
-        else if(showTab && tabCount <= maxTabs && showWindow && windowCount >= maxWindows){
+        else if(showTab && evalTabCount <= maxTabs && showWindow && windowCount >= maxWindows){
             //show only window count as an exponent - it'll look funny, but it'll be consistent
             //badgeText = "\(tabCount) "
             badgeText = exponent(i: windowCount)
         }
-        else if(showTab && tabCount >= maxTabs && !showWindow ){
+        else if(showTab && evalTabCount >= maxTabs && !showWindow ){
             //the tab count is requested and meets requirement
-            badgeText = "\(tabCount)"
+            badgeText = "\(evalTabCount)"
         }
         else if(!showTab && showWindow && windowCount >= maxWindows){
             //as the tabCount is not requested, we will show the windowCount as the big badge number
@@ -89,4 +113,35 @@ class Helper {
         return string
     }
     
+    func getCounts(completion: @escaping (Result<CountObject, Error>) -> ()){
+        let counts = CountObject()
+        SFSafariApplication.getAllWindows { safariWindows in
+            var totalTabs = 0
+            counts.windowCount = safariWindows.count
+            var windowCountIteration = 0
+            for singleSafariWindow in safariWindows{
+                singleSafariWindow.getAllTabs{ tabs in
+                    windowCountIteration += 1
+                    totalTabs = totalTabs + tabs.count
+                    counts.totalTabs = totalTabs
+                    if (windowCountIteration == counts.windowCount){
+                        SFSafariApplication.getActiveWindow { (safariWindow) in
+                            safariWindow?.getAllTabs(completionHandler: { (tabs) in
+                                counts.activeWindowTabs = tabs.count
+                                completion(.success(counts))
+                            })
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+}
+
+
+class CountObject{
+    var windowCount = 0
+    var totalTabs = 0
+    var activeWindowTabs = 0
 }

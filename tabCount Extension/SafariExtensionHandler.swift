@@ -36,7 +36,6 @@ class SafariExtensionHandler: SFSafariExtensionHandler {
         // This is called when Safari's state changed in some way that would require the extension's toolbar item to be validated again.
         validationHandler(true, "")
         getCounts()
-        getCurrentWindowCount()
     }
     
     override func popoverViewController() -> SFSafariExtensionViewController {
@@ -45,74 +44,46 @@ class SafariExtensionHandler: SFSafariExtensionHandler {
     
     
     func getCounts(){
-        let countPerWindow = settings.getBoolData(key: "countPerWindow")
-        
-        if (!countPerWindow){
-            SFSafariApplication.getAllWindows { (safariWindows) in
-                self.windowCount = safariWindows.count
-                var newTabCount = 0;
-                for singleSafariWindow in safariWindows{
-                    singleSafariWindow.getAllTabs{ tabs in
-                        newTabCount = newTabCount + tabs.count
-                        self.helper.updateCountBadge(windowCount: self.windowCount, tabCount: newTabCount)
-                    }
-                }
-                self.tabCount = newTabCount;
-            }
-        }
-        else{
-            self.windowCount = 0;
-            SFSafariApplication.getAllWindows { (safariWindows) in
-                self.windowCount = safariWindows.count
-            }
-            SFSafariApplication.getActiveWindow { (safariWindow) in
-                var newTabCount = 0;
-                if let window = safariWindow {
-                    window.getAllTabs{ tabs in
-                        newTabCount = newTabCount + tabs.count
-                        self.helper.updateCountBadge(windowCount: self.windowCount, tabCount: newTabCount)
-                    }
-                    self.tabCount = newTabCount;
-                }
-                
-            }
-        }
-        
-        
-    }
-    
-    func getCurrentWindowCount(){
-//        print("getCurrentWindowCount")
         let autoCloseCount = settings.getIntData(key: "autoCloseCount")
         let shouldAutoClose = settings.getBoolData(key: "autoclose")
         let preventNewCount = settings.getIntData(key: "preventNewCount")
         let preventNew = settings.getBoolData(key: "preventNew")
         let enforceTotalTabCountState = settings.getBoolData(key: "enforceTotalTabCount")
 
-        if(!shouldAutoClose && !preventNew){
-            return
-        }
-        getCounts(enforceTotalTabCountState: enforceTotalTabCountState) { (res) in
+        self.helper.getCounts() { (res) in
             switch res {
             case .success(let counts):
-                if(shouldAutoClose && counts.tabs > (autoCloseCount+1)){
+                
+                var tabCount = 0
+                self.helper.updateCountBadge(windowCount: counts.windowCount, tabCount: counts.activeWindowTabs, totalTabCount: counts.totalTabs)
+                if(!shouldAutoClose && !preventNew){
+                    return
+                }
+                if(enforceTotalTabCountState) {
+                    tabCount = counts.totalTabs
+                }
+                else {
+                    tabCount = counts.activeWindowTabs
+                }
+                
+                if(shouldAutoClose && tabCount > (autoCloseCount+1)){
                     self.mayCloseTab = false
                     return
                 }
-                else if(counts.tabs == autoCloseCount){
+                else if(tabCount == autoCloseCount){
                     self.mayCloseTab = true
                 }
-                if(preventNew && counts.tabs > (preventNewCount+1)){
+                if(preventNew && tabCount > (preventNewCount+1)){
                     self.mayPreventTab = false
                     return
                 }
-                else if(counts.tabs == preventNewCount){
+                else if(tabCount == preventNewCount){
                     self.mayPreventTab = true
                 }
-                if(shouldAutoClose && counts.tabs > autoCloseCount && self.mayCloseTab){
+                if(shouldAutoClose && tabCount > autoCloseCount && self.mayCloseTab){
                     self.actionPreventTabs(first: true)
                 }
-                else if(preventNew && counts.tabs > preventNewCount && self.mayPreventTab){
+                else if(preventNew && tabCount > preventNewCount && self.mayPreventTab){
                     self.actionPreventTabs(first: false)
                 }
             case .failure(let error):
@@ -136,36 +107,7 @@ class SafariExtensionHandler: SFSafariExtensionHandler {
     }
     
     
-    func getCounts(enforceTotalTabCountState : Bool, completion: @escaping (Result<CountObject, Error>) -> ()){
-        let counts = CountObject()
-        if(enforceTotalTabCountState){
-            SFSafariApplication.getAllWindows { safariWindows in
-                var count = 0;
-                let windowCount = safariWindows.count
-                var windowCountIteration = 0
-                for singleSafariWindow in safariWindows{
-                    singleSafariWindow.getAllTabs{ tabs in
-                        windowCountIteration += 1
-//                        print("windowCount: \(windowCount)")
-//                        print("windowCountIteration: \(windowCountIteration)")
-                        count = count + tabs.count
-                        counts.tabs = count
-                        if (windowCountIteration == windowCount){
-                            completion(.success(counts))
-                        }
-                    }
-                }
-            }
-        }
-        else{
-            SFSafariApplication.getActiveWindow { (safariWindow) in
-                safariWindow?.getAllTabs(completionHandler: { (tabs) in
-                    counts.tabs = tabs.count
-                    completion(.success(counts))
-                })
-            }
-        }
-    }
+    
     
     
     func updateBadge(text: String){
@@ -176,7 +118,4 @@ class SafariExtensionHandler: SFSafariExtensionHandler {
     
 }
 
-class CountObject{
-    var windows = 0
-    var tabs = 0
-}
+
