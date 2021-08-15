@@ -509,7 +509,7 @@
                                 </constraints>
                                 <textFieldCell key="cell" allowsUndo="NO" sendsActionOnEndEditing="YES" state="on" alignment="justified" id="Ybs-tm-0T5">
                                     <font key="font" metaFont="system"/>
-                                    <mutableString key="title">Thank you for downloading Tab Count! You'll need this containing app just once to enable Tab Count in Safari. To do so, click the button to Open Safari Extension Preferences below.
+                                    <string key="title">Thank you for downloading Tab Count! You'll need this containing app just once to enable Tab Count in Safari. To do so, click the button to Open Safari Extension Preferences below.
 
 The app will show a toolbar icon and a badge with the number of open tabs. To avoid it being too intrusive you can set a threshold for when the badge is to show. The default is 10, which you can change within the popover or the settings tab.
 
@@ -517,7 +517,7 @@ If you see "x" in the toolbar icon, no more tabs will be allowed. Opening a new 
 
 Let me know, if you have ideas on how to improve this app! 
 
-Claus - tabcount@otzberg.net</mutableString>
+Claus - tabcount@otzberg.net</string>
                                     <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="quaternaryLabelColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
