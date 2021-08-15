@@ -126,7 +126,7 @@
         <scene sceneID="Bdl-Y3-fJh">
             <objects>
                 <viewController title="Settings" id="EW4-1R-6Qh" sceneMemberID="viewController">
-                    <view key="view" misplaced="YES" id="2U5-jO-Az9" customClass="SettingsViewController" customModule="Tab_Count" customModuleProvider="target">
+                    <view key="view" id="2U5-jO-Az9" customClass="SettingsViewController" customModule="Tab_Count" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="640" height="400"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
@@ -147,9 +147,9 @@
                                 </textFieldCell>
                             </textField>
                             <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" textCompletion="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hv4-xx-Gmy">
-                                <rect key="frame" x="137" y="304" width="504" height="32"/>
+                                <rect key="frame" x="137" y="304" width="484" height="32"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="500" id="gMZ-kZ-OXW"/>
+                                    <constraint firstAttribute="width" constant="480" id="gMZ-kZ-OXW"/>
                                 </constraints>
                                 <textFieldCell key="cell" allowsUndo="NO" sendsActionOnEndEditing="YES" state="on" alignment="justified" id="tvs-oo-bLL">
                                     <font key="font" metaFont="system"/>
