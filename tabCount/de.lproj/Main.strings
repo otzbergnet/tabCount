@@ -16,6 +16,9 @@
 /* Class = "NSTextFieldCell"; title = "Help me focus!"; ObjectID = "7LP-Vb-acH"; */
 "7LP-Vb-acH.title" = "Fokus-Einstellungen";
 
+/* Class = "NSButtonCell"; title = "Hide \"close to left / right\" buttons"; ObjectID = "8vr-y3-SzQ"; */
+"8vr-y3-SzQ.title" = "\"Alle Tabs schließen\" ausblenden";
+
 /* Class = "NSMenu"; title = "Main Menu"; ObjectID = "AYu-sK-qS6"; */
 "AYu-sK-qS6.title" = "Hauptmenü";
 
@@ -97,5 +100,14 @@
 /* Class = "NSButtonCell"; title = "Do not allow new tabs, after:"; ObjectID = "Zi0-bD-H6a"; */
 "Zi0-bD-H6a.title" = "Keine neuen Tabs erlauben, nach:";
 
-/* Class = "NSButtonCell"; title = "Hide \"close to left / right\" buttons"; ObjectID = "8vr-y3-SzQ"; */
-"8vr-y3-SzQ.title" = "\"Alle Tabs schließen\" ausblenden";
+/* Class = "NSTextFieldCell"; title = "tabs"; ObjectID = "14l-m7-5o0"; */
+"14l-m7-5o0.title" = "Tabs";
+
+/* Class = "NSTextFieldCell"; title = "tabs"; ObjectID = "hpk-RL-jZQ"; */
+"hpk-RL-jZQ.title" = "Tabs";
+
+/* Class = "NSTextFieldCell"; title = "windows"; ObjectID = "iSJ-TF-ZZu"; */
+"iSJ-TF-ZZu.title" = "Fenster";
+
+/* Class = "NSTextFieldCell"; title = "tabs"; ObjectID = "sEr-sG-8zB"; */
+"sEr-sG-8zB.title" = "Tabs";
