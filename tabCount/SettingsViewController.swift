@@ -21,10 +21,13 @@ class SettingsViewController: NSView {
     @IBOutlet weak var windowCountCheck: NSButton!
     @IBOutlet weak var tabCountCheck: NSButton!
     @IBOutlet weak var keepPinnedTabsCheck: NSButton!
-    
+    @IBOutlet weak var hideLeftRightCheck: NSButton!
+    @IBOutlet weak var countPerWindowCheck: NSButton!
     
     @IBOutlet weak var autoCloseCheck: NSButtonCell!
     @IBOutlet weak var preventNewCheck: NSButton!
+    @IBOutlet weak var enforceTotalTabCountCheck: NSButton!
+    
     
     override func draw(_ dirtyRect: NSRect) {
         super.draw(dirtyRect)
@@ -38,6 +41,9 @@ class SettingsViewController: NSView {
         getAutoCloseState()
         getPreventNewState()
         getPinnedTabState()
+        getCountPerWindowState()
+        getEnforceTotalTabCountState()
+        getHideLeftRightCheckState()
     }
 
     
@@ -49,6 +55,9 @@ class SettingsViewController: NSView {
             settings.setBoolData(key: "autoclose", data: false)
             settings.setBoolData(key: "preventNew", data: false)
             settings.setBoolData(key: "setup", data: true)
+            settings.setBoolData(key: "countPerWindow", data: false)
+            settings.setBoolData(key: "enforceTotalTabCount", data: false)
+            settings.setBoolData(key: "hideLeftRight", data: false)
         }
     }
     
@@ -143,6 +152,36 @@ class SettingsViewController: NSView {
         }
         else{
             keepPinnedTabsCheck.state = .off
+        }
+    }
+    
+    func getCountPerWindowState(){
+        let countPerWindowState = settings.getBoolData(key: "countPerWindow")
+        if(countPerWindowState){
+            countPerWindowCheck.state = .on
+        }
+        else{
+            countPerWindowCheck.state = .off
+        }
+    }
+    
+    func getEnforceTotalTabCountState(){
+        let enforceTotalTabCountState = settings.getBoolData(key: "enforceTotalTabCount")
+        if(enforceTotalTabCountState){
+            enforceTotalTabCountCheck.state = .on
+        }
+        else{
+            enforceTotalTabCountCheck.state = .off
+        }
+    }
+    
+    func getHideLeftRightCheckState(){
+        let hideLeftRightCheckState = settings.getBoolData(key: "hideLeftRight")
+        if(hideLeftRightCheckState){
+            hideLeftRightCheck.state = .on
+        }
+        else{
+            hideLeftRightCheck.state = .off
         }
     }
     
@@ -287,5 +326,33 @@ class SettingsViewController: NSView {
             settings.setBoolData(key: "pinnedTab", data: false)
         }
     }
+    
+    @IBAction func saveCountPerWindowTab(_ sender: NSButton) {
+        if(sender.state == .on){
+            settings.setBoolData(key: "countPerWindow", data: true)
+        }
+        else{
+            settings.setBoolData(key: "countPerWindow", data: false)
+        }
+    }
+    
+    @IBAction func enforceTotalTabCountTab(_ sender: NSButton) {
+        if(sender.state == .on){
+            settings.setBoolData(key: "enforceTotalTabCount", data: true)
+        }
+        else{
+            settings.setBoolData(key: "enforceTotalTabCount", data: false)
+        }
+    }
+    
+    @IBAction func hideLeftRightTab(_ sender: NSButton) {
+        if(sender.state == .on){
+            settings.setBoolData(key: "hideLeftRight", data: true)
+        }
+        else{
+            settings.setBoolData(key: "hideLeftRight", data: false)
+        }
+    }
+    
     
 }

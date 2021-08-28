@@ -36,7 +36,6 @@ class SafariExtensionHandler: SFSafariExtensionHandler {
         // This is called when Safari's state changed in some way that would require the extension's toolbar item to be validated again.
         validationHandler(true, "")
         getCounts()
-        getCurrentWindowCount()
     }
     
     override func popoverViewController() -> SFSafariExtensionViewController {
@@ -45,56 +44,70 @@ class SafariExtensionHandler: SFSafariExtensionHandler {
     
     
     func getCounts(){
-        SFSafariApplication.getAllWindows { (safariWindows) in
-            self.windowCount = safariWindows.count
-            var newTabCount = 0;
-            for singleSafariWindow in safariWindows{
-                singleSafariWindow.getAllTabs{ tabs in
-                    newTabCount = newTabCount + tabs.count
-                    self.helper.updateCountBadge(windowCount: self.windowCount, tabCount: newTabCount)
-                }
-            }
-            self.tabCount = newTabCount;
-        }
-    }
-    
-    func getCurrentWindowCount(){
-        print("getCurrentWindowCount")
         let autoCloseCount = settings.getIntData(key: "autoCloseCount")
         let shouldAutoClose = settings.getBoolData(key: "autoclose")
         let preventNewCount = settings.getIntData(key: "preventNewCount")
         let preventNew = settings.getBoolData(key: "preventNew")
+        let enforceTotalTabCountState = settings.getBoolData(key: "enforceTotalTabCount")
 
-        if(!shouldAutoClose && !preventNew){
-            return
-        }
-        SFSafariApplication.getActiveWindow { (safariWindow) in
-            safariWindow?.getAllTabs(completionHandler: { (tabs) in
-
-                let count = tabs.count
-                if(shouldAutoClose && count > (autoCloseCount+1)){
+        self.helper.getCounts() { (res) in
+            switch res {
+            case .success(let counts):
+                
+                var tabCount = 0
+                self.helper.updateCountBadge(windowCount: counts.windowCount, tabCount: counts.activeWindowTabs, totalTabCount: counts.totalTabs)
+                if(!shouldAutoClose && !preventNew){
+                    return
+                }
+                if(enforceTotalTabCountState) {
+                    tabCount = counts.totalTabs
+                }
+                else {
+                    tabCount = counts.activeWindowTabs
+                }
+                
+                if(shouldAutoClose && tabCount > (autoCloseCount+1)){
                     self.mayCloseTab = false
                     return
                 }
-                else if(count == autoCloseCount){
+                else if(tabCount == autoCloseCount){
                     self.mayCloseTab = true
                 }
-                if(preventNew && count > (preventNewCount+1)){
+                if(preventNew && tabCount > (preventNewCount+1)){
                     self.mayPreventTab = false
                     return
                 }
-                else if(count == preventNewCount){
+                else if(tabCount == preventNewCount){
                     self.mayPreventTab = true
                 }
-                if(shouldAutoClose && count > autoCloseCount && self.mayCloseTab){
-                    tabs[0].close()
+                if(shouldAutoClose && tabCount > autoCloseCount && self.mayCloseTab){
+                    self.actionPreventTabs(first: true)
                 }
-                else if(preventNew && count > preventNewCount && self.mayPreventTab){
-                    tabs.last?.close()
+                else if(preventNew && tabCount > preventNewCount && self.mayPreventTab){
+                    self.actionPreventTabs(first: false)
+                }
+            case .failure(let error):
+                print(error)
+            }
+        }
+        
+    }
+    
+    func actionPreventTabs(first: Bool) {
+        SFSafariApplication.getActiveWindow { (safariWindow) in
+            safariWindow?.getAllTabs(completionHandler: { (tabs) in
+                switch first {
+                    case true:
+                        tabs[0].close()
+                    case false:
+                        tabs.last?.close()
                 }
             })
         }
     }
+    
+    
+    
     
     
     func updateBadge(text: String){
@@ -104,3 +117,5 @@ class SafariExtensionHandler: SFSafariExtensionHandler {
     }
     
 }
+
+

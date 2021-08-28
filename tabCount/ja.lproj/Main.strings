@@ -16,6 +16,9 @@
 /* Class = "NSTextFieldCell"; title = "Help me focus!"; ObjectID = "7LP-Vb-acH"; */
 "7LP-Vb-acH.title" = "フォーカス-設定";
 
+/* Class = "NSButtonCell"; title = "Hide \"close to left / right\" buttons"; ObjectID = "8vr-y3-SzQ"; */
+"8vr-y3-SzQ.title" = "隠れる: \"全てのタブを閉じる\"";
+
 /* Class = "NSMenu"; title = "Main Menu"; ObjectID = "AYu-sK-qS6"; */
 "AYu-sK-qS6.title" = "メインメニュー";
 
@@ -27,6 +30,12 @@
 
 /* Class = "NSMenuItem"; title = "Tab Count Help"; ObjectID = "FKE-Sm-Kum"; */
 "FKE-Sm-Kum.title" = "Tab Count ヘルプ";
+
+/* Class = "NSButtonCell"; title = "Enforce limit based on total tab count of all windows"; ObjectID = "hJC-sM-wLV"; */
+"hJC-sM-wLV.title" = "すべてのウィンドウの合計タブ数に基づいて制限を適用します";
+
+/* Class = "NSButtonCell"; title = "Show tab count per window"; ObjectID = "hVu-vi-j8c"; */
+"hVu-vi-j8c.title" = "ウィンドウごとのタブ数を表示";
 
 /* Class = "NSWindow"; title = "Tab Count"; ObjectID = "IQv-IB-iLA"; */
 "IQv-IB-iLA.title" = "Tab Count";
@@ -82,11 +91,23 @@
 /* Class = "NSButtonCell"; title = "Save"; ObjectID = "xlz-ha-1c8"; */
 "xlz-ha-1c8.title" = "変更の保存";
 
-/* Class = "NSTextFieldCell"; title = "Thank you for downloading Tab Count! You'll need this containing app just once to enable Tab Count in Safari. To do so, click the button to Open Safari Extension Preferences below\n\nThe app will show a toolbar icon and a badge with the number of open tabs. To avoid it being too intrusive you can set a threshold for when the badge is to show. The default is 10, which you can change within the popover or the settings tab.\n\nLet me know, if you have ideas on how to improve this app! \n\nClaus - tabcount@otzberg.net"; ObjectID = "Ybs-tm-0T5"; */
-"Ybs-tm-0T5.title" = "Tab Count をダウンロードして頂きありがとうございました。この拡張機能を有効にするには下の「Safari機能拡張へ」ボタンをクリックして、Tab Countにチェックを付けてくだいさい。\n\nこのSafari機能拡張では開いているタブ数やウィンドウ数をカウントしてツールバーに表示されます。タブ数とウィンドウ数は閾値を設定可能で、閾値を超えると開いているタブ数がツールバーに表示されます。設定を変更するには、このアプリの設定タブより、もしくはツールバーのバッジをクリックしてください。\n\nどうぞ、よろしくお願いします。 Claus - tabcount@otzberg.net";
+/* Class = "NSTextFieldCell"; title = "Thank you for downloading Tab Count! You'll need this containing app just once to enable Tab Count in Safari. To do so, click the button to Open Safari Extension Preferences below.\n\nThe app will show a toolbar icon and a badge with the number of open tabs. To avoid it being too intrusive you can set a threshold for when the badge is to show. The default is 10, which you can change within the popover or the settings tab.\n\nIf you see \"x\" in the toolbar icon, no more tabs will be allowed. Opening a new tab will close the first or last tab, based on your settings. If you see \"!!\" in the toolbar icon, you have more tabs open than specified in your settings. Tab Count will not prevent new tabs at this point and you should adjust your settings or close tabs manually.\n\nLet me know, if you have ideas on how to improve this app! \n\nClaus - tabcount@otzberg.net"; ObjectID = "Ybs-tm-0T5"; */
+"Ybs-tm-0T5.title" = "Tab Count をダウンロードして頂きありがとうございました。この拡張機能を有効にするには下の「Safari機能拡張へ」ボタンをクリックして、Tab Countにチェックを付けてくだいさい。\n\nこのSafari機能拡張では開いているタブ数やウィンドウ数をカウントしてツールバーに表示されます。タブ数とウィンドウ数は閾値を設定可能で、閾値を超えると開いているタブ数がツールバーに表示されます。設定を変更するには、このアプリの設定タブより、もしくはツールバーのバッジをクリックしてください。\n\nツールバーアイコンに「x」が表示されている場合、それ以上のタブは許可されません。 新しいタブを開くと、設定に基づいて最初または最後のタブが閉じます。 「!!」が表示されたら ツールバーアイコンでは、設定で指定されているよりも多くのタブが開いています。 タブ数はこの時点で新しいタブを妨げることはありません。設定を調整するか、タブを手動で閉じる必要があります。\n\nどうぞ、よろしくお願いします。 Claus - tabcount@otzberg.net";
 
 /* Class = "NSButtonCell"; title = "Show number of open windows from:"; ObjectID = "zfs-jB-2nZ"; */
 "zfs-jB-2nZ.title" = "から開いているウィンドウの数を表示";
 
 /* Class = "NSButtonCell"; title = "Do not allow new tabs, after:"; ObjectID = "Zi0-bD-H6a"; */
 "Zi0-bD-H6a.title" = "次の場合は、新しいタブを許可しないでください。";
+
+/* Class = "NSTextFieldCell"; title = "tabs"; ObjectID = "14l-m7-5o0"; */
+"14l-m7-5o0.title" = "タブ";
+
+/* Class = "NSTextFieldCell"; title = "tabs"; ObjectID = "hpk-RL-jZQ"; */
+"hpk-RL-jZQ.title" = "タブ";
+
+/* Class = "NSTextFieldCell"; title = "windows"; ObjectID = "iSJ-TF-ZZu"; */
+"iSJ-TF-ZZu.title" = "ウィンドウ";
+
+/* Class = "NSTextFieldCell"; title = "tabs"; ObjectID = "sEr-sG-8zB"; */
+"sEr-sG-8zB.title" = "タブ";
