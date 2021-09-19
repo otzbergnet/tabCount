@@ -1,3 +1,6 @@
+/* Class = "NSTextFieldCell"; title = "tabs"; ObjectID = "14l-m7-5o0"; */
+"14l-m7-5o0.title" = "Tabs";
+
 /* Class = "NSMenuItem"; title = "Tab Count"; ObjectID = "1Xt-HY-uBw"; */
 "1Xt-HY-uBw.title" = "tabCount";
 
@@ -34,11 +37,17 @@
 /* Class = "NSButtonCell"; title = "Enforce limit based on total tab count of all windows"; ObjectID = "hJC-sM-wLV"; */
 "hJC-sM-wLV.title" = "Limits anhand der Gesamtzahl der Tabs in allen Fenstern anwenden";
 
+/* Class = "NSTextFieldCell"; title = "tabs"; ObjectID = "hpk-RL-jZQ"; */
+"hpk-RL-jZQ.title" = "Tabs";
+
 /* Class = "NSButtonCell"; title = "Show tab count per window"; ObjectID = "hVu-vi-j8c"; */
 "hVu-vi-j8c.title" = "Anzahl der Tabs pro Fenster zeigen";
 
 /* Class = "NSWindow"; title = "Tab Count"; ObjectID = "IQv-IB-iLA"; */
 "IQv-IB-iLA.title" = "Tab Count";
+
+/* Class = "NSTextFieldCell"; title = "windows"; ObjectID = "iSJ-TF-ZZu"; */
+"iSJ-TF-ZZu.title" = "Fenster";
 
 /* Class = "NSButtonCell"; title = "Show number of open tabs from:"; ObjectID = "j7q-gw-4bq"; */
 "j7q-gw-4bq.title" = "Die Anzahl offener Tabs zeigen, ab:";
@@ -52,6 +61,9 @@
 /* Class = "NSTextFieldCell"; title = "Welcome to Tab Count"; ObjectID = "Ndz-z7-kVw"; */
 "Ndz-z7-kVw.title" = "Welcome to Tab Count";
 
+/* Class = "NSButtonCell"; title = "Don't count pinned tabs"; ObjectID = "nNj-0r-v7C"; */
+"nNj-0r-v7C.title" = "Fixierte Tabs nicht mitzählen";
+
 /* Class = "NSMenuItem"; title = "Hide Tab Count"; ObjectID = "Olw-nP-bQN"; */
 "Olw-nP-bQN.title" = "Hide tabCount";
 
@@ -60,6 +72,9 @@
 
 /* Class = "NSTextFieldCell"; placeholderString = "Open Tabs"; ObjectID = "qAP-ch-I6k"; */
 "qAP-ch-I6k.placeholderString" = "Offene Tabs";
+
+/* Class = "NSTextFieldCell"; title = "tabs"; ObjectID = "sEr-sG-8zB"; */
+"sEr-sG-8zB.title" = "Tabs";
 
 /* Class = "NSTextFieldCell"; title = "Settings"; ObjectID = "Srr-w6-WFp"; */
 "Srr-w6-WFp.title" = "Einstellungen";
@@ -99,15 +114,3 @@
 
 /* Class = "NSButtonCell"; title = "Do not allow new tabs, after:"; ObjectID = "Zi0-bD-H6a"; */
 "Zi0-bD-H6a.title" = "Keine neuen Tabs erlauben, nach:";
-
-/* Class = "NSTextFieldCell"; title = "tabs"; ObjectID = "14l-m7-5o0"; */
-"14l-m7-5o0.title" = "Tabs";
-
-/* Class = "NSTextFieldCell"; title = "tabs"; ObjectID = "hpk-RL-jZQ"; */
-"hpk-RL-jZQ.title" = "Tabs";
-
-/* Class = "NSTextFieldCell"; title = "windows"; ObjectID = "iSJ-TF-ZZu"; */
-"iSJ-TF-ZZu.title" = "Fenster";
-
-/* Class = "NSTextFieldCell"; title = "tabs"; ObjectID = "sEr-sG-8zB"; */
-"sEr-sG-8zB.title" = "Tabs";
