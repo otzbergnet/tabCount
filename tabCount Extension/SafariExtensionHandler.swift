@@ -53,7 +53,7 @@ class SafariExtensionHandler: SFSafariExtensionHandler {
         self.helper.getCounts() { (res) in
             switch res {
             case .success(let counts):
-                
+                print("getCounts totalTabs success is: \(counts.totalTabs) ")
                 var tabCount = 0
                 self.helper.updateCountBadge(windowCount: counts.windowCount, tabCount: counts.activeWindowTabs, totalTabCount: counts.totalTabs)
                 if(!shouldAutoClose && !preventNew){

@@ -114,26 +114,91 @@ class Helper {
     }
     
     func getCounts(completion: @escaping (Result<CountObject, Error>) -> ()){
+        let dontCountPinnedTabs = self.settings.getBoolData(key: "dontCountPinnedTabs")
         let counts = CountObject()
         SFSafariApplication.getAllWindows { safariWindows in
             var totalTabs = 0
             counts.windowCount = safariWindows.count
+            let compareWindowCount = safariWindows.count
             var windowCountIteration = 0
             for singleSafariWindow in safariWindows{
                 singleSafariWindow.getAllTabs{ tabs in
                     windowCountIteration += 1
-                    totalTabs = totalTabs + tabs.count
-                    counts.totalTabs = totalTabs
-                    if (windowCountIteration == counts.windowCount){
-                        SFSafariApplication.getActiveWindow { (safariWindow) in
-                            safariWindow?.getAllTabs(completionHandler: { (tabs) in
-                                counts.activeWindowTabs = tabs.count
-                                completion(.success(counts))
-                            })
+                    if(dontCountPinnedTabs){
+                        // this one needs work, as the completion might fire before all the other completions are done
+                        let singleWindowTabCount = tabs.count
+                        var singleWindowCompareTabCount = 0
+                        for tab in tabs {
+                            singleWindowCompareTabCount += 1
+                            tab.getContainingWindow { (window) in
+                                if(window != nil){
+                                    totalTabs = totalTabs + 1
+                                }
+                                if (windowCountIteration == compareWindowCount && singleWindowTabCount == singleWindowCompareTabCount){
+                                    self.getActiveWindowTabCounts { activeWindowCountResult in
+                                        switch activeWindowCountResult {
+                                        case .success(let resultCount):
+                                            counts.totalTabs = totalTabs
+                                            counts.windowCount = windowCountIteration
+                                            counts.activeWindowTabs = resultCount
+                                            completion(.success(counts))
+                                        case .failure(let error):
+                                            print(error)
+                                            counts.activeWindowTabs = 0
+                                            completion(.success(counts))
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    else {
+                        print("I am in count pinnedtabs")
+                        totalTabs = totalTabs + tabs.count
+                        counts.totalTabs = totalTabs
+                        if (windowCountIteration == counts.windowCount){
+                            self.getActiveWindowTabCounts { activeWindowCountResult in
+                                switch activeWindowCountResult {
+                                case .success(let resultCount):
+                                    counts.activeWindowTabs = resultCount
+                                    completion(.success(counts))
+                                case .failure(let error):
+                                    print(error)
+                                    counts.activeWindowTabs = 0
+                                    completion(.success(counts))
+                                }
+                            }
                         }
                     }
                 }
             }
+        }
+    }
+    
+    func getActiveWindowTabCounts(completion: @escaping (Result<Int, Error>) -> ()){
+        let dontCountPinnedTabs = self.settings.getBoolData(key: "dontCountPinnedTabs")
+        SFSafariApplication.getActiveWindow { (safariWindow) in
+            safariWindow?.getAllTabs(completionHandler: { (tabs) in
+                if(dontCountPinnedTabs){
+                    var activeWindowTabCount = 0
+                    let tmpTabCount = tabs.count
+                    var tmpTabCountCompare = 0
+                    for tab in tabs {
+                        tmpTabCountCompare += 1
+                        tab.getContainingWindow { (window) in
+                            if(window != nil){
+                                activeWindowTabCount = activeWindowTabCount + 1
+                                if(tmpTabCount == tmpTabCountCompare){
+                                    completion(.success(activeWindowTabCount))
+                                }
+                            }
+                        }
+                    }
+                }
+                else{
+                    completion(.success(tabs.count))
+                }
+            })
         }
     }
     
