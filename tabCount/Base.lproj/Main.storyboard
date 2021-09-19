@@ -361,6 +361,9 @@
                                                     <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                     <font key="font" metaFont="system"/>
                                                 </buttonCell>
+                                                <connections>
+                                                    <action selector="saveDontCountPinnedTab:" target="2U5-jO-Az9" id="U1u-zg-dV5"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <visibilityPriorities>
@@ -570,6 +573,7 @@
                             <outlet property="autoCloseCheck" destination="t0H-Oo-Zcy" id="MhE-NI-CHH"/>
                             <outlet property="autoCloseCountBox" destination="xf1-sN-HB3" id="15v-7h-lra"/>
                             <outlet property="countPerWindowCheck" destination="xT8-pu-hMl" id="f8a-FY-6In"/>
+                            <outlet property="dontCountFixedTabsCheck" destination="Buk-fY-wb9" id="aoy-9j-Uzg"/>
                             <outlet property="enforceTotalTabCountCheck" destination="Oix-vX-0FD" id="lFH-tU-OhE"/>
                             <outlet property="hideLeftRightCheck" destination="SWq-2I-wb6" id="u0O-nD-1W3"/>
                             <outlet property="keepPinnedTabsCheck" destination="1XX-6q-uVC" id="Wtb-f2-qvO"/>
