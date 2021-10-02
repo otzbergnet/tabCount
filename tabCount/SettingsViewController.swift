@@ -23,6 +23,7 @@ class SettingsViewController: NSView {
     @IBOutlet weak var keepPinnedTabsCheck: NSButton!
     @IBOutlet weak var hideLeftRightCheck: NSButton!
     @IBOutlet weak var countPerWindowCheck: NSButton!
+    @IBOutlet weak var dontCountFixedTabsCheck: NSButton!
     
     @IBOutlet weak var autoCloseCheck: NSButtonCell!
     @IBOutlet weak var preventNewCheck: NSButton!
@@ -44,6 +45,7 @@ class SettingsViewController: NSView {
         getCountPerWindowState()
         getEnforceTotalTabCountState()
         getHideLeftRightCheckState()
+        getDontCountPinnedTabsState()
     }
 
     
@@ -58,6 +60,7 @@ class SettingsViewController: NSView {
             settings.setBoolData(key: "countPerWindow", data: false)
             settings.setBoolData(key: "enforceTotalTabCount", data: false)
             settings.setBoolData(key: "hideLeftRight", data: false)
+            settings.setBoolData(key: "dontCountPinnedTabs", data: false)
         }
     }
     
@@ -182,6 +185,16 @@ class SettingsViewController: NSView {
         }
         else{
             hideLeftRightCheck.state = .off
+        }
+    }
+    
+    func getDontCountPinnedTabsState(){
+        let dontCountPinnedTabs = settings.getBoolData(key: "dontCountPinnedTabs")
+        if(dontCountPinnedTabs){
+            dontCountFixedTabsCheck.state = .on
+        }
+        else{
+            dontCountFixedTabsCheck.state = .off
         }
     }
     
@@ -324,6 +337,15 @@ class SettingsViewController: NSView {
         }
         else{
             settings.setBoolData(key: "pinnedTab", data: false)
+        }
+    }
+    
+    @IBAction func saveDontCountPinnedTab(_ sender: NSButton) {
+        if(sender.state == .on){
+            settings.setBoolData(key: "dontCountPinnedTabs", data: true)
+        }
+        else{
+            settings.setBoolData(key: "dontCountPinnedTabs", data: false)
         }
     }
     
