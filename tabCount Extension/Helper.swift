@@ -153,7 +153,6 @@ class Helper {
                         }
                     }
                     else {
-                        print("I am in count pinnedtabs")
                         totalTabs = totalTabs + tabs.count
                         counts.totalTabs = totalTabs
                         if (windowCountIteration == counts.windowCount){
