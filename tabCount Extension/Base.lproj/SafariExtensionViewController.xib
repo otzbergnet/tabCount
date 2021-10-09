@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="18122" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="19162" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="18122"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="19162"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -16,6 +16,7 @@
                 <outlet property="tabCountBox" destination="vpp-2c-TQr" id="wkQ-dD-QeQ"/>
                 <outlet property="tabCountCheckBox" destination="uCs-rf-y5M" id="OsP-98-vGC"/>
                 <outlet property="tabCountLabel" destination="sC5-o9-pg4" id="dhM-Fa-40e"/>
+                <outlet property="tabsHeader" destination="Fda-wa-Gn1" id="FRv-Ya-1hc"/>
                 <outlet property="view" destination="c22-O7-iKe" id="vwT-Xx-Aiz"/>
                 <outlet property="windowCountBox" destination="rcX-FE-6Q2" id="AfD-V6-JxP"/>
                 <outlet property="windowCountCheckBox" destination="Bci-jG-5L6" id="VZr-iN-0im"/>
@@ -42,23 +43,23 @@
                     <rect key="frame" x="25" y="15" width="200" height="260"/>
                     <subviews>
                         <stackView distribution="fill" orientation="vertical" alignment="leading" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fuh-qc-425">
-                            <rect key="frame" x="0.0" y="207" width="200" height="53"/>
+                            <rect key="frame" x="0.0" y="205" width="200" height="55"/>
                             <subviews>
                                 <stackView distribution="fillEqually" orientation="horizontal" alignment="top" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EUR-ba-cJI">
-                                    <rect key="frame" x="0.0" y="41" width="200" height="12"/>
+                                    <rect key="frame" x="0.0" y="41" width="200" height="14"/>
                                     <subviews>
                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="GUx-Bz-OcW">
-                                            <rect key="frame" x="-2" y="0.0" width="100" height="12"/>
+                                            <rect key="frame" x="-2" y="0.0" width="100" height="14"/>
                                             <textFieldCell key="cell" lineBreakMode="clipping" title="Tabs" id="Fda-wa-Gn1">
-                                                <font key="font" size="11" name="HelveticaNeue"/>
+                                                <font key="font" metaFont="system" size="11"/>
                                                 <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                                 <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                             </textFieldCell>
                                         </textField>
                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="leS-uS-yfl">
-                                            <rect key="frame" x="102" y="0.0" width="100" height="12"/>
+                                            <rect key="frame" x="102" y="0.0" width="100" height="14"/>
                                             <textFieldCell key="cell" lineBreakMode="clipping" title="Windows" id="ha4-Ck-XDO">
-                                                <font key="font" size="11" name="HelveticaNeue"/>
+                                                <font key="font" metaFont="system" size="11"/>
                                                 <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                                 <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                             </textFieldCell>
@@ -124,7 +125,7 @@
                             </customSpacing>
                         </stackView>
                         <stackView distribution="fill" orientation="vertical" alignment="leading" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="N2J-Ri-Cmd">
-                            <rect key="frame" x="0.0" y="110" width="200" height="77"/>
+                            <rect key="frame" x="0.0" y="109" width="200" height="77"/>
                             <subviews>
                                 <stackView distribution="fillEqually" orientation="horizontal" alignment="top" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nby-ie-gIo">
                                     <rect key="frame" x="0.0" y="61" width="200" height="16"/>
@@ -249,7 +250,7 @@
                             </customSpacing>
                         </stackView>
                         <stackView distribution="fill" orientation="vertical" alignment="leading" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kcM-Zf-wTQ">
-                            <rect key="frame" x="0.0" y="38" width="200" height="53"/>
+                            <rect key="frame" x="0.0" y="37" width="200" height="53"/>
                             <subviews>
                                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="DG4-KK-CWI" userLabel="Close Tabs Label">
                                     <rect key="frame" x="-2" y="37" width="189" height="16"/>
