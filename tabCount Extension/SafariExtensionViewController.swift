@@ -17,6 +17,9 @@ class SafariExtensionViewController: SFSafariExtensionViewController, NSTextFiel
     var countPerWindow = false
     var enforceTotalTabCount = false
     
+    
+    @IBOutlet weak var tabsHeader: NSTextFieldCell!
+    
     @IBOutlet weak var windowCountLabel: NSTextField!
     @IBOutlet weak var tabCountLabel: NSTextField!
     
@@ -182,13 +185,36 @@ class SafariExtensionViewController: SFSafariExtensionViewController, NSTextFiel
         helper.getCounts { (res) in
             switch res {
             case .success(let counts):
+                
+                let attrs1 = [NSAttributedString.Key.foregroundColor : NSColor.black]
+                let attrs2 = [NSAttributedString.Key.foregroundColor : NSColor.darkGray]
+                let attrs3 = [NSAttributedString.Key.font : NSFont.systemFont(ofSize: 16), NSAttributedString.Key.foregroundColor : NSColor.darkGray]
+                
+                
                 self.windowCount = counts.windowCount
                 self.tabCount = counts.activeWindowTabs
                 self.totalTabCount = counts.totalTabs
+                
+                let attributedString1 = NSMutableAttributedString(string:"\(self.tabCount)", attributes: attrs1)
+                
+                let tabsString = NSLocalizedString("Tabs", comment: "The word Tabs translated")
+                let totalString = NSLocalizedString("Total", comment: "The word Total translated")
+                
+                let attributedTabHeading = NSMutableAttributedString(string:"\(tabsString)", attributes: attrs1)
+                
+                if(counts.windowCount > 1){
+                    let attributedString2 = NSMutableAttributedString(string:" / \(self.totalTabCount)", attributes: attrs3)
+                    let attributedTabHeading2 = NSMutableAttributedString(string:" / \(totalString)", attributes: attrs2)
+                    attributedString1.append(attributedString2)
+                    attributedTabHeading.append(attributedTabHeading2)
+                }
+                
                 DispatchQueue.main.async {
-                    self.tabCountLabel.stringValue = "\(self.tabCount)"
+                    self.tabsHeader.attributedStringValue = attributedTabHeading
+                    self.tabCountLabel.attributedStringValue = attributedString1
                     self.windowCountLabel.stringValue = "\(self.windowCount)"
                 }
+                
             case .failure(let errors):
                 print(errors)
             }

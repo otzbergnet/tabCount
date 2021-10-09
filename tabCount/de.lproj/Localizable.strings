@@ -3,3 +3,9 @@
 
 /* the mode is on */
 "ON" = "AN";
+
+/* The word Tabs translated */
+"Tabs" = "Tabs";
+
+/* The word Total translated */
+"Total" = "Gesamt";

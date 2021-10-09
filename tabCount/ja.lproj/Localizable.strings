@@ -3,3 +3,9 @@
 
 /* the mode is on */
 "ON" = "オン";
+
+/* The word Tabs translated */
+"Tabs" = "タブ";
+
+/* The word Total translated */
+"Total" = "合計";
