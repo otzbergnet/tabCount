@@ -26,10 +26,6 @@ I didn't put nearly enough time into designing this. If you are into design, fee
 
 You can reach me by [eMail](mailto:tabcount@otzberg.net)
 
-## Support my work
-
-[<img src="https://www.otzberg.net/img/buymeatea.png" width="250" height="80" >](https://www.buymeacoffee.com/otzberg)
-
 ## License
 
 This app will be published to the AppStore, but the code itself is licensed under MIT license. See repository for license information.
