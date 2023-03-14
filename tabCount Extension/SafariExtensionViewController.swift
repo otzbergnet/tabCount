@@ -186,9 +186,9 @@ class SafariExtensionViewController: SFSafariExtensionViewController, NSTextFiel
             switch res {
             case .success(let counts):
                 
-                let attrs1 = [NSAttributedString.Key.foregroundColor : NSColor.black]
-                let attrs2 = [NSAttributedString.Key.foregroundColor : NSColor.darkGray]
-                let attrs3 = [NSAttributedString.Key.font : NSFont.systemFont(ofSize: 16), NSAttributedString.Key.foregroundColor : NSColor.darkGray]
+                let attrs1 = [NSAttributedString.Key.foregroundColor : NSColor.labelColor]
+                let attrs2 = [NSAttributedString.Key.foregroundColor : NSColor.secondaryLabelColor]
+                let attrs3 = [NSAttributedString.Key.font : NSFont.systemFont(ofSize: 16), NSAttributedString.Key.foregroundColor : NSColor.secondaryLabelColor]
                 
                 
                 self.windowCount = counts.windowCount
