@@ -85,6 +85,7 @@ class Helper {
             badgeText = ""
         }
         SFSafariApplication.getActiveWindow { (window) in
+			window?.getToolbarItem { $0?.setBadgeText("999")}
             window?.getToolbarItem { $0?.setBadgeText(badgeText)}
         }
         
